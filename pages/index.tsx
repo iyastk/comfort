@@ -7,6 +7,7 @@ import Services from "@/components/services";
 import ImageCollage from "@/components/imageCollage";
 import InfoSection from "@/components/InfoSection";
 import Footer from "@/components/footer";
+import Navigation from "@/components/Navigation/mainNavigation";
 // import hangLight from "../public/images/hang-light.png";
 
 // import iconImage from "../public/images/";
@@ -63,12 +64,7 @@ export default function Home() {
               </svg>
             </div>
             <nav className="space-x-8 text-gray-600">
-              <Link href="/">Home</Link>
-              <Link href="/pages">Pages</Link>
-              <Link href="/portfolio">Portfolio</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/shop">Shop</Link>
-              <Link href="/elements">Elements</Link>
+              <Navigation></Navigation>
             </nav>
             <div className="flex gap-6">
               <svg

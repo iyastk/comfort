@@ -1,0 +1,52 @@
+const features1 = [
+  {
+    title: "Complete Upholstery Solutions",
+    icon: "🏠",
+    description:
+      "We offer professional upholstery services for residential, commercial, automotive, and marine needs, including reupholstering, frame repairs, and restoring furniture with high-quality materials for comfort and style.",
+  },
+  {
+    title: "Joinery and Fit-Out Solutions",
+    icon: "✏️",
+    description:
+      "We specialize in custom joinery and fit-outs, crafting furniture, cabinetry, doors, and partitions. Our services cover residential, commercial, and bespoke projects, focusing on quality craftsmanship and seamless execution.",
+  },
+  {
+    title: "Curtains and Blinds Solutions",
+    icon: "⚙️",
+    description:
+      "We provide a variety of custom curtains and blinds, including drapes, Roman blinds, Venetian blinds, and motorized options. Our solutions offer style, privacy, and light control, with expert design, fabrication, and installation.",
+  },
+  {
+    title: "Shop Fittings",
+    icon: "⚙️",
+    description:
+      "We supply retail store fixtures, including shelving, display units, counters, and lighting, to enhance product presentation and create an inviting atmosphere.",
+  },
+];
+const features2 = [
+  {
+    title: "Hospitality Furnishing ",
+    icon: "🏠",
+    description:
+      "Tailored solutions for hospitality venues, including custom furniture, upholstery, and fit-outs. We focus on comfort, durability, and aesthetic appeal to meet the unique needs of hotels, restaurants, and event spaces.",
+  },
+  {
+    title: "Office furnishing",
+    icon: "✏️",
+    description:
+      "We offer ergonomic desks, chairs, and storage solutions for offices, including conference room furniture and reception area furnishings, designed for comfort, functionality, and a professional look.",
+  },
+  {
+    title: "Premium Leather Trading Solutions",
+    icon: "⚙️",
+    description:
+      "We provide a range of high-quality leathers for upholstery, furniture, fashion, and commercial applications, offering genuine, synthetic, and specialty hides for durability, aesthetic appeal, and functionality.",
+  },
+  {
+    title: "home furnishing",
+    icon: "✏️",
+    description:
+      "Transform your home with custom-made furniture, curtains, blinds, upholstery, and décor. We focus on craftsmanship and premium materials to reflect your personal style and lifestyle.",
+  },
+];

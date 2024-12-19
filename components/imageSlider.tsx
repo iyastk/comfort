@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Image from "next/image";
-import Slider1 from "../public/images/slider_2.jpeg";
-import Slider2 from "../public/images/slider_3.webp";
+import Slider1 from "../public/images/slider/slider_1.avif";
+import Slider2 from "../public/images/slider/slider_3.webp";
 
-import Slider3 from "../public/images/slider_4.avif";
-import Slider4 from "../public/images/slider_1.avif";
+import Slider3 from "../public/images/slider/slider_4.avif";
+import Slider4 from "../public/images/slider/slider_1.avif";
 
 const images = [Slider1, Slider2, Slider3, Slider4];
 
