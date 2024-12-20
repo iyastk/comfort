@@ -1,12 +1,23 @@
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
-const ImageGallery = ({ items }: { items: StaticImageData[] }) => {
+interface ImageGalleryProps {
+  selectedImages: StaticImageData[];
+}
+
+const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedImages }) => {
+  console.log(" after clicking");
+  console.log(selectedImages);
+  console.log("end after clicking");
+  useEffect(() => {
+    console.log("Updated selected images:", selectedImages);
+  }, [selectedImages]);
+
   return (
     <>
       <div className="bg-slate-100 w-full mt-10 p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((src, index) => (
+          {selectedImages.map((src, index) => (
             <div key={index} className="relative group">
               <Image
                 src={src}

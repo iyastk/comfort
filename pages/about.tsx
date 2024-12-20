@@ -3,7 +3,6 @@ import Sidebar from "@/components/sidebar";
 import Image from "next/image";
 import AboutHero from "../public/images/Portfolio/image-60.webp";
 import AboutPhoto from "../public/images/Icon/decoration.png";
-import TeamCard from "@/components/teamCard";
 
 const about = () => {
   return (
