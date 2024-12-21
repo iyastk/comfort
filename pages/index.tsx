@@ -20,7 +20,7 @@ export default function Home() {
       <div className="  bg-orange-50	 text-gray-800 min-h-screen">
         {/* Navigation Bar */}
         <header className="flex flex-col items-between justify-center px-8">
-          <div className="flex items-center justify-center text-4xl p-4 font-serif text-gray-800 tracking-widest ">
+          <div className="flex items-center justify-center text-6xl p-4 font-serif text-gray-800 tracking-widest ">
             {/* <Image src={iconImage} alt="icon" width={100} height={100} /> */}
             COMFORT
           </div>
@@ -107,8 +107,8 @@ export default function Home() {
         </header>
 
         {/* Main Content */}
-        <main className="flex flex-wrap justify-center p-8">
-          <div className="w-full h-screen md:w-1/2  p-4">
+        <main className="flex flex-wrap justify-center p-8 relative">
+          <div className="w-full h-screen  ">
             {/* Video Component */}
             <video
               src="/images/video_7.mp4" // Replace with the actual path of your video in the public folder
@@ -118,20 +118,26 @@ export default function Home() {
               className=" w-full h-5/6	 object-cover"
             />
           </div>
+          <div
+            className="absolute top-[39] right-0 mr-8 w-3/5   bg-black opacity-50  "
+            style={{ height: "76%" }}
+          ></div>
 
-          <div className="w-full md:w-1/2 p-2 flex flex-col justify-center text-center md:text-left md:flex md:flex-col md:justify-center md:items-center">
+          <div className="absolute top-40 left-60  w-full  p-2 flex flex-col justify-center text-center md:text-left md:flex md:flex-col md:justify-center md:items-center">
             <div className=" flex mb-4">
               <Image src={pillow1} width={100} alt="pillow1" className="" />
               <Image src={pillow2} width={100} alt="pillow2" />
             </div>
 
-            <h2 className="text-4xl font-serif mb-4"> Modern & Innovative</h2>
-            <h3>FURNITURE INTERIOR & EXTERIOR</h3>
-            <p className="text-gray-600 mb-4">
+            <h2 className="text-4xl text-white font-serif mb-4">
+              Modern & Innovative
+            </h2>
+            <h3 className="text-stone-200">FURNITURE INTERIOR & EXTERIOR</h3>
+            <p className="text-stone-200 mb-4">
               We will make your life more comfortable...
             </p>
-            <Link href="/adorn">
-              <div className="inline-block px-6 py-2 mt-2 text-lg font-medium text-white bg-gray-800 rounded-full hover:bg-gray-700">
+            <Link href="/portfolio">
+              <div className="inline-block px-6 py-2 mt-2 text-lg font-medium text-white bg-teal-900 rounded-full hover:bg-gray-700">
                 View More
               </div>
             </Link>

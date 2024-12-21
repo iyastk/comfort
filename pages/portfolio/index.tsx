@@ -6,8 +6,6 @@ import { useServiceContext } from "@/store/serviceContext";
 
 const PortfolioPage = () => {
   const { selectedImages } = useServiceContext();
-  console.log("from-------------");
-  console.log(selectedImages);
   useEffect(() => {
     console.log("Selected Images:", selectedImages);
   }, [selectedImages]);

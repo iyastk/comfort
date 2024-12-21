@@ -15,10 +15,13 @@ import gallary_12 from "/public/images/gallary/gallary_12.jpg";
 import gallary_13 from "/public/images/gallary/gallary_13.jpg";
 
 import image_1 from "/public/images/image_2.jpg";
+import { useServiceContext } from "@/store/serviceContext";
 
 const ImageCollage = () => {
+  const { selectedImages } = useServiceContext();
+  console.log(selectedImages);
   return (
-    <div className="grid grid-cols-8 grid-rows-[5vw] col-span-full gap-3 p-4 pt-20">
+    <div className="grid grid-cols-8 grid-rows-[5vw] col-span-full gap-3 p-4 ">
       <div className="col-span-2 row-span-2">
         <Image
           src={gallary_1}

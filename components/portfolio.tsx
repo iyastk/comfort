@@ -1,11 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Display_1 from "/public/display_1.jpg";
+import Display_2 from "/public/display_2.jpg";
 import chair from "/public/images/chair_3.png";
+
 const Portfolio = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center p-8">
-      <div className="w-full md:w-1/3 p-2 flex flex-col justify-center text-center md:text-left md:flex md:flex-col md:justify-center md:items-center">
+    <div className="flex flex-wrap justify-between items-center w-full p-4 pl-24">
+      <div className="  flex flex-col justify-center text-center items-center  md:text-left md:flex md:flex-col md:justify-center md:items-center">
         <Image
           src={chair}
           alt="Feature Image"
@@ -18,40 +21,26 @@ const Portfolio = () => {
         <p className="text-gray-600 mb-4">
           We will make your life more comfortable...
         </p>
-        <Link href="/adorn">
+        <Link href="/portfolio">
           <div className="inline-block px-6 py-2 mt-2 text-lg font-medium text-white bg-gray-800 rounded-full hover:bg-gray-700">
             View More
           </div>
         </Link>
       </div>
-      <div className="w-full h-80 md:w-1/3  ">
-        {/* Video Component */}
-        <video
-          src="/images/video_4.mp4" // Replace with the actual path of your video in the public folder
-          autoPlay
-          loop
-          muted
-          className=" w-full h-5/6	 object-cover"
+      <div className="flex  gap-3 h-80 -mb-7  ">
+        <Image
+          src={Display_1}
+          alt="Feature Image"
+          width={400}
+          //   className="rounded-lg shadow-lg"
         />
+        <Image
+          src={Display_2}
+          alt="Feature Image"
+          width={400}
 
-        <h3 className="p-2 ">place</h3>
-        <p className="px-2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-        </p>
-      </div>
-      <div className="w-full h-80 md:w-1/3  ">
-        {/* Video Component */}
-        <video
-          src="/images/video_5.mp4" // Replace with the actual path of your video in the public folder
-          autoPlay
-          loop
-          muted
-          className=" w-full h-5/6	 object-cover"
+          //   className="rounded-lg shadow-lg"
         />
-        <h3 className="p-2 ">place</h3>
-        <p className="px-2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-        </p>
       </div>
     </div>
   );

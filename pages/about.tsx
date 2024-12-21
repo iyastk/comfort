@@ -1,15 +1,16 @@
 import React from "react";
 import Sidebar from "@/components/sidebar";
 import Image from "next/image";
-import AboutHero from "../public/images/Portfolio/image-60.webp";
+import AboutHero from "../public/images/Portfolio/sample-22.webp";
 import AboutPhoto from "../public/images/Icon/decoration.png";
+import TeamCard from "@/components/teamCard";
 
-const about = () => {
+const About = () => {
   return (
     <div className="container mx-auto  flex ">
       <Sidebar></Sidebar>
-      <div className="w-full bg-slate-100 relative ">
-        <div className="  bg-slate-100 flex items-center justify-between  ">
+      <div className="w-full  bg-slate-100  ">
+        <div className="  bg-slate-100   ">
           <div className="h-screen">
             <Image
               src={AboutHero}
@@ -21,16 +22,22 @@ const about = () => {
             {/* <h1 className="absolute top-28 left-44 text-4xl font-semibold  p-4">
               Who We Are <span className="text-red-600">?</span>
             </h1> */}
-
-            <div>
-              <div className="flex bg-slate-100">
+          </div>
+          <div>
+            <div className="flex -mt-32 bg-slate-100 w-full">
+              <div className="flex justify-center items-center w-full ">
                 <Image
                   src={AboutPhoto}
                   alt="photo of a sofa and lamb to represent about"
-                  width={400}
+                  className="p-10 "
+                  width={500}
                 ></Image>
-                <div className="px-10 bg-slate-100 py-5">
-                  <h1 className="text-3xl  py-6">About us</h1>
+              </div>
+
+              <div className="px-10 bg-slate-100 py-5">
+                <h1 className="text-3xl  py-6">About us</h1>
+                <div className="text-justify p-5">
+                  {" "}
                   <span className="font-bold	">
                     Comfort Furniture Factory
                   </span>{" "}
@@ -39,12 +46,16 @@ const about = () => {
                   industries. We specialize in crafting both contemporary and
                   traditional furniture solutions designed to meet the highest
                   standards of quality and durability.
-                  <ul className="font-bold p-2	">
+                  <ul className="font-bold p-2	text-red-400">
                     Our extensive product range includes:
                   </ul>
-                  <li>Classic, traditional, and contemporary furniture</li>{" "}
-                  <li>Fixed seating and outdoor furniture</li>{" "}
-                  <li className="pb-2">
+                  <li className="font-bold">
+                    Classic, traditional, and contemporary furniture
+                  </li>{" "}
+                  <li className="font-bold">
+                    Fixed seating and outdoor furniture
+                  </li>{" "}
+                  <li className="pb-2 font-bold">
                     Reclaimed furniture, case goods, and soft furnishings With
                     state-of-the-art joinery and upholstery units,
                   </li>
@@ -59,10 +70,15 @@ const about = () => {
                   innovation, precision, and craftsmanship has positioned us as
                   a preferred supplier in the Gulf region’s contract furniture
                   market. At Comfort Furniture Factory,
-                  <ul className="font-bold p-2		">we prioritize: </ul>
-                  <li>Reliable construction for long-lasting performance</li>
-                  <li> Timely and relevant designs to match evolving trends</li>
-                  <li className="pb-2">
+                  <ul className="font-bold p-2	text-red-400	">we prioritize: </ul>
+                  <li className="font-bold">
+                    Reliable construction for long-lasting performance
+                  </li>
+                  <li className="font-bold">
+                    {" "}
+                    Timely and relevant designs to match evolving trends
+                  </li>
+                  <li className="pb-2 font-bold">
                     Value-driven pricing to suit your project requirements
                   </li>
                   Our products are built to withstand even the most demanding
@@ -73,26 +89,38 @@ const about = () => {
                   solutions.
                 </div>
               </div>
-              <div>
-                {/* <h1 className="text-3xl  py-6 flex justify-center items-center ">
-                  Our Team
-                </h1>
-                <div className="flex gap-3 p-2 h-80">
-                  <TeamCard
-                    name={"Shafi Muhammed"}
-                    role={"Business Development Manager"}
-                    email={"shafi@comfortplus.com"}
-                    image={"👨🏻"}
-                  ></TeamCard>
-                  <TeamCard
-                    name={"Najeeb"}
-                    role={"Business Development Manager"}
-                    email={"shafi@comfortplus.com"}
-                    image={"👨🏻"}
-                  ></TeamCard>
-                </div> */}
-              </div>
             </div>
+            <div></div>
+          </div>
+        </div>
+        {/* our team section */}
+        <div className="bg-white p-4">
+          <h1 className="text-3xl  py-6 text-center p-2">Our Team</h1>
+          <div className="flex flex-wrap gap-5 items-center justify-center">
+            <TeamCard
+              name={"Shafi Muhammed"}
+              role={"Business Development Manager"}
+              email={"shafi@comfortplus.com"}
+              image={"👨🏻"}
+            ></TeamCard>
+            <TeamCard
+              name={"Shafi Muhammed"}
+              role={"Business Development Manager"}
+              email={"shafi@comfortplus.com"}
+              image={"👨🏻"}
+            ></TeamCard>
+            <TeamCard
+              name={"Shafi Muhammed"}
+              role={"Business Development Manager"}
+              email={"shafi@comfortplus.com"}
+              image={"👨🏻"}
+            ></TeamCard>
+            <TeamCard
+              name={"Shafi Muhammed"}
+              role={"Business Development Manager"}
+              email={"shafi@comfortplus.com"}
+              image={"👨🏻"}
+            ></TeamCard>
           </div>
         </div>
       </div>
@@ -100,4 +128,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

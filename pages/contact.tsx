@@ -5,7 +5,7 @@ import Scanner from "../public/whatsapp contact.jpg";
 import ContactCard from "@/components/contactCard";
 import Image from "next/image";
 
-const contact = () => {
+const Contact = () => {
   return (
     <div className="container mx-auto  flex">
       <Sidebar></Sidebar>
@@ -46,4 +46,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
