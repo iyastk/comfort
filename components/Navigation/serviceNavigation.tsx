@@ -20,13 +20,13 @@ const ServiceNavigation = () => {
   const { handleClick } = useServiceContext();
   const services: Service[] = [
     { id: 1, name: "Hospitality Furnishing", slug: "hospitalityFurnishing" },
-    { id: 2, name: "Upholstery", slug: "upholstery" },
-    { id: 3, name: "Joinery and Fit-Out", slug: "joineryAndFitOut" },
-    { id: 4, name: "Curtains and Blinds", slug: "curtainsAndBlinds" },
-    { id: 5, name: "Majlis designs", slug: "MajlisDesigns" },
-    { id: 6, name: "Office furnishing", slug: "officeFurnishing" },
-    { id: 7, name: "Shop Fittings", slug: "shopFittings" },
-    { id: 8, name: "Home furnishing", slug: "homeFurnishing" },
+    { id: 2, name: "Majlis designs", slug: "MajlisDesigns" },
+    { id: 3, name: "Shop Fittings", slug: "shopFittings" },
+    { id: 4, name: "Office furnishing", slug: "officeFurnishing" },
+    { id: 5, name: "Home furnishing", slug: "homeFurnishing" },
+    { id: 6, name: "Joinery and Fit-Out", slug: "joineryAndFitOut" },
+    { id: 7, name: "Curtains and Blinds", slug: "curtainsAndBlinds" },
+    { id: 8, name: "Upholstery", slug: "upholstery" },
   ];
 
   return (

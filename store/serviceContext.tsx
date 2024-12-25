@@ -92,13 +92,7 @@ const services = {
     employee_7,
   ],
   curtainsAndBlinds: [sample_14, sample_15, sample_16, sample_17],
-  premiumLeatherTrading: [
-    sample_10,
-    sample_11,
-    sample_12,
-    sample_13,
-    sample_18,
-  ],
+  MajlisDesigns: [sample_10, sample_11, sample_12, sample_13, sample_18],
   officeFurnishing: [
     sample_3,
     sample_4,
