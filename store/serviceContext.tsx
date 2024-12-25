@@ -177,11 +177,11 @@ const serviceData = [
       "We offer ergonomic desks, chairs, and storage solutions for offices, including conference room furniture and reception area furnishings, designed for comfort, functionality, and a professional look.",
   },
   {
-    title: "Premium Leather Trading Solutions",
+    title: "Majlis designs",
     slug: "premiumLeatherTrading",
-    icon: "🏷️",
+    icon: "🕌",
     description:
-      "We provide a range of high-quality leathers for upholstery, furniture, fashion, and commercial applications, offering genuine, synthetic, and specialty hides for durability, aesthetic appeal, and functionality.",
+      "Enhance your space with exquisite Majlis designs, blending tradition and modernity. we Create a welcoming Majlis with custom seating, luxurious fabrics, and elegant décor, blending tradition and modern style for timeless sophistication.",
   },
   {
     title: "home furnishing",

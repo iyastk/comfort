@@ -28,10 +28,10 @@ const features2 = [
   },
 
   {
-    title: "Curtains and Blinds Solutions",
-    icon: "🪟",
+    title: "Majlis designs",
+    icon: "🕌",
     description:
-      "We provide a variety of custom curtains and blinds, including drapes, Roman blinds, Venetian blinds, and motorized options. Our solutions offer style, privacy, and light control, with expert design, fabrication, and installation.",
+      "Enhance your space with exquisite Majlis designs, blending tradition and modernity. we Create a welcoming Majlis with custom seating, luxurious fabrics, and elegant décor, blending tradition and modern style for timeless sophistication.",
   },
 ];
 

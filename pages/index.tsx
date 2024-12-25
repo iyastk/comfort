@@ -48,23 +48,23 @@ export default function Home() {
         </header>
 
         {/* Main Content */}
-        <main className=" flex flex-col sm:flex   sm:justify-center sm:p-8 sm:relative">
+        <main className="flex flex-col sm:flex sm:flex-row  sm:justify-around sm:p-8 sm:relative">
           <div className="  sm:h-screen mt-4 ">
             {/* Video Component */}
             <video
-              src="/images/video_7.mp4"
+              src="/images/video_4.mp4"
               autoPlay
               loop
               muted
-              className=" w-full h-5/6	 object-cover"
+              className="  h-5/6	 object-contain"
             />
           </div>
           <div
-            className="hidden  sm:block sm:absolute sm:top-12 sm:right-0 sm:mr-8 sm:w-3/5    sm:bg-black sm:opacity-50  "
+            className="hidden  sm:block sm:absolute sm:top-12 sm:left-96 sm:ml-11		 sm:mr-8 sm:w-[38%]		  sm:z-0   sm:bg-black sm:opacity-50  "
             style={isAboveSm ? { height: "75%" } : { height: "0" }}
           ></div>
 
-          <div className="flex p-6 flex-col justify-center text-center sm:absolute sm:top-40 sm:right-60  sm:p-2 sm:flex sm:flex-col sm:justify-center sm:text-center md:text-left md:flex md:flex-col md:justify-center md:items-center">
+          <div className="flex p-6 flex-col justify-center text-center z-40">
             <div className=" flex justify-center  sm:mb-4">
               <Image src={pillow1} width={100} alt="pillow1" className="" />
               <Image src={pillow2} width={100} alt="pillow2" />
@@ -84,6 +84,16 @@ export default function Home() {
                 View More
               </div>
             </Link>
+          </div>
+          <div className=" hidden sm:block sm:h-screen mt-4 ">
+            {/* Video Component */}
+            <video
+              src="/images/video_7.mp4"
+              autoPlay
+              loop
+              muted
+              className=" w-full h-5/6	 object-contain"
+            />
           </div>
         </main>
         <Services></Services>

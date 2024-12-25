@@ -16,6 +16,9 @@ module.exports = {
       animation: {
         rotate360: "rotate360 1s linear infinite",
       },
+      // width:{
+
+      // },
       keyframes: {
         rotate360: {
           "0%": { transform: "rotate(0deg)" },
