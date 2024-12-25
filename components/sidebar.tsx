@@ -7,7 +7,7 @@ import Logo from "@/public/logo.png";
 
 const Sidebar = () => {
   return (
-    <div className="w-1/4 flex flex-col p-4 ">
+    <div className="hidden sm:w-1/4 sm:flex sm:flex-col p-4 ">
       <div className="sticky top-0 bg-white">
         <div>
           <Image src={Logo} width={200} alt="comfort logo" className="" />

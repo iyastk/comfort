@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-slate-800	 grid col-span-full text-white py-32">
-      <ul className="list-none grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] gap-8 items-center">
+      <ul className="list-none grid grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] sm:gap-8 items-center">
         <li className="nav__item">
           <Link
             href="/contact"

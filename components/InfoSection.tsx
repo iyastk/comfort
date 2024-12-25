@@ -2,11 +2,13 @@ import VerticalImageSlider from "./imageSlider";
 
 export default function InfoSection() {
   return (
-    <div className="container flex  mx-auto bg-white  py-16  items-center justify-between">
+    <div className=" sm:flex   bg-white    sm:items-center sm:justify-between p-2">
       {/* Left Text Section */}
-      <div className="space-y-6 w-1/2  ">
-        <h1 className="text-5xl font-bold text-gray-800">Few words</h1>
-        <p className="text-gray-600 leading-relaxed">
+      <div className="  sm:w-1/2  ">
+        <h1 className="text-4xl p-2 text-center sm:text-left  sm:text-5xl font-bold text-gray-800">
+          Few words
+        </h1>
+        <p className="text-gray-600 p-4 sm:p-0 leading-relaxed">
           Comfort Furniture Factory is a leading supplier of custom-built
           contract furniture, specializing in solutions for the hospitality and
           leisure industries. We offer a wide range of high-quality products,

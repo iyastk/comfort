@@ -11,30 +11,30 @@ const About = () => {
       <Sidebar></Sidebar>
       <div className="w-full  bg-slate-100  ">
         <div className="  bg-slate-100   ">
-          <div className="h-screen">
+          <div className="sm:h-screen">
             <Image
               src={AboutHero}
               alt="photo of a sofa and lamb to represent about"
               objectFit="contain"
               object-position="bottom"
-              className="h-4/5"
+              className="sm:h-4/5 "
             ></Image>
             {/* <h1 className="absolute top-28 left-44 text-4xl font-semibold  p-4">
               Who We Are <span className="text-red-600">?</span>
             </h1> */}
           </div>
           <div>
-            <div className="flex -mt-32 bg-slate-100 w-full">
+            <div className="flex sm:-mt-32 bg-slate-100 w-full">
               <div className="flex justify-center items-center w-full ">
                 <Image
                   src={AboutPhoto}
                   alt="photo of a sofa and lamb to represent about"
-                  className="p-10 "
+                  className="sm:p-10 hidden sm:block "
                   width={500}
                 ></Image>
               </div>
 
-              <div className="px-10 bg-slate-100 py-5">
+              <div className="sm:px-10 bg-slate-100 py-5">
                 <h1 className="text-3xl  py-6">About us</h1>
                 <div className="text-justify p-5">
                   {" "}
@@ -96,7 +96,7 @@ const About = () => {
         {/* our team section */}
         <div className="bg-white p-4">
           <h1 className="text-3xl  py-6 text-center p-2">Our Team</h1>
-          <div className="flex flex-wrap gap-5 items-center justify-center">
+          <div className="flex flex-col sm:flex-wrap gap-5 items-center justify-center">
             <TeamCard
               name={"Shafi Muhammed"}
               role={"Business Development Manager"}

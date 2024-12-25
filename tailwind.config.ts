@@ -9,6 +9,10 @@ module.exports = {
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],
       },
+      screens: {
+        xs: "480px", // Extra-small breakpoint at 480px
+      },
+
       animation: {
         rotate360: "rotate360 1s linear infinite",
       },

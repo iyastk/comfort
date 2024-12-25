@@ -25,7 +25,7 @@ export default function RotatableImage() {
 
   return (
     <div
-      className="relative flex justify-center items-center h-screen "
+      className="relative flex justify-center items-center sm:h-screen "
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp} // Stop dragging if the mouse leaves the container

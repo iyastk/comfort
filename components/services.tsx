@@ -3,6 +3,7 @@ import React from "react";
 // components/FeatureSection.js
 import Image from "next/image";
 import houseImage from "/public/images/house.png";
+import useCheckScreen from "@/components/utils/checkScreen";
 
 const features1 = [
   {
@@ -35,31 +36,46 @@ const features2 = [
 ];
 
 const Services = () => {
+  const isAboveSm = useCheckScreen();
+
   return (
     <div>
       <div className="flex items-center justify-center bg-white px-1">
         <h1 className="text-5xl 	 mt-8	">Our Services</h1>
       </div>
 
-      <div className="flex bg-white flex-col lg:flex-row items-center lg:justify-between  mx-auto p-1">
+      <div className="flex  bg-white flex-col sm:flex-row  sm:justify-between  sm:mx-auto sm:p-1">
         {/* Features List */}
-        <div className="flex flex-col w-1/3 gap-6">
+        <div className="flex flex-col sm:w-1/3  gap-6 p-6 sm:p-0">
           {features1.map((feature, index) => (
             <div
               key={index}
-              className="flex items-start text-right	 sm:text-left space-x-4"
+              className="flex items-start gap-6 sm:gap-0 sm:text-left	 sm:space-x-4"
             >
-              <div>
-                <h3 className="text-lg font-semibold">{feature.title}</h3>
-                <p className="text-gray-600 mt-2">{feature.description}</p>
-              </div>
-              <div className="text-yellow-500 text-3xl">{feature.icon}</div>
+              {isAboveSm ? (
+                <>
+                  <div>
+                    <h3 className="text-lg font-semibold">{feature.title}</h3>
+                    <p className="text-gray-600 mt-2">{feature.description}</p>
+                  </div>
+                  <div className="text-yellow-500 text-3xl">{feature.icon}</div>
+                </>
+              ) : (
+                <>
+                  <div className="text-yellow-500 text-3xl">{feature.icon}</div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold">{feature.title}</h3>
+                    <p className="text-gray-600 mt-2">{feature.description}</p>
+                  </div>
+                </>
+              )}
             </div>
           ))}
         </div>
 
         {/* Feature Image */}
-        <div className="mt-10 p-6 w-1/3  lg:mt-0 lg:w-1/2 flex justify-center">
+        <div className="mt-10 p-6 sm:w-1/3  lg:mt-0 lg:w-1/2 flex justify-center">
           <Image
             src={houseImage}
             alt="Feature Image"
@@ -69,9 +85,9 @@ const Services = () => {
           />
         </div>
 
-        <div className="flex flex-col w-1/3 gap-6 ">
+        <div className="flex flex-col sm:w-1/3 gap-6 p-6 sm:p-0">
           {features2.map((feature, index) => (
-            <div key={index} className="flex items-start space-x-4">
+            <div key={index} className="flex items-start space-x-4 ">
               <div className="text-yellow-500 text-3xl">{feature.icon}</div>
 
               <div>

@@ -7,8 +7,8 @@ import chair from "/public/images/chair_3.png";
 
 const Portfolio = () => {
   return (
-    <div className="flex flex-wrap justify-between items-center w-full p-4 pl-24">
-      <div className="  flex flex-col justify-center text-center items-center  md:text-left md:flex md:flex-col md:justify-center md:items-center">
+    <div className="p-2 sm:grid sm:grid-cols-3 sm:gap-3 ">
+      <div className="flex flex-col justify-center items-center ">
         <Image
           src={chair}
           alt="Feature Image"
@@ -27,21 +27,20 @@ const Portfolio = () => {
           </div>
         </Link>
       </div>
-      <div className="flex  gap-3 h-80 -mb-7  ">
-        <Image
-          src={Display_1}
-          alt="Feature Image"
-          width={400}
-          //   className="rounded-lg shadow-lg"
-        />
-        <Image
-          src={Display_2}
-          alt="Feature Image"
-          width={400}
+      <Image
+        src={Display_1}
+        alt="Feature Image"
+        className="object-cover w-full h-full hidden sm:block"
 
-          //   className="rounded-lg shadow-lg"
-        />
-      </div>
+        //   className="rounded-lg shadow-lg"
+      />
+      <Image
+        src={Display_2}
+        alt="Feature Image"
+        className="object-cover w-full h-full hidden sm:block"
+
+        //   className="rounded-lg shadow-lg"
+      />
     </div>
   );
 };

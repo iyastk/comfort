@@ -24,7 +24,7 @@ export default function VerticalImageSlider() {
   };
 
   return (
-    <div className="relative w-full max-w-md  m-2 overflow-hidden">
+    <div className="relative w-full max-w-md  sm:m-2 overflow-hidden">
       <div className="relative h-96 overflow-hidden">
         {images.map((image, index) => (
           <div
