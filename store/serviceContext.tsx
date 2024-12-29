@@ -5,12 +5,10 @@ import { StaticImageData } from "next/image";
 
 import employee_1 from "/public/images/Portfolio/worker/Employee-1.jpeg";
 import employee_2 from "/public/images/Portfolio/worker/Employee-2.jpeg";
-import employee_3 from "/public/images/Portfolio/worker/Employee-3.jpeg";
 import employee_4 from "/public/images/Portfolio/worker/Employee-4.jpeg";
 import employee_5 from "/public/images/Portfolio/worker/Employee-5.jpeg";
 import employee_6 from "/public/images/Portfolio/worker/Employee-6.jpeg";
 import employee_7 from "/public/images/Portfolio/worker/Employee-7.jpeg";
-import employee_8 from "/public/images/Portfolio/worker/Employee-8.jpeg";
 import hospitality_1 from "@/public/images/Portfolio/hospitality/hospitality-1.jpeg";
 import hospitality_2 from "@/public/images/Portfolio/hospitality/hospitality-2.jpeg";
 import hospitality_3 from "@/public/images/Portfolio/hospitality/hospitality-3.jpeg";
@@ -19,15 +17,21 @@ import hospitality_5 from "@/public/images/Portfolio/hospitality/hospitality-5.j
 import hospitality_6 from "@/public/images/Portfolio/hospitality/hospitality-6.jpeg";
 import hospitality_7 from "@/public/images/Portfolio/hospitality/hospitality-7.jpeg";
 import hospitality_8 from "@/public/images/Portfolio/hospitality/hospitality-8.jpeg";
-import hospitality_9 from "@/public/images/Portfolio/hospitality/hospitality-9.jpeg";
-import hospitality_10 from "@/public/images/Portfolio/hospitality/hospitality-10.jpeg";
-import hospitality_11 from "@/public/images/Portfolio/hospitality/hospitality-11.jpeg";
-import hospitality_12 from "@/public/images/Portfolio/hospitality/hospitality-12.jpeg";
-import hospitality_13 from "@/public/images/Portfolio/hospitality/hospitality-13.jpeg";
-import hospitality_14 from "@/public/images/Portfolio/hospitality/hospitality-14.jpeg";
 import hospitality_15 from "@/public/images/Portfolio/hospitality/hospitality-15.jpg";
-import hospitality_16 from "@/public/images/Portfolio/hospitality/hospitality-16.jpg";
 import hospitality_17 from "@/public/images/Portfolio/hospitality/hospitality-17.jpg";
+
+// import Majlis_1
+import Majlis_1 from "@/public/images/Portfolio/majlis/Majlis-1.jpeg";
+import Majlis_2 from "@/public/images/Portfolio/majlis/Majlis-2.jpeg";
+import Majlis_3 from "@/public/images/Portfolio/majlis/Majlis-3.jpg";
+import Majlis_4 from "@/public/images/Portfolio/majlis/Majlis-4.jpeg";
+
+//import shopFitting
+import shop_1 from "@/public/images/Portfolio/Shop/shop-1.jpeg";
+import shop_2 from "@/public/images/Portfolio/Shop/shop-2.jpeg";
+import shop_3 from "@/public/images/Portfolio/Shop/shop-3.jpeg";
+import shop_4 from "@/public/images/Portfolio/Shop/shop-4.jpeg";
+import shop_5 from "@/public/images/Portfolio/sample-14.jpeg";
 
 import sample_3 from "@/public/images/Portfolio/sample-3.jpeg";
 import sample_4 from "@/public/images/Portfolio/sample-4.jpeg";
@@ -36,15 +40,9 @@ import sample_6 from "@/public/images/Portfolio/sample-6.jpeg";
 import sample_7 from "@/public/images/Portfolio/sample-7.jpeg";
 import sample_8 from "@/public/images/Portfolio/sample-8.jpeg";
 import sample_9 from "@/public/images/Portfolio/sample-9.jpeg";
-import sample_10 from "@/public/images/Portfolio/sample-10.jpeg";
-import sample_11 from "@/public/images/Portfolio/sample-11.jpeg";
-import sample_12 from "@/public/images/Portfolio/sample-12.jpeg";
-import sample_13 from "@/public/images/Portfolio/sample-13.jpeg";
-import sample_14 from "@/public/images/Portfolio/sample-14.jpeg";
 import sample_15 from "@/public/images/Portfolio/sample-15.jpeg";
 import sample_16 from "@/public/images/Portfolio/sample-16.jpeg";
 import sample_17 from "@/public/images/Portfolio/sample-17.jpeg";
-import sample_18 from "@/public/images/Portfolio/sample-18.jpeg";
 
 import gallary_1 from "/public/images/gallary/gallary_1.webp";
 import gallary_2 from "/public/images/gallary/gallary_2.jpeg";
@@ -63,47 +61,6 @@ import gallary_13 from "/public/images/gallary/gallary_13.jpg";
 // Define the types for the services and the context
 const services = {
   hospitalityFurnishing: [
-    hospitality_5,
-    hospitality_6,
-    hospitality_7,
-    hospitality_8,
-    hospitality_9,
-    hospitality_10,
-    hospitality_11,
-    hospitality_12,
-    hospitality_13,
-    hospitality_14,
-    hospitality_15,
-    hospitality_16,
-    hospitality_17,
-    hospitality_1,
-    hospitality_2,
-    hospitality_3,
-    hospitality_4,
-  ],
-  upholstery: [employee_4, employee_5, employee_6],
-  joineryAndFitOut: [
-    employee_1,
-    employee_2,
-    employee_3,
-    employee_4,
-    employee_5,
-    employee_6,
-    employee_7,
-  ],
-  curtainsAndBlinds: [sample_14, sample_15, sample_16, sample_17],
-  MajlisDesigns: [sample_10, sample_11, sample_12, sample_13, sample_18],
-  officeFurnishing: [
-    sample_3,
-    sample_4,
-    sample_5,
-    sample_6,
-    sample_7,
-    sample_8,
-    sample_9,
-  ],
-  shopFittings: [employee_6, employee_7, employee_8],
-  homeFurnishing: [
     gallary_1,
     gallary_2,
     gallary_3,
@@ -117,7 +74,32 @@ const services = {
     gallary_11,
     gallary_12,
     gallary_13,
+    hospitality_5,
+    hospitality_6,
+    hospitality_7,
+    hospitality_8,
+    hospitality_15,
+    hospitality_17,
+    hospitality_1,
+    hospitality_2,
+    hospitality_3,
+    hospitality_4,
   ],
+  upholstery: [employee_4, employee_5, employee_6],
+  joineryAndFitOut: [employee_1, employee_2, employee_6, employee_7],
+  curtainsAndBlinds: [sample_15, sample_16, sample_17],
+  MajlisDesigns: [Majlis_1, Majlis_2, Majlis_3, Majlis_4],
+  officeFurnishing: [
+    sample_3,
+    sample_4,
+    sample_5,
+    sample_6,
+    sample_7,
+    sample_8,
+    sample_9,
+  ],
+  shopFittings: [shop_1, shop_2, shop_3, shop_4, shop_5],
+  homeFurnishing: [],
 };
 const serviceData = [
   {
@@ -209,7 +191,9 @@ interface ServiceProviderProps {
 export const ServiceProvider: React.FC<ServiceProviderProps> = ({
   children,
 }) => {
-  const [selectedImages, setSelectedImages] = useState(services.homeFurnishing); // Default set
+  const [selectedImages, setSelectedImages] = useState<StaticImageData[]>(
+    services.homeFurnishing
+  ); // Default set
   const router = useRouter();
 
   const handleClick = (serviceSlug: ServiceKeys) => {
