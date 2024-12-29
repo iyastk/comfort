@@ -100,25 +100,25 @@ const About = () => {
             <TeamCard
               name={"Shafi Muhammed"}
               role={"Business Development Manager"}
-              email={"shafi@comfortplus.com"}
+              email={"shafi@comfortsplus.com"}
               image={"👨🏻"}
             ></TeamCard>
             <TeamCard
               name={"Shafi Muhammed"}
               role={"Business Development Manager"}
-              email={"shafi@comfortplus.com"}
+              email={"shafi@comfortsplus.com"}
               image={"👨🏻"}
             ></TeamCard>
             <TeamCard
               name={"Shafi Muhammed"}
               role={"Business Development Manager"}
-              email={"shafi@comfortplus.com"}
+              email={"shafi@comfortsplus.com"}
               image={"👨🏻"}
             ></TeamCard>
             <TeamCard
               name={"Shafi Muhammed"}
               role={"Business Development Manager"}
-              email={"shafi@comfortplus.com"}
+              email={"shafi@comfortsplus.com"}
               image={"👨🏻"}
             ></TeamCard>
           </div>

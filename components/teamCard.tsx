@@ -15,7 +15,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ name, email, role, image }) => {
         <h2 className="text-md font-semibold text-gray-800  ">{name}</h2>
         <p className="text-gray-600 mb-2">{role}</p>
         <p className="text-blue-500">
-          <a href="mailto:john.doe@example.com">{email}</a>
+          <a href="">{email}</a>
         </p>
       </div>
     </div>

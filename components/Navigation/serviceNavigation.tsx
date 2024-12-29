@@ -6,27 +6,22 @@ interface Service {
   id: number;
   name: string;
   slug:
-    | "hospitalityFurnishing"
-    | "upholstery"
-    | "joineryAndFitOut"
-    | "curtainsAndBlinds"
     | "MajlisDesigns"
     | "officeFurnishing"
     | "shopFittings"
-    | "homeFurnishing"; // Strict slug types
+    | "homeFurnishing"
+    | "FactoryWorks";
+  // Strict slug types
 }
 
 const ServiceNavigation = () => {
   const { handleClick } = useServiceContext();
   const services: Service[] = [
-    { id: 1, name: "Hospitality Furnishing", slug: "hospitalityFurnishing" },
-    { id: 2, name: "Majlis designs", slug: "MajlisDesigns" },
-    { id: 3, name: "Shop Fittings", slug: "shopFittings" },
-    { id: 4, name: "Office furnishing", slug: "officeFurnishing" },
-    { id: 5, name: "Home furnishing", slug: "homeFurnishing" },
-    { id: 6, name: "Joinery and Fit-Out", slug: "joineryAndFitOut" },
-    { id: 7, name: "Curtains and Blinds", slug: "curtainsAndBlinds" },
-    { id: 8, name: "Upholstery", slug: "upholstery" },
+    { id: 1, name: "Majlis designs", slug: "MajlisDesigns" },
+    { id: 2, name: "Shop Fittings", slug: "shopFittings" },
+    { id: 3, name: "Office furnishing", slug: "officeFurnishing" },
+    { id: 4, name: "Home furnishing", slug: "homeFurnishing" },
+    { id: 4, name: "Factory Works", slug: "FactoryWorks" },
   ];
 
   return (

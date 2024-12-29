@@ -8,7 +8,7 @@ import useCheckScreen from "@/components/utils/checkScreen";
 const features1 = [
   {
     title: "Complete Upholstery Solutions",
-    icon: "🛋️",
+    icon: "⚙️",
     description:
       "We offer professional upholstery services for residential, commercial, automotive, and marine needs, including reupholstering, frame repairs, and restoring furniture with high-quality materials for comfort and style.",
   },
@@ -29,7 +29,7 @@ const features2 = [
 
   {
     title: "Majlis designs",
-    icon: "🕌",
+    icon: "🛋️",
     description:
       "Enhance your space with exquisite Majlis designs, blending tradition and modernity. we Create a welcoming Majlis with custom seating, luxurious fabrics, and elegant décor, blending tradition and modern style for timeless sophistication.",
   },

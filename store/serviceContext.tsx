@@ -5,20 +5,12 @@ import { StaticImageData } from "next/image";
 
 import employee_1 from "/public/images/Portfolio/worker/Employee-1.jpeg";
 import employee_2 from "/public/images/Portfolio/worker/Employee-2.jpeg";
+import employee_3 from "/public/images/Portfolio/worker/Employee-3.jpeg";
 import employee_4 from "/public/images/Portfolio/worker/Employee-4.jpeg";
 import employee_5 from "/public/images/Portfolio/worker/Employee-5.jpeg";
 import employee_6 from "/public/images/Portfolio/worker/Employee-6.jpeg";
 import employee_7 from "/public/images/Portfolio/worker/Employee-7.jpeg";
-import hospitality_1 from "@/public/images/Portfolio/hospitality/hospitality-1.jpeg";
-import hospitality_2 from "@/public/images/Portfolio/hospitality/hospitality-2.jpeg";
-import hospitality_3 from "@/public/images/Portfolio/hospitality/hospitality-3.jpeg";
-import hospitality_4 from "@/public/images/Portfolio/hospitality/hospitality-4.jpeg";
-import hospitality_5 from "@/public/images/Portfolio/hospitality/hospitality-5.jpeg";
-import hospitality_6 from "@/public/images/Portfolio/hospitality/hospitality-6.jpeg";
-import hospitality_7 from "@/public/images/Portfolio/hospitality/hospitality-7.jpeg";
-import hospitality_8 from "@/public/images/Portfolio/hospitality/hospitality-8.jpeg";
-import hospitality_15 from "@/public/images/Portfolio/hospitality/hospitality-15.jpg";
-import hospitality_17 from "@/public/images/Portfolio/hospitality/hospitality-17.jpg";
+import employee_8 from "/public/images/Portfolio/worker/Employee-8.jpeg";
 
 // import Majlis_1
 import Majlis_1 from "@/public/images/Portfolio/majlis/Majlis-1.jpeg";
@@ -31,82 +23,74 @@ import shop_1 from "@/public/images/Portfolio/Shop/shop-1.jpeg";
 import shop_2 from "@/public/images/Portfolio/Shop/shop-2.jpeg";
 import shop_3 from "@/public/images/Portfolio/Shop/shop-3.jpeg";
 import shop_4 from "@/public/images/Portfolio/Shop/shop-4.jpeg";
-import shop_5 from "@/public/images/Portfolio/sample-14.jpeg";
 
-import sample_3 from "@/public/images/Portfolio/sample-3.jpeg";
-import sample_4 from "@/public/images/Portfolio/sample-4.jpeg";
-import sample_5 from "@/public/images/Portfolio/sample-5.jpeg";
-import sample_6 from "@/public/images/Portfolio/sample-6.jpeg";
-import sample_7 from "@/public/images/Portfolio/sample-7.jpeg";
-import sample_8 from "@/public/images/Portfolio/sample-8.jpeg";
-import sample_9 from "@/public/images/Portfolio/sample-9.jpeg";
-import sample_15 from "@/public/images/Portfolio/sample-15.jpeg";
-import sample_16 from "@/public/images/Portfolio/sample-16.jpeg";
-import sample_17 from "@/public/images/Portfolio/sample-17.jpeg";
+import office_1 from "@/public/images/Portfolio/office/Office-1.jpeg";
+import office_2 from "@/public/images/Portfolio/office/Office-2.jpeg";
+import office_3 from "@/public/images/Portfolio/office/Office-3.jpeg";
+import office_4 from "@/public/images/Portfolio/office/Office-4.jpeg";
+import office_5 from "@/public/images/Portfolio/office/Office-5.jpeg";
+import office_6 from "@/public/images/Portfolio/office/Office-6.jpeg";
+import office_7 from "@/public/images/Portfolio/office/Office-7.jpg";
+import office_8 from "@/public/images/Portfolio/office/Office-8.jpg";
+import office_9 from "@/public/images/Portfolio/office/Office-9.jpg";
+import office_10 from "@/public/images/Portfolio/office/Office-10.jpeg";
 
-import gallary_1 from "/public/images/gallary/gallary_1.webp";
-import gallary_2 from "/public/images/gallary/gallary_2.jpeg";
-import gallary_3 from "/public/images/gallary/gallary_3.jpg";
-import gallary_4 from "/public/images/gallary/gallary_4.jpg";
-import gallary_5 from "/public/images/gallary/gallary_5.jpg";
-import gallary_6 from "/public/images/gallary/gallary_6.jpg";
-import gallary_7 from "/public/images/gallary/gallary_7.jpg";
-import gallary_8 from "/public/images/gallary/gallary_8.jpg";
-import gallary_9 from "/public/images/gallary/gallary_9.jpg";
-import gallary_10 from "/public/images/gallary/gallary_10.jpg";
-import gallary_11 from "/public/images/gallary/gallary_11.jpg";
-import gallary_12 from "/public/images/gallary/gallary_12.jpg";
-import gallary_13 from "/public/images/gallary/gallary_13.jpg";
+import home_1 from "@/public/images/Portfolio/home/Home-1.jpeg";
+import home_2 from "@/public/images/Portfolio/home/Home-2.jpeg";
+import home_3 from "@/public/images/Portfolio/home/Home-3.jpg";
+import home_4 from "@/public/images/Portfolio/home/Home-4.jpg";
+import home_5 from "@/public/images/Portfolio/home/Home-5.jpg";
+import home_6 from "@/public/images/Portfolio/home/Home-6.jpg";
+import home_7 from "@/public/images/Portfolio/home/Home-7.jpg";
+import home_8 from "@/public/images/Portfolio/home/Home-8.jpg";
+import home_9 from "@/public/images/Portfolio/home/Home-9.jpeg";
+import home_10 from "@/public/images/Portfolio/home/Home-10.jpg";
 
 // Define the types for the services and the context
 const services = {
-  hospitalityFurnishing: [
-    gallary_1,
-    gallary_2,
-    gallary_3,
-    gallary_4,
-    gallary_5,
-    gallary_6,
-    gallary_7,
-    gallary_8,
-    gallary_9,
-    gallary_10,
-    gallary_11,
-    gallary_12,
-    gallary_13,
-    hospitality_5,
-    hospitality_6,
-    hospitality_7,
-    hospitality_8,
-    hospitality_15,
-    hospitality_17,
-    hospitality_1,
-    hospitality_2,
-    hospitality_3,
-    hospitality_4,
-  ],
-  upholstery: [employee_4, employee_5, employee_6],
-  joineryAndFitOut: [employee_1, employee_2, employee_6, employee_7],
-  curtainsAndBlinds: [sample_15, sample_16, sample_17],
   MajlisDesigns: [Majlis_1, Majlis_2, Majlis_3, Majlis_4],
-  officeFurnishing: [
-    sample_3,
-    sample_4,
-    sample_5,
-    sample_6,
-    sample_7,
-    sample_8,
-    sample_9,
+  FactoryWorks: [
+    employee_1,
+    employee_2,
+    employee_3,
+    employee_4,
+    employee_5,
+    employee_6,
+    employee_7,
+    employee_8,
   ],
-  shopFittings: [shop_1, shop_2, shop_3, shop_4, shop_5],
-  homeFurnishing: [],
+  officeFurnishing: [
+    office_1,
+    office_2,
+    office_3,
+    office_4,
+    office_5,
+    office_6,
+    office_7,
+    office_8,
+    office_9,
+    office_10,
+  ],
+  shopFittings: [shop_1, shop_2, shop_3, shop_4],
+  homeFurnishing: [
+    home_1,
+    home_2,
+    home_3,
+    home_4,
+    home_5,
+    home_6,
+    home_7,
+    home_8,
+    home_9,
+    home_10,
+  ],
 };
 const serviceData = [
   {
     title: "Complete Upholstery Solutions",
     slug: "upholstery",
 
-    icon: "🛋️",
+    icon: "⚙️",
 
     description:
       "We offer professional upholstery services for residential, commercial, automotive, and marine needs, including reupholstering, frame repairs, and restoring furniture with high-quality materials for comfort and style.",
@@ -132,7 +116,7 @@ const serviceData = [
     title: "Shop Fittings",
     slug: "shopFittings",
 
-    icon: "⚙️",
+    icon: "🔨",
     description:
       "We supply retail store fixtures, including shelving, display units, counters, and lighting, to enhance product presentation and create an inviting atmosphere.",
   },
@@ -155,7 +139,7 @@ const serviceData = [
   {
     title: "Majlis designs",
     slug: "premiumLeatherTrading",
-    icon: "🕌",
+    icon: "🛋️",
     description:
       "Enhance your space with exquisite Majlis designs, blending tradition and modernity. we Create a welcoming Majlis with custom seating, luxurious fabrics, and elegant décor, blending tradition and modern style for timeless sophistication.",
   },
