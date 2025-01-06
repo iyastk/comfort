@@ -7,7 +7,7 @@ import chair from "/public/images/chair_3.png";
 
 const Portfolio = () => {
   return (
-    <div className="p-2 sm:grid sm:grid-cols-3 sm:gap-3 ">
+    <div className="p-2 md:grid md:grid-cols-3 md:gap-3 ">
       <div className="flex flex-col justify-center items-center ">
         <Image
           src={chair}
@@ -30,14 +30,14 @@ const Portfolio = () => {
       <Image
         src={Display_1}
         alt="Feature Image"
-        className="object-cover w-full h-full hidden sm:block"
+        className="object-cover w-full h-full hidden md:block"
 
         //   className="rounded-lg shadow-lg"
       />
       <Image
         src={Display_2}
         alt="Feature Image"
-        className="object-cover w-full h-full hidden sm:block"
+        className="object-cover w-full h-full hidden md:block"
 
         //   className="rounded-lg shadow-lg"
       />

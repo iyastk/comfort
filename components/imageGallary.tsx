@@ -10,7 +10,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedImages }) => {
   return (
     <>
       <div className="bg-slate-100 w-full mt-10 p-4">
-        <div className=" grid grid-flow-row-  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className=" grid grid-flow-row-  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {selectedImages.map((src, index) => (
             <div key={index} className="container mx-auto relative group  ">
               <Image

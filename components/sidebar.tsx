@@ -4,27 +4,45 @@ import ServiceNavigation from "@/components/Navigation/serviceNavigation";
 import Navigation from "@/components/Navigation/mainNavigation";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
+import { useServiceContext } from "@/store/serviceContext";
 
 const Sidebar = () => {
-  return (
-    <div className="hidden sm:w-1/4 sm:flex sm:flex-col p-4 ">
-      <div className="sticky top-0 bg-white">
-        <div>
-          <Image src={Logo} width={200} alt="comfort logo" className="" />
-          <p className="text-gray-600 p-1">Your comfort is our first choice.</p>
-        </div>
-        <div className="absolute top-28">
-          <nav className=" flex flex-col gap-3  my-4 p-6">
-            <Navigation></Navigation>
-          </nav>
+  const { toggleSidebar, isOpen } = useServiceContext();
 
-          <p className=" text-emerald-600 p-1">See our latest projects.</p>
-          <nav className="flex flex-col gap-3 p-2 px-6">
-            <ServiceNavigation></ServiceNavigation>
-          </nav>
+  return (
+    <>
+      <button
+        className="p-2  text-white bg-green-500 rounded-md fixed top-4 left-4 z-50 md:hidden"
+        onClick={toggleSidebar}
+      >
+        {isOpen ? "Close" : "Menu"}
+      </button>
+
+      <div
+        className={`w-full md:w-1/4 md:flex md:flex-col md:p-4 ${
+          isOpen ? "block" : "hidden"
+        }`}
+      >
+        <div className="sticky top-12 bg-white">
+          <div>
+            <Image src={Logo} width={200} alt="comfort logo" className="" />
+            <p className="text-gray-600 p-1">
+              Your comfort is our first choice.
+            </p>
+          </div>
+          <div className="absolute top-28">
+            <nav className=" flex flex-col gap-3  my-4 p-6">
+              <Navigation></Navigation>
+            </nav>
+
+            <p className=" text-emerald-600 p-1">See our latest projects.</p>
+            <nav className="flex flex-col gap-3 p-2 px-6">
+              <ServiceNavigation></ServiceNavigation>
+            </nav>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

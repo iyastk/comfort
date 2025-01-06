@@ -3,11 +3,9 @@ import React, { createContext, useState, useContext, ReactNode } from "react";
 import { useRouter } from "next/router";
 import { StaticImageData } from "next/image";
 
-import employee_1 from "/public/images/Portfolio/worker/Employee-1.jpeg";
 import employee_2 from "/public/images/Portfolio/worker/Employee-2.jpeg";
 import employee_3 from "/public/images/Portfolio/worker/Employee-3.jpeg";
 import employee_4 from "/public/images/Portfolio/worker/Employee-4.jpeg";
-import employee_5 from "/public/images/Portfolio/worker/Employee-5.jpeg";
 import employee_6 from "/public/images/Portfolio/worker/Employee-6.jpeg";
 import employee_7 from "/public/images/Portfolio/worker/Employee-7.jpeg";
 import employee_8 from "/public/images/Portfolio/worker/Employee-8.jpeg";
@@ -17,6 +15,12 @@ import Majlis_1 from "@/public/images/Portfolio/majlis/Majlis-1.jpeg";
 import Majlis_2 from "@/public/images/Portfolio/majlis/Majlis-2.jpeg";
 import Majlis_3 from "@/public/images/Portfolio/majlis/Majlis-3.jpg";
 import Majlis_4 from "@/public/images/Portfolio/majlis/Majlis-4.jpeg";
+import Majlis_5 from "@/public/images/Portfolio/majlis/Majlis-5.jpg";
+
+import Majlis_6 from "@/public/images/Portfolio/majlis/Majlis-6.webp";
+import Majlis_7 from "@/public/images/Portfolio/majlis/Majlis-7.jpg";
+import Majlis_8 from "@/public/images/Portfolio/majlis/majlis-8.jpg";
+import Majlis_9 from "@/public/images/Portfolio/majlis/Majlis-10.jpg";
 
 //import shopFitting
 import shop_1 from "@/public/images/Portfolio/Shop/shop-1.jpeg";
@@ -45,34 +49,49 @@ import home_7 from "@/public/images/Portfolio/home/Home-7.jpg";
 import home_8 from "@/public/images/Portfolio/home/Home-8.jpg";
 import home_9 from "@/public/images/Portfolio/home/Home-9.jpeg";
 import home_10 from "@/public/images/Portfolio/home/Home-10.jpg";
+import home_11 from "@/public/images/Portfolio/home/Home-11.jpg";
+import home_12 from "@/public/images/Portfolio/home/Home-12.jpeg";
+
+import home_13 from "@/public/images/Portfolio/home/home-13.jpg";
+
+import home_14 from "@/public/images/Portfolio/home/Home-14.jpg";
 
 // Define the types for the services and the context
 const services = {
-  MajlisDesigns: [Majlis_1, Majlis_2, Majlis_3, Majlis_4],
+  MajlisDesigns: [
+    Majlis_9,
+    Majlis_8,
+    Majlis_7,
+    Majlis_6,
+    Majlis_5,
+    Majlis_1,
+    Majlis_2,
+    Majlis_3,
+    Majlis_4,
+  ],
+  HotelFurnishing: [office_1, office_2, office_9, office_7],
   FactoryWorks: [
-    employee_1,
     employee_2,
     employee_3,
     employee_4,
-    employee_5,
     employee_6,
     employee_7,
     employee_8,
   ],
   officeFurnishing: [
-    office_1,
-    office_2,
     office_3,
     office_4,
     office_5,
     office_6,
-    office_7,
     office_8,
-    office_9,
     office_10,
   ],
   shopFittings: [shop_1, shop_2, shop_3, shop_4],
   homeFurnishing: [
+    home_13,
+    home_14,
+    home_11,
+    home_12,
     home_1,
     home_2,
     home_3,
@@ -138,7 +157,7 @@ const serviceData = [
   },
   {
     title: "Majlis designs",
-    slug: "premiumLeatherTrading",
+    slug: "MajlisDesigns",
     icon: "🛋️",
     description:
       "Enhance your space with exquisite Majlis designs, blending tradition and modernity. we Create a welcoming Majlis with custom seating, luxurious fabrics, and elegant décor, blending tradition and modern style for timeless sophistication.",
@@ -156,14 +175,17 @@ type ServiceKeys = keyof typeof services; // This creates a type for the keys of
 
 interface ServiceContextType {
   selectedImages: StaticImageData[];
+  activeButton: string;
   serviceData: {
     title: string;
     icon: string;
     slug: string;
     description: string;
   }[];
+  isOpen:boolean;
 
-  handleClick: (serviceSlug: ServiceKeys) => void;
+  handleClick: (serviceSlug: ServiceKeys, serviceName: string) => void;
+  toggleSidebar: () => void;
 }
 
 const ServiceContext = createContext<ServiceContextType | undefined>(undefined);
@@ -178,16 +200,31 @@ export const ServiceProvider: React.FC<ServiceProviderProps> = ({
   const [selectedImages, setSelectedImages] = useState<StaticImageData[]>(
     services.homeFurnishing
   ); // Default set
+  const [activeButton, setActiveButton] = useState(""); // Track active button
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
   const router = useRouter();
 
-  const handleClick = (serviceSlug: ServiceKeys) => {
+  const handleClick = (serviceSlug: ServiceKeys, serviceName: string) => {
+    setActiveButton(serviceName);
+    toggleSidebar();
     setSelectedImages([...services[serviceSlug]]);
     router.push(`/portfolio/${serviceSlug}`, undefined, { shallow: true });
   };
 
   return (
     <ServiceContext.Provider
-      value={{ selectedImages, handleClick, serviceData }}
+      value={{
+        selectedImages,
+        handleClick,
+        serviceData,
+        activeButton,
+        toggleSidebar,
+        isOpen
+      }}
     >
       {children}
     </ServiceContext.Provider>

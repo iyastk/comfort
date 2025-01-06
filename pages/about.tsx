@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "@/components/sidebar";
 import Image from "next/image";
 import AboutHero from "../public/images/Portfolio/sample-22.webp";
 import AboutPhoto from "../public/images/Icon/decoration.png";
@@ -8,33 +7,32 @@ import TeamCard from "@/components/teamCard";
 const About = () => {
   return (
     <div className="container mx-auto  flex ">
-      <Sidebar></Sidebar>
       <div className="w-full  bg-slate-100  ">
         <div className="  bg-slate-100   ">
-          <div className="sm:h-screen">
+          <div className="md:h-screen">
             <Image
               src={AboutHero}
               alt="photo of a sofa and lamb to represent about"
               objectFit="contain"
               object-position="bottom"
-              className="sm:h-4/5 "
+              className="md:h-4/5 "
             ></Image>
             {/* <h1 className="absolute top-28 left-44 text-4xl font-semibold  p-4">
               Who We Are <span className="text-red-600">?</span>
             </h1> */}
           </div>
           <div>
-            <div className="flex sm:-mt-32 bg-slate-100 w-full">
+            <div className="flex md:-mt-32 bg-slate-100 w-full">
               <div className="flex justify-center items-center w-full ">
                 <Image
                   src={AboutPhoto}
                   alt="photo of a sofa and lamb to represent about"
-                  className="sm:p-10 hidden sm:block "
+                  className="md:p-10 hidden md:block "
                   width={500}
                 ></Image>
               </div>
 
-              <div className="sm:px-10 bg-slate-100 py-5">
+              <div className="md:px-10 bg-slate-100 py-5">
                 <h1 className="text-3xl  py-6">About us</h1>
                 <div className="text-justify p-5">
                   {" "}
@@ -67,7 +65,7 @@ const About = () => {
                   </span>
                   we have earned the trust of leading hotel chains, interior
                   contractors, designers, and architects. Our commitment to
-                  innovation, precision, and craftsmanship has positioned us as
+                  innovation, precision, and craftmdanship has positioned us as
                   a preferred supplier in the Gulf region’s contract furniture
                   market. At Comfort Furniture Factory,
                   <ul className="font-bold p-2	text-red-400	">we prioritize: </ul>
@@ -96,7 +94,7 @@ const About = () => {
         {/* our team section */}
         <div className="bg-white p-4">
           <h1 className="text-3xl  py-6 text-center p-2">Our Team</h1>
-          <div className="flex flex-col sm:flex-wrap gap-5 items-center justify-center">
+          <div className="flex flex-col md:flex-wrap gap-5 items-center justify-center">
             <TeamCard
               name={"Shafi Muhammed"}
               role={"Business Development Manager"}

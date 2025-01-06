@@ -44,13 +44,13 @@ const Services = () => {
         <h1 className="text-5xl 	 mt-8	">Our Services</h1>
       </div>
 
-      <div className="flex  bg-white flex-col sm:flex-row  sm:justify-between  sm:mx-auto sm:p-1">
+      <div className="flex  bg-white flex-col sm:flex-row  md:justify-between  md:mx-auto md:p-1">
         {/* Features List */}
-        <div className="flex flex-col sm:w-1/3  gap-6 p-6 sm:p-0">
+        <div className="flex flex-col md:w-1/3  gap-6 p-6 md:p-0">
           {features1.map((feature, index) => (
             <div
               key={index}
-              className="flex items-start gap-6 sm:gap-0 sm:text-left	 sm:space-x-4"
+              className="flex items-start gap-6 md:gap-0 md:text-left	 md:space-x-4"
             >
               {isAboveSm ? (
                 <>
@@ -75,7 +75,7 @@ const Services = () => {
         </div>
 
         {/* Feature Image */}
-        <div className="mt-10 p-6 sm:w-1/3  lg:mt-0 lg:w-1/2 flex justify-center">
+        <div className="mt-10 p-6 md:w-1/3  lg:mt-0 lg:w-1/2 flex justify-center">
           <Image
             src={houseImage}
             alt="Feature Image"
@@ -85,7 +85,7 @@ const Services = () => {
           />
         </div>
 
-        <div className="flex flex-col sm:w-1/3 gap-6 p-6 sm:p-0">
+        <div className="flex flex-col md:w-1/3 gap-6 p-6 md:p-0">
           {features2.map((feature, index) => (
             <div key={index} className="flex items-start space-x-4 ">
               <div className="text-yellow-500 text-3xl">{feature.icon}</div>

@@ -7,7 +7,7 @@ const SubPage = () => {
   const { selectedImages } = useServiceContext();
 
   return (
-    <div className="container mx-auto p-6 flex">
+    <div className="container mx-auto p-4 flex">
       <Sidebar></Sidebar>
       <ImageGallery selectedImages={selectedImages}></ImageGallery>
     </div>

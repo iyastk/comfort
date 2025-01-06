@@ -12,20 +12,17 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import useCheckScreen from "@/components/utils/checkScreen";
 
 // import hangLight from "../public/images/hang-light.png";
 
 // import iconImage from "../public/images/";
 export default function Home() {
-  const isAboveSm = useCheckScreen();
-
   return (
     <div className="grid grid-cols-[1fr_20fr_1fr] ">
-      <div className=" hidden  sm:flex sm:items-center sm:justify-center  ">
+      <div className=" hidden  md:flex md:items-center md:justify-center  ">
         <p>&nbsp; </p>
       </div>
-      <div className="  bg-orange-50	 text-gray-800 min-h-screen">
+      <div className="  bg-orange-50	 text-gray-800 ">
         {/* Navigation Bar */}
         <header className="flex flex-col items-between justify-center px-8">
           <div className="flex items-center justify-center text-6xl p-4 font-serif text-gray-800 tracking-widest ">
@@ -33,14 +30,14 @@ export default function Home() {
             COMFORT
           </div>
           <div className="flex items-center justify-between">
-            <div className=" gap-6 hidden sm:flex">
+            <div className=" gap-6 hidden md:flex">
               <FaLinkedin className="text-2xl " />
               <FaInstagram className="text-2xl " />
             </div>
-            <div className="flex gap-2 sm:flex sm:justify-center sm:gap-4">
+            <div className="flex gap-2 md:flex md:justify-center md:gap-4">
               <Navigation></Navigation>
             </div>
-            <div className=" gap-6 hidden sm:flex">
+            <div className=" gap-6 hidden md:flex">
               <FaWhatsapp className="text-2xl " />
               <FaYoutube className="text-2xl " />
             </div>
@@ -48,35 +45,30 @@ export default function Home() {
         </header>
 
         {/* Main Content */}
-        <main className="flex flex-col sm:flex sm:flex-row  sm:justify-around sm:p-8 sm:relative">
-          <div className="  sm:h-screen mt-4 ">
-            {/* Video Component */}
+        <main className="flex flex-col h-screen gap-2 md:flex-row md:justify-around md:items-center md:p-8 md:relative">
+          {/* Video Section */}
+          <div className="mt-4 h-1/2 md:h-full md:flex-1 flex justify-center items-center md:mt-0 ">
             <video
               src="/images/video_4.mp4"
               autoPlay
               loop
               muted
-              className="  h-5/6	 object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
-          <div
-            className="hidden  sm:block sm:absolute sm:top-12 sm:left-96 sm:ml-11		 sm:mr-8 sm:w-[38%]		  sm:z-0   sm:bg-black sm:opacity-50  "
-            style={isAboveSm ? { height: "75%" } : { height: "0" }}
-          ></div>
 
-          <div className="flex p-6 flex-col justify-center text-center z-40">
-            <div className=" flex justify-center  sm:mb-4">
-              <Image src={pillow1} width={100} alt="pillow1" className="" />
+          {/* Overlay Section */}
+          <div className="flex-1 flex flex-col justify-center text-center h-full bg-black opacity-80  p-6 ">
+            <div className="flex justify-center mb-4">
+              <Image src={pillow1} width={100} alt="pillow1" />
               <Image src={pillow2} width={100} alt="pillow2" />
             </div>
 
-            <h2 className="text-4xl text-gray-800 sm:text-white font-serif mb-4">
+            <h2 className="text-4xl text-white font-serif mb-4">
               Modern & Innovative
             </h2>
-            <h3 className=" text-gray-800 sm:text-stone-200">
-              FURNITURE INTERIOR & EXTERIOR
-            </h3>
-            <p className="text-gray-800 sm:text-stone-200 mb-4">
+            <h3 className="text-stone-200">FURNITURE INTERIOR & EXTERIOR</h3>
+            <p className="text-stone-200 mb-4">
               We will make your life more comfortable...
             </p>
             <Link href="/portfolio">
@@ -85,23 +77,25 @@ export default function Home() {
               </div>
             </Link>
           </div>
-          <div className=" hidden sm:block sm:h-screen mt-4 ">
-            {/* Video Component */}
+
+          {/* Secondary Video Section */}
+          <div className="hidden md:flex-1 md:flex md:justify-center md:items-center md:h-full ">
             <video
               src="/images/video_7.mp4"
               autoPlay
               loop
               muted
-              className=" w-full h-5/6	 object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
         </main>
+
         <Services></Services>
         <Portfolio></Portfolio>
         <ImageCollage></ImageCollage>
         <InfoSection></InfoSection>
       </div>
-      <div className=" hidden sm:rounded-lg  sm:items-center sm:justify-center  sm:block">
+      <div className=" hidden md:rounded-lg  md:items-center md:justify-center  md:block">
         <p>&nbsp; </p>
       </div>
       <Footer></Footer>
