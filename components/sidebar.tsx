@@ -19,7 +19,7 @@ const Sidebar = () => {
       </button>
 
       <div
-        className={`w-full md:w-1/4 md:flex md:flex-col md:p-4 ${
+        className={`w-full bg-white md:w-1/4 md:flex md:flex-col md:p-4 ${
           isOpen ? "block" : "hidden"
         }`}
       >
