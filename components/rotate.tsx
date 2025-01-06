@@ -1,39 +1,44 @@
 import { useState } from "react";
 import houseImage from "/public/images/house.png";
 import Image from "next/image";
+
 export default function RotatableImage() {
   const [isDragging, setIsDragging] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [startX, setStartX] = useState(0);
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLImageElement>) => {
+  // Handle mouse and touch start events
+  const handleStart = (x: number) => {
     setIsDragging(true);
-    setStartX(e.clientX); // Record the initial mouse position
+    setStartX(x); // Record the initial position
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
+  // Handle mouse and touch move events
+  const handleMove = (x: number) => {
     if (!isDragging) return;
 
-    const deltaX = e.clientX - startX; // Calculate the change in X position
+    const deltaX = x - startX; // Calculate the change in X position
     setRotation((prevRotation) => prevRotation + deltaX / 5); // Adjust sensitivity
-    setStartX(e.clientX); // Update the starting position for the next movement
+    setStartX(x); // Update the starting position for the next movement
   };
 
-  const handleMouseUp = () => {
+  const handleEnd = () => {
     setIsDragging(false);
   };
 
   return (
     <div
-      className="relative flex justify-center items-center sm:h-screen "
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp} // Stop dragging if the mouse leaves the container
+      className="relative flex justify-center items-center sm:h-screen"
+      onMouseMove={(e) => handleMove(e.clientX)}
+      onMouseUp={handleEnd}
+      onMouseLeave={handleEnd}
+      onTouchMove={(e) => handleMove(e.touches[0].clientX)}
+      onTouchEnd={handleEnd}
     >
       <Image
-        src={houseImage} // Replace with your image path
+        src={houseImage}
         alt="Rotatable"
-        className=" object-cover  "
+        className="object-cover"
         width={500}
         draggable={false}
         style={{
@@ -41,7 +46,8 @@ export default function RotatableImage() {
           transition: isDragging ? "none" : "transform 0.2s ease-out",
           cursor: isDragging ? "grabbing" : "grab",
         }}
-        onMouseDown={handleMouseDown}
+        onMouseDown={(e) => handleStart(e.clientX)}
+        onTouchStart={(e) => handleStart(e.touches[0].clientX)}
       />
     </div>
   );

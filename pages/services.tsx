@@ -10,8 +10,8 @@ const Services = () => {
   const isAboveMd = useCheckScreen();
 
   return (
-    <div className="container mx-auto  flex">
-            {isAboveMd ? <Sidebar></Sidebar> : <></>}
+    <div className="container mx-auto  flex text-black">
+      {isAboveMd ? <Sidebar></Sidebar> : <></>}
 
       <div className="bg-white  w-full  ">
         <div className=" w-full  flex flex-col items-between justify-center  md:p-6  md:-m-10 ">
