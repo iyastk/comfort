@@ -10,7 +10,7 @@ const Contact = () => {
   const isAboveMd = useCheckScreen();
 
   return (
-    <div className="container mx-auto  flex">
+    <div className="container mx-auto  flex bg-slate-100">
       {isAboveMd ? <Sidebar></Sidebar> : <></>}
       <div className="w-full bg-slate-100 text-black  ">
         <div className=" sticky top-0 bg-slate-100 flex items-center justify-between gap-4 p-6 ">

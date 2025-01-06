@@ -30,13 +30,13 @@ const Sidebar = () => {
               Your comfort is our first choice.
             </p>
           </div>
-          <div className="absolute top-28">
-            <nav className=" flex flex-col gap-3  my-4 p-6">
+          <div className="absolute top-28 bg-slate-100">
+            <nav className=" flex flex-col gap-3  my-4 p-6 bg-slate-100 text-black">
               <Navigation></Navigation>
             </nav>
 
-            <p className=" text-emerald-600 p-1">See our latest projects.</p>
-            <nav className="flex flex-col gap-3 p-2 px-6">
+            <p className=" text-emerald-600 bg-slate-100 p-1">See our latest projects.</p>
+            <nav className="flex flex-col gap-3 p-2 px-6 bg-white text-black">
               <ServiceNavigation></ServiceNavigation>
             </nav>
           </div>
