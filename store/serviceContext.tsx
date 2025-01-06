@@ -19,7 +19,6 @@ import Majlis_5 from "@/public/images/Portfolio/majlis/Majlis-5.jpg";
 
 import Majlis_6 from "@/public/images/Portfolio/majlis/Majlis-6.webp";
 import Majlis_7 from "@/public/images/Portfolio/majlis/Majlis-7.jpg";
-import Majlis_8 from "@/public/images/Portfolio/majlis/majlis-8.jpg";
 import Majlis_9 from "@/public/images/Portfolio/majlis/Majlis-10.jpg";
 
 //import shopFitting
@@ -52,7 +51,7 @@ import home_10 from "@/public/images/Portfolio/home/Home-10.jpg";
 import home_11 from "@/public/images/Portfolio/home/Home-11.jpg";
 import home_12 from "@/public/images/Portfolio/home/Home-12.jpeg";
 
-import home_13 from "@/public/images/Portfolio/home/home-13.jpg";
+import home_13 from "@/public/images/Portfolio/home/Home-13.jpg";
 
 import home_14 from "@/public/images/Portfolio/home/Home-14.jpg";
 
@@ -182,7 +181,7 @@ interface ServiceContextType {
     slug: string;
     description: string;
   }[];
-  isOpen:boolean;
+  isOpen: boolean;
 
   handleClick: (serviceSlug: ServiceKeys, serviceName: string) => void;
   toggleSidebar: () => void;
@@ -223,7 +222,7 @@ export const ServiceProvider: React.FC<ServiceProviderProps> = ({
         serviceData,
         activeButton,
         toggleSidebar,
-        isOpen
+        isOpen,
       }}
     >
       {children}

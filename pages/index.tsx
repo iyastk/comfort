@@ -16,6 +16,13 @@ import { FaWhatsapp } from "react-icons/fa";
 // import hangLight from "../public/images/hang-light.png";
 
 // import iconImage from "../public/images/";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Comfortsplus",
+  description: "Discover modern and innovative decoration for your space.",
+};
+
 export default function Home() {
   return (
     <div className="grid grid-cols-[1fr_20fr_1fr] ">
