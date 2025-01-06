@@ -12,14 +12,14 @@ const Contact = () => {
   return (
     <div className="container mx-auto  flex">
       {isAboveMd ? <Sidebar></Sidebar> : <></>}
-      <div className="w-full bg-slate-100  ">
+      <div className="w-full bg-slate-100 text-black  ">
         <div className=" sticky top-0 bg-slate-100 flex items-center justify-between gap-4 p-6 ">
           <div className="flex items-center justify-center">
             <div className="text-3xl md:text-6xl">☎️</div>
-            <div className="text-xl md:text-3xl ">CONTACT US</div>
+            <div className="text-xl text-black  md:text-3xl ">CONTACT US</div>
           </div>
           <div className="flex flex-col gap-1 text-right">
-            <div className="text-sm md:text-md justify-self-end">
+            <div className="text-sm text md:text-md justify-self-end">
               {" "}
               07501684151 📞
             </div>
@@ -31,7 +31,7 @@ const Contact = () => {
           {/* <Image src={Pillow} width={70} alt="pillow2" /> */}
         </div>
         <div className="flex flex-col md:flex-row  rounded bg-white md:justify-between">
-          <div className=" flex flex-col gap-4 p-4 md:p-0 justify-center items-center w-full">
+          <div className=" flex flex-col gap-4 p-2 md:p-0 justify-center items-center w-full">
             <ContactCard
               name={"Shafi Muhammed"}
               role={"Business Development Manager"}

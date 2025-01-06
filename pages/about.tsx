@@ -10,10 +10,10 @@ const About = () => {
   const isAboveMd = useCheckScreen();
 
   return (
-    <div className="container mx-auto  flex ">
+    <div className="container mx-auto  flex  text-black">
       {isAboveMd ? <Sidebar></Sidebar> : <></>}
 
-      <div className="w-full  bg-slate-100  ">
+      <div className="w-full  bg-slate-100 text-black ">
         <div className="  bg-slate-100   ">
           <div className="md:h-screen">
             <Image
@@ -38,7 +38,7 @@ const About = () => {
                 ></Image>
               </div>
 
-              <div className="md:px-10 bg-slate-100 py-5">
+              <div className="md:px-10 bg-slate-100 text-black py-5">
                 <h1 className="text-3xl  py-6">About us</h1>
                 <div className="text-justify p-5">
                   {" "}
@@ -98,7 +98,7 @@ const About = () => {
           </div>
         </div>
         {/* our team section */}
-        <div className="bg-white p-4">
+        <div className="bg-white text-black p-4">
           <h1 className="text-3xl  py-6 text-center p-2">Our Team</h1>
           <div className="flex flex-col md:flex-wrap gap-5 items-center justify-center">
             <TeamCard
