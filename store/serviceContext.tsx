@@ -59,7 +59,6 @@ import home_14 from "@/public/images/Portfolio/home/Home-14.jpg";
 const services = {
   MajlisDesigns: [
     Majlis_9,
-    Majlis_8,
     Majlis_7,
     Majlis_6,
     Majlis_5,
