@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 const useCheckScreen = () => {
-  const [isAboveSm, setIsAboveSm] = useState(false);
+  const [isAboveMd, setIsAboveMd] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsAboveSm(window.innerWidth >= 640); // `sm` breakpoint is 640px
+      setIsAboveMd(window.innerWidth >= 768); // `Md` breakpoint is 640px
     };
 
     handleResize(); // Check on initial render
@@ -13,7 +13,7 @@ const useCheckScreen = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return isAboveSm;
+  return isAboveMd;
 };
 
 export default useCheckScreen;

@@ -3,10 +3,16 @@ import Image from "next/image";
 import AboutHero from "../public/images/Portfolio/sample-22.webp";
 import AboutPhoto from "../public/images/Icon/decoration.png";
 import TeamCard from "@/components/teamCard";
+import useCheckScreen from "@/components/utils/checkScreen";
+import Sidebar from "@/components/sidebar";
 
 const About = () => {
+  const isAboveMd = useCheckScreen();
+
   return (
     <div className="container mx-auto  flex ">
+      {isAboveMd ? <Sidebar></Sidebar> : <></>}
+
       <div className="w-full  bg-slate-100  ">
         <div className="  bg-slate-100   ">
           <div className="md:h-screen">

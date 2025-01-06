@@ -12,7 +12,7 @@ const Sidebar = () => {
   return (
     <>
       <button
-        className="p-2  text-white bg-green-500 rounded-md fixed top-4 left-4 z-50 md:hidden"
+        className="p-2  text-white bg-green-500 rounded-md fixed top-2 left-4 z-50 md:hidden"
         onClick={toggleSidebar}
       >
         {isOpen ? "Close" : "Menu"}
@@ -23,7 +23,7 @@ const Sidebar = () => {
           isOpen ? "block" : "hidden"
         }`}
       >
-        <div className="sticky top-12 bg-white">
+        <div className="sticky top-10 bg-white">
           <div>
             <Image src={Logo} width={200} alt="comfort logo" className="" />
             <p className="text-gray-600 p-1">

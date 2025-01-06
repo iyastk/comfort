@@ -2,12 +2,17 @@ import React from "react";
 import RotatableImage from "@/components/rotate";
 import { useServiceContext } from "@/store/serviceContext";
 import Link from "next/link";
+import useCheckScreen from "@/components/utils/checkScreen";
+import Sidebar from "@/components/sidebar";
 
 const Services = () => {
   const { serviceData } = useServiceContext();
+  const isAboveMd = useCheckScreen();
 
   return (
     <div className="container mx-auto  flex">
+            {isAboveMd ? <Sidebar></Sidebar> : <></>}
+
       <div className="bg-white  w-full  ">
         <div className=" w-full  flex flex-col items-between justify-center  md:p-6  md:-m-10 ">
           <p className="text-orange-400  text-center  p-6">

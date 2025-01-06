@@ -3,10 +3,15 @@ import React from "react";
 import Scanner from "../public/whatsapp contact.jpg";
 import ContactCard from "@/components/contactCard";
 import Image from "next/image";
+import useCheckScreen from "@/components/utils/checkScreen";
+import Sidebar from "@/components/sidebar";
 
 const Contact = () => {
+  const isAboveMd = useCheckScreen();
+
   return (
     <div className="container mx-auto  flex">
+      {isAboveMd ? <Sidebar></Sidebar> : <></>}
       <div className="w-full bg-slate-100  ">
         <div className=" sticky top-0 bg-slate-100 flex items-center justify-between gap-4 p-6 ">
           <div className="flex items-center justify-center">
