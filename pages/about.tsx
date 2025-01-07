@@ -10,7 +10,7 @@ const About = () => {
   const isAboveMd = useCheckScreen();
 
   return (
-    <div className="container mx-auto  flex bg-slate-100 text-black">
+    <div className="container mx-auto  flex bg-slate-100 text-black font-serif">
       {isAboveMd ? <Sidebar></Sidebar> : <></>}
 
       <div className="w-full  bg-slate-100 text-black ">

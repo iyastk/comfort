@@ -12,7 +12,7 @@ const Sidebar = () => {
   return (
     <>
       <button
-        className="p-2  text-white bg-green-500 rounded-md fixed top-2 left-4 z-50 md:hidden"
+        className="p-2  text-white bg-green-500 rounded-md fixed top-1 left-4 z-50 md:hidden"
         onClick={toggleSidebar}
       >
         {isOpen ? "Close" : "Menu"}
@@ -23,19 +23,21 @@ const Sidebar = () => {
           isOpen ? "block" : "hidden"
         }`}
       >
-        <div className="sticky top-10 bg-white">
+        <div className="sticky top-8 bg-white">
           <div>
-            <Image src={Logo} width={200} alt="comfort logo" className="" />
-            <p className="text-gray-600 p-1">
+            <Image src={Logo} width={200} alt="comfort logo" className="z-0" />
+            <p className="text-gray-600 p-1 z-40">
               Your comfort is our first choice.
             </p>
           </div>
-          <div className="absolute top-28 bg-slate-100">
-            <nav className=" flex flex-col gap-3  my-4 p-6 bg-slate-100 text-black">
+          <div className="absolute top-32 ">
+            <nav className=" flex flex-col gap-3  my-4 p-6 bg-white text-black">
               <Navigation></Navigation>
             </nav>
 
-            <p className=" text-emerald-600 bg-slate-100 p-1">See our latest projects.</p>
+            <p className=" text-emerald-600 bg-white p-1">
+              See our latest projects.
+            </p>
             <nav className="flex flex-col gap-3 p-2 px-6 bg-white text-black">
               <ServiceNavigation></ServiceNavigation>
             </nav>

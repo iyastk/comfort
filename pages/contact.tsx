@@ -10,7 +10,7 @@ const Contact = () => {
   const isAboveMd = useCheckScreen();
 
   return (
-    <div className="container mx-auto  flex bg-slate-100">
+    <div className="container mx-auto  flex bg-slate-100 font-serif">
       {isAboveMd ? <Sidebar></Sidebar> : <></>}
       <div className="w-full bg-slate-100 text-black  ">
         <div className=" sticky top-0 bg-slate-100 flex items-center justify-between gap-4 p-6 ">
@@ -30,7 +30,7 @@ const Contact = () => {
 
           {/* <Image src={Pillow} width={70} alt="pillow2" /> */}
         </div>
-        <div className="flex flex-col md:flex-row  rounded bg-white md:justify-between">
+        <div className="flex flex-col md:flex-row  rounded bg-slate-100 md:justify-between">
           <div className=" flex flex-col gap-4 p-2 md:p-0 justify-center items-center w-full">
             <ContactCard
               name={"Shafi Muhammed"}

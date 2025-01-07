@@ -7,7 +7,7 @@ import chair from "/public/images/chair_3.png";
 
 const Portfolio = () => {
   return (
-    <div className="p-2 md:grid md:grid-cols-3 md:gap-3 ">
+    <div className="p-2 md:grid md:grid-cols-3 md:gap-3 font-serif ">
       <div className="flex flex-col justify-center items-center ">
         <Image
           src={chair}

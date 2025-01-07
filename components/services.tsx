@@ -40,7 +40,7 @@ const Services = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-center bg-white px-1">
+      <div className="flex items-center justify-center bg-white font-serif px-1">
         <h1 className="text-5xl 	 mt-8	">Our Services</h1>
       </div>
 

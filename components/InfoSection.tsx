@@ -2,7 +2,7 @@ import VerticalImageSlider from "./imageSlider";
 
 export default function InfoSection() {
   return (
-    <div className=" md:flex   bg-white    md:items-center md:justify-between p-2">
+    <div className=" md:flex   bg-white font-serif   md:items-center md:justify-between p-2">
       {/* Left Text Section */}
       <div className="  md:w-1/2  ">
         <h1 className="text-4xl p-2 text-center md:text-left  md:text-5xl font-bold text-gray-800">
