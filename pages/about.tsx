@@ -102,21 +102,15 @@ const About = () => {
           <h1 className="text-3xl  py-6 text-center p-2">Our Team</h1>
           <div className="flex flex-col md:flex-wrap gap-5 items-center justify-center">
             <TeamCard
-              name={"Shafi Muhammed"}
-              role={"Business Development Manager"}
-              email={"shafi@comfortsplus.com"}
+              name={"info"}
+              role={"Administrator"}
+              email={"info@comfortsplus.com"}
               image={"👨🏻"}
             ></TeamCard>
             <TeamCard
-              name={"Shafi Muhammed"}
-              role={"Business Development Manager"}
-              email={"shafi@comfortsplus.com"}
-              image={"👨🏻"}
-            ></TeamCard>
-            <TeamCard
-              name={"Shafi Muhammed"}
-              role={"Business Development Manager"}
-              email={"shafi@comfortsplus.com"}
+              name={"Sales"}
+              role={"Sales executive"}
+              email={"sales@comfortsplus.com"}
               image={"👨🏻"}
             ></TeamCard>
             <TeamCard

@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="flex flex-col gap-1 text-right">
             <div className="text-sm text md:text-md justify-self-end">
               {" "}
-              07501684151 📞
+              00971501684151 📞
             </div>
             <div className="text-sm md:text-md justify-self-end">
               Dubai - UAE 📍
@@ -39,9 +39,9 @@ const Contact = () => {
               image={"👨🏻"}
             ></ContactCard>
             <ContactCard
-              name={"Najeeb"}
+              name={"information"}
               role={"Administrator"}
-              email={"Najeeb@comfortsplus.com"}
+              email={"info@comfortsplus.com"}
               image={"👨🏻"}
             ></ContactCard>
           </div>
