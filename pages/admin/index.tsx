@@ -9,7 +9,6 @@ import Services from "@/components/services";
 import ImageCollage from "@/components/imageCollage";
 import InfoSection from "@/components/InfoSection";
 import Hero from "@/components/Hero";
-import TeamCard from "@/components/teamCard"; 
 import ContactCard from "@/components/contactCard";
 import ImageGallery from "@/components/imageGallary";
 import Image from "next/image";
