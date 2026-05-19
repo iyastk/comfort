@@ -9,9 +9,15 @@ import Services from "@/components/services";
 import ImageCollage from "@/components/imageCollage";
 import InfoSection from "@/components/InfoSection";
 import Hero from "@/components/Hero";
-import TeamCard from "@/components/teamCard"; // For About Page preview
-import ContactCard from "@/components/contactCard"; // For Contact Page preview
-import ImageGallery from "@/components/imageGallary"; // For Portfolio Page preview
+import TeamCard from "@/components/teamCard"; 
+import ContactCard from "@/components/contactCard";
+import ImageGallery from "@/components/imageGallary";
+import Image from "next/image";
+
+// Preview Assets
+import AboutHero from "../../public/images/Portfolio/sample-22.webp";
+import AboutPhoto from "../../public/images/Icon/decoration.png";
+import Scanner from "../../public/whatsapp contact.jpg";
 
 interface PortfolioMediaItem {
   id: string;
@@ -528,11 +534,11 @@ const AdminDashboard = () => {
                     {activePreviewPage === 'About' && (
                       <div className="pt-24 space-y-20">
                         <section className="relative h-[50vh] overflow-hidden group">
+                          <Image src={AboutHero} alt="Hero" fill className="object-cover opacity-60" />
                           <div className="absolute inset-0 bg-black/40 flex items-center justify-center z-10">
                             <h1 className="text-7xl font-serif text-white tracking-tight">Our Story</h1>
                           </div>
                           <div className="absolute inset-0 bg-primary/20" />
-                          {/* Admin Edit Shortcut for About Content */}
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
                             <button 
                               onClick={() => setViewMode('inventory')}
@@ -544,7 +550,9 @@ const AdminDashboard = () => {
                         </section>
                         <section className="max-w-7xl mx-auto px-6 py-20">
                            <div className="grid grid-cols-2 gap-16 items-center">
-                              <div className="aspect-square bg-white/5 rounded-3xl" />
+                              <div className="relative aspect-square bg-white/5 rounded-3xl overflow-hidden">
+                                <Image src={AboutPhoto} alt="About" fill className="object-cover" />
+                              </div>
                               <div className="space-y-6">
                                 <h2 className="text-5xl font-serif leading-tight">Crafting Excellence</h2>
                                 <p className="text-xl text-foreground/60 leading-relaxed">20 years of bespoke quality for hospitality and leisure.</p>
@@ -571,7 +579,9 @@ const AdminDashboard = () => {
                            <p className="text-xl text-foreground/60">Dubai, UAE | +971 50 168 4151</p>
                          </div>
                          <div className="grid grid-cols-2 gap-16">
-                            <div className="bg-white/5 h-96 rounded-[3rem] border border-white/10" />
+                            <div className="relative bg-white/5 h-96 rounded-[3rem] border border-white/10 overflow-hidden">
+                              <Image src={Scanner} alt="WhatsApp" fill className="object-contain p-8" />
+                            </div>
                             <div className="space-y-6">
                                <ContactCard name="Shafi Muhammed" role="BM" email="shafi@comfortsplus.com" />
                                <ContactCard name="Support Team" role="Admin" email="info@comfortsplus.com" />
