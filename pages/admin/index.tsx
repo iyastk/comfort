@@ -502,7 +502,7 @@ const AdminDashboard = () => {
                     Back to Terminal
                   </button>
                 </div>
-                <div className="w-full h-[850px] overflow-y-auto rounded-[3rem] border border-white/20 bg-background shadow-2xl shadow-black/50 scrollbar-hide relative group/preview">
+                <div className="w-full h-[850px] overflow-y-auto rounded-[3rem] border border-white/20 bg-background dark shadow-2xl shadow-black/50 scrollbar-hide relative group/preview">
                   <div className="scale-[0.8] origin-top transform-gpu transition-transform duration-500">
                     {activePreviewPage === 'Home' && (
                       <>
