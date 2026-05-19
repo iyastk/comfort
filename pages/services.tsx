@@ -13,6 +13,7 @@ import RotatableImage from "@/components/rotate";
 import { useServiceContext } from "@/store/serviceContext";
 import Header from "@/components/Navigation/header";
 import Footer from "@/components/footer";
+import Head from "next/head";
 
 // Simple helper to pick an icon based on slug since the current icons are emojis
 const getIcon = (slug: string) => {
@@ -32,6 +33,10 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Our Services | Bespoke Furniture & Joinery Dubai</title>
+        <meta name="description" content="Explore our wide range of services including upholstery, joinery, fit-out solutions, curtains, and bespoke furniture manufacturing for hospitality and homes in Dubai." />
+      </Head>
       <Header />
       
       <main className="pt-32 pb-24">

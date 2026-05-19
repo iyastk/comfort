@@ -45,10 +45,10 @@ const Hero = ({ onEdit }: HeroProps) => {
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center animate-slide-up">
         <div className="flex justify-center gap-4 mb-8">
           <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl">
-            <Image src={pillow1} fill alt="Pillow deco 1" className="object-cover" />
+            <Image src={pillow1} fill alt="Luxury decorative pillow - Comfort Furniture" className="object-cover" priority />
           </div>
           <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl">
-            <Image src={pillow2} fill alt="Pillow deco 2" className="object-cover" />
+            <Image src={pillow2} fill alt="Premium interior decor pillow - Comfort Furniture" className="object-cover" priority />
           </div>
         </div>
 

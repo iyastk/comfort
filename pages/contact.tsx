@@ -6,12 +6,17 @@ import ContactCard from "@/components/contactCard";
 import Header from "@/components/Navigation/header";
 import Footer from "@/components/footer";
 import { useServiceContext } from "@/store/serviceContext";
+import Head from "next/head";
 
 const Contact = () => {
   const { isDarkMode } = useServiceContext();
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? 'bg-[#0c0a09] text-white' : 'bg-[#fafaf9] text-black'}`}>
+      <Head>
+        <title>Contact Us | Comfortsplus Dubai Furniture Specialist</title>
+        <meta name="description" content="Get in touch with Comfortsplus. Contact our specialists for bespoke furniture inquiries, shop fittings, or interior solutions in Dubai, UAE." />
+      </Head>
       <Header />
       
       <main className="pt-32 pb-24">

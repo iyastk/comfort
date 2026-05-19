@@ -4,12 +4,17 @@ import ImageGallery from "@/components/imageGallary";
 import { useServiceContext } from "@/store/serviceContext";
 import Header from "@/components/Navigation/header";
 import Footer from "@/components/footer";
+import Head from "next/head";
 
 const PortfolioPage = () => {
   const { selectedImages } = useServiceContext();
 
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Our Portfolio | Luxury Furniture & Interior Projects Dubai</title>
+        <meta name="description" content="View our portfolio of luxury furniture and interior design projects across Dubai and the Gulf region. Featuring hotel furnishing, home decor, and custom joinery." />
+      </Head>
       <Header />
       
       <main className="pt-32 pb-24">

@@ -6,12 +6,17 @@ import TeamCard from "@/components/teamCard";
 import { useServiceContext } from "@/store/serviceContext";
 import AboutHero from "../public/images/Portfolio/sample-22.webp";
 import AboutPhoto from "../public/images/Icon/decoration.png";
+import Head from "next/head";
 
 const About = () => {
   const { isDarkMode } = useServiceContext();
 
   return (
     <div className={`min-h-screen transition-colors duration-500 selection:bg-primary selection:text-primary-foreground ${isDarkMode ? 'bg-[#0c0a09] text-white' : 'bg-[#fafaf9] text-black'}`}>
+      <Head>
+        <title>About Us | Comfort Furniture Factory Dubai</title>
+        <meta name="description" content="Learn about Comfort Furniture Factory, with over 20 years of experience in crafting bespoke contract furniture for hospitality and leisure industries in Dubai." />
+      </Head>
       {/* Header / Navigation */}
       <Header />
 
