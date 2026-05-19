@@ -8,6 +8,10 @@ import Portfolio from "@/components/portfolio";
 import Services from "@/components/services";
 import ImageCollage from "@/components/imageCollage";
 import InfoSection from "@/components/InfoSection";
+import Hero from "@/components/Hero";
+import TeamCard from "@/components/teamCard"; // For About Page preview
+import ContactCard from "@/components/contactCard"; // For Contact Page preview
+import ImageGallery from "@/components/imageGallary"; // For Portfolio Page preview
 
 interface PortfolioMediaItem {
   id: string;
@@ -21,6 +25,7 @@ const AdminDashboard = () => {
   const { serviceData, updatePortfolio, categories: contextCategories, setIsAdmin } = useServiceContext();
   const [activeCategory, setActiveCategory] = useState("homeFurnishing");
   const [viewMode, setViewMode] = useState<'inventory' | 'preview'>('inventory');
+  const [activePreviewPage, setActivePreviewPage] = useState<'Home' | 'About' | 'Contact' | 'Portfolio'>('Home');
   const [tempLinks, setTempLinks] = useState<{ [key: string]: string }>({});
   const [isSaving, setIsSaving] = useState(false);
   const [isLocked, setIsLocked] = useState(true);
@@ -226,6 +231,20 @@ const AdminDashboard = () => {
                 <HiOutlineEye size={16} /> Preview
               </button>
             </div>
+            
+            {viewMode === 'preview' && (
+              <div className="flex items-center gap-2 p-1 bg-black/40 border border-white/10 rounded-2xl">
+                {(['Home', 'About', 'Contact', 'Portfolio'] as const).map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => setActivePreviewPage(page)}
+                    className={`px-4 py-2 rounded-xl transition-all text-[9px] font-black uppercase tracking-widest ${activePreviewPage === page ? 'bg-white/10 text-white' : 'text-white/30 hover:text-white/60'}`}
+                  >
+                    {page}
+                  </button>
+                ))}
+              </div>
+            )}
             <div className="hidden xl:flex flex-col items-end gap-1">
               <span className="text-[9px] font-black text-white/30 uppercase tracking-[0.2em]">Environment State</span>
               <div className="flex items-center gap-2">
@@ -483,19 +502,83 @@ const AdminDashboard = () => {
                     Back to Terminal
                   </button>
                 </div>
-                <div className="w-full h-[800px] overflow-y-auto rounded-3xl border border-white/5 bg-background shadow-inner scrollbar-hide">
+                <div className="w-full h-[850px] overflow-y-auto rounded-3xl border border-white/5 bg-background shadow-inner scrollbar-hide">
                   <div className="scale-[0.8] origin-top transform-gpu">
-                    <Services />
-                    <Portfolio onEdit={(item, category) => {
-                      setActiveCategory(category);
-                      handleEdit(item);
-                      setViewMode('inventory');
-                    }} />
-                    <ImageCollage onEdit={() => {
-                      setViewMode('inventory');
-                      editorRef.current?.scrollIntoView({ behavior: 'smooth' });
-                    }} />
-                    <InfoSection />
+                    {activePreviewPage === 'Home' && (
+                      <>
+                        <Hero onEdit={(item, category) => {
+                          setActiveCategory(category);
+                          handleEdit(item);
+                          setViewMode('inventory');
+                        }} />
+                        <Services />
+                        <Portfolio onEdit={(item, category) => {
+                          setActiveCategory(category);
+                          handleEdit(item);
+                          setViewMode('inventory');
+                        }} />
+                        <ImageCollage onEdit={() => {
+                          setViewMode('inventory');
+                          editorRef.current?.scrollIntoView({ behavior: 'smooth' });
+                        }} />
+                        <InfoSection />
+                      </>
+                    )}
+
+                    {activePreviewPage === 'About' && (
+                      <div className="pt-24 space-y-20">
+                        <section className="relative h-[50vh] overflow-hidden group">
+                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center z-10">
+                            <h1 className="text-7xl font-serif text-white tracking-tight">Our Story</h1>
+                          </div>
+                          <div className="absolute inset-0 bg-primary/20" />
+                          {/* Admin Edit Shortcut for About Content */}
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                            <button 
+                              onClick={() => setViewMode('inventory')}
+                              className="px-8 py-4 bg-white text-black rounded-xl font-bold uppercase tracking-widest shadow-2xl flex items-center gap-2"
+                            >
+                              <HiPencil size={20} /> Edit Story Assets
+                            </button>
+                          </div>
+                        </section>
+                        <section className="max-w-7xl mx-auto px-6 py-20">
+                           <div className="grid grid-cols-2 gap-16 items-center">
+                              <div className="aspect-square bg-white/5 rounded-3xl" />
+                              <div className="space-y-6">
+                                <h2 className="text-5xl font-serif leading-tight">Crafting Excellence</h2>
+                                <p className="text-xl text-foreground/60 leading-relaxed">20 years of bespoke quality for hospitality and leisure.</p>
+                              </div>
+                           </div>
+                        </section>
+                      </div>
+                    )}
+
+                    {activePreviewPage === 'Portfolio' && (
+                      <div className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+                        <div className="mb-20 text-center">
+                           <h1 className="text-6xl font-serif mb-4">Masterpiece Collection</h1>
+                           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+                        </div>
+                        <ImageGallery selectedImages={contextCategories?.['homeFurnishing'] || []} />
+                      </div>
+                    )}
+
+                    {activePreviewPage === 'Contact' && (
+                      <div className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+                         <div className="text-center mb-20">
+                           <h1 className="text-7xl font-serif mb-6">Let&apos;s Connect</h1>
+                           <p className="text-xl text-foreground/60">Dubai, UAE | +971 50 168 4151</p>
+                         </div>
+                         <div className="grid grid-cols-2 gap-16">
+                            <div className="bg-white/5 h-96 rounded-[3rem] border border-white/10" />
+                            <div className="space-y-6">
+                               <ContactCard name="Shafi Muhammed" role="BM" email="shafi@comfortsplus.com" />
+                               <ContactCard name="Support Team" role="Admin" email="info@comfortsplus.com" />
+                            </div>
+                         </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
