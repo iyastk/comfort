@@ -238,7 +238,7 @@ const AdminDashboard = () => {
                   <button
                     key={page}
                     onClick={() => setActivePreviewPage(page)}
-                    className={`px-4 py-2 rounded-xl transition-all text-[9px] font-black uppercase tracking-widest ${activePreviewPage === page ? 'bg-white/10 text-white' : 'text-white/30 hover:text-white/60'}`}
+                    className={`px-4 py-2 rounded-xl transition-all text-[9px] font-black uppercase tracking-widest ${activePreviewPage === page ? 'bg-white/15 text-white shadow-sm' : 'text-white/50 hover:text-white/80'}`}
                   >
                     {page}
                   </button>
@@ -492,8 +492,8 @@ const AdminDashboard = () => {
               <div className="bg-[#141211] p-10 rounded-[3rem] border border-white/10 shadow-2xl space-y-8">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-serif text-white">Live Studio Preview</h2>
-                    <p className="text-xs text-white/40 uppercase tracking-widest mt-1">Interactive Layout Editor</p>
+                    <h2 className="text-3xl font-serif text-white tracking-tight">Live Studio Preview</h2>
+                    <p className="text-xs text-white/60 uppercase tracking-widest mt-2 font-black">Interactive Layout Terminal</p>
                   </div>
                   <button 
                     onClick={() => { setViewMode('inventory'); editorRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -502,8 +502,8 @@ const AdminDashboard = () => {
                     Back to Terminal
                   </button>
                 </div>
-                <div className="w-full h-[850px] overflow-y-auto rounded-3xl border border-white/5 bg-background shadow-inner scrollbar-hide">
-                  <div className="scale-[0.8] origin-top transform-gpu">
+                <div className="w-full h-[850px] overflow-y-auto rounded-[3rem] border border-white/20 bg-background shadow-2xl shadow-black/50 scrollbar-hide relative group/preview">
+                  <div className="scale-[0.8] origin-top transform-gpu transition-transform duration-500">
                     {activePreviewPage === 'Home' && (
                       <>
                         <Hero onEdit={(item, category) => {

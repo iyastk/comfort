@@ -19,7 +19,7 @@ const Hero = ({ onEdit }: HeroProps) => {
   const EditButton = ({ item, category }: { item: any, category: string }) => (
     <button 
       onClick={(e) => { e.preventDefault(); onEdit?.(item, category); }}
-      className="absolute top-4 right-4 w-10 h-10 rounded-lg bg-white/20 text-white backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary hover:text-white z-30"
+      className="absolute top-4 right-4 w-10 h-10 rounded-lg bg-white text-black shadow-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary hover:text-white z-30 border border-white/20"
     >
       <HiPencil size={18} />
     </button>
@@ -43,9 +43,9 @@ const Hero = ({ onEdit }: HeroProps) => {
               const item = selectedImages?.find(i => i.url === heroVideo);
               if (item) onEdit(item, activeCategorySlug);
             }}
-            className="absolute top-32 right-12 w-12 h-12 rounded-xl bg-white/10 text-white backdrop-blur-xl border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary z-30"
+            className="absolute top-32 right-12 w-14 h-14 rounded-2xl bg-white text-black shadow-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary hover:text-white z-30 border-2 border-white/50"
           >
-            <HiPencil size={20} />
+            <HiPencil size={24} />
           </button>
         )}
       </div>
@@ -94,9 +94,9 @@ const Hero = ({ onEdit }: HeroProps) => {
                 const item = selectedImages?.filter(i => i.type === 'video')[1];
                 if (item) onEdit(item, activeCategorySlug);
               }}
-              className="absolute top-4 right-4 w-10 h-10 rounded-lg bg-black/40 text-white backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary z-30"
+              className="absolute top-4 right-4 w-12 h-12 rounded-xl bg-white text-black shadow-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary hover:text-white z-30 border border-white/20"
             >
-              <HiPencil size={18} />
+              <HiPencil size={22} />
             </button>
           )}
         </div>
