@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useServiceContext } from "@/store/serviceContext";
 import Navigation from "@/components/Navigation/mainNavigation";
 import Footer from "@/components/footer";
-import { HiPlus, HiTrash, HiSave, HiLink, HiPhotograph, HiPlay, HiPencil, HiCheck, HiX, HiInformationCircle, HiOutlineHome, HiOutlineOfficeBuilding, HiOutlinePuzzle, HiOutlineShoppingBag, HiOutlinePhotograph, HiOutlineVideoCamera, HiOutlineEye, HiOutlineDatabase } from "react-icons/hi";
+import { HiPlus, HiTrash, HiSave, HiLink, HiPhotograph, HiPlay, HiPencil, HiCheck, HiX, HiInformationCircle, HiOutlineHome, HiOutlineOfficeBuilding, HiOutlinePuzzle, HiOutlineShoppingBag, HiOutlinePhotograph, HiOutlineVideoCamera, HiOutlineEye, HiOutlineDatabase, HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import Portfolio from "@/components/portfolio";
 import Services from "@/components/services";
 import ImageCollage from "@/components/imageCollage";
@@ -28,7 +28,7 @@ interface PortfolioMediaItem {
 
 const AdminDashboard = () => {
   const router = useRouter();
-  const { serviceData, updatePortfolio, categories: contextCategories, setIsAdmin } = useServiceContext();
+  const { serviceData, updatePortfolio, categories: contextCategories, setIsAdmin, isDarkMode, toggleDarkMode } = useServiceContext();
   const [activeCategory, setActiveCategory] = useState("homeFurnishing");
   const [viewMode, setViewMode] = useState<'inventory' | 'preview'>('inventory');
   const [activePreviewPage, setActivePreviewPage] = useState<'Home' | 'About' | 'Contact' | 'Portfolio'>('Home');
@@ -501,15 +501,23 @@ const AdminDashboard = () => {
                     <h2 className="text-3xl font-serif text-white tracking-tight">Live Studio Preview</h2>
                     <p className="text-xs text-white/60 uppercase tracking-widest mt-2 font-black">Interactive Layout Terminal</p>
                   </div>
-                  <button 
-                    onClick={() => { setViewMode('inventory'); editorRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
-                    className="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:bg-white/10 transition-all"
-                  >
-                    Back to Terminal
-                  </button>
+                  <div className="flex items-center gap-4">
+                    <button
+                      onClick={toggleDarkMode}
+                      className={`w-12 h-12 flex items-center justify-center rounded-2xl border transition-all ${isDarkMode ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-black/5 border-black/10 text-black hover:bg-black/10'}`}
+                    >
+                      {isDarkMode ? <HiOutlineSun size={20} /> : <HiOutlineMoon size={20} />}
+                    </button>
+                    <button 
+                      onClick={() => { setViewMode('inventory'); editorRef.current?.scrollIntoView({ behavior: 'smooth' }); }}
+                      className="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:bg-white/10 transition-all text-white"
+                    >
+                      Back to Terminal
+                    </button>
+                  </div>
                 </div>
-                <div className="w-full h-[850px] overflow-y-auto rounded-[3rem] border border-white/20 bg-background dark shadow-2xl shadow-black/50 scrollbar-hide relative group/preview">
-                  <div className="scale-[0.8] origin-top transform-gpu transition-transform duration-500">
+                <div className={`w-full h-[850px] overflow-y-auto rounded-[3.5rem] border-8 transition-all duration-700 scrollbar-hide relative group/preview shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] ${isDarkMode ? 'bg-[#0c0a09] border-[#1a1716]' : 'bg-[#fafaf9] border-[#e7e5e4]'}`}>
+                  <div className={`scale-[0.8] origin-top transform-gpu transition-all duration-500 px-4 pt-4 ${isDarkMode ? 'dark' : ''}`}>
                     {activePreviewPage === 'Home' && (
                       <>
                         <Hero onEdit={(item, category) => {

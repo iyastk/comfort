@@ -28,7 +28,9 @@ interface ServiceContextType {
   serviceData: any[];
   isOpen: boolean;
   isAdmin: boolean;
+  isDarkMode: boolean;
   setIsAdmin: (val: boolean) => void;
+  toggleDarkMode: () => void;
   handleClick: (serviceSlug: string, serviceName: string) => void;
   toggleSidebar: () => void;
   updatePortfolio: (newCategories: any) => void;
@@ -44,6 +46,7 @@ export const ServiceProvider: React.FC<{ children: ReactNode }> = ({ children })
   const [activeButton, setActiveButton] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark as requested
   const router = useRouter();
 
   // Initialize with home furnishing
@@ -53,7 +56,29 @@ export const ServiceProvider: React.FC<{ children: ReactNode }> = ({ children })
       url: transformDriveUrl(item.url)
     }));
     setSelectedImages(initial as MediaItem[]);
+
+    // Theme initialization
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    } else {
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
   }, [categories]);
+
+  const toggleDarkMode = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    if (newMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
 
   const toggleSidebar = () => setIsOpen(!isOpen);
 
@@ -88,6 +113,8 @@ export const ServiceProvider: React.FC<{ children: ReactNode }> = ({ children })
         isOpen,
         isAdmin,
         setIsAdmin,
+        isDarkMode,
+        toggleDarkMode,
         updatePortfolio,
         categories
       }}

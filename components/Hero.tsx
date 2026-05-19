@@ -11,7 +11,7 @@ interface HeroProps {
 }
 
 const Hero = ({ onEdit }: HeroProps) => {
-  const { selectedImages, isAdmin, activeCategorySlug } = useServiceContext();
+  const { selectedImages, isAdmin, activeCategorySlug, isDarkMode } = useServiceContext();
   
   const heroVideo = selectedImages?.find(item => item.type === 'video')?.url || "/images/video_4.mp4";
   const floatingVideo = selectedImages?.filter(item => item.type === 'video')[1]?.url || "/images/video_7.mp4";
@@ -26,7 +26,7 @@ const Hero = ({ onEdit }: HeroProps) => {
   );
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20 group/hero">
+    <section className={`relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20 group/hero transition-colors duration-500 ${isDarkMode ? 'bg-black' : 'bg-[#fafaf9]'}`}>
       <div className="absolute inset-0 z-0 group">
         <video
           src={heroVideo}
@@ -34,9 +34,9 @@ const Hero = ({ onEdit }: HeroProps) => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-60"
+          className={`w-full h-full object-cover transition-opacity duration-500 ${isDarkMode ? 'opacity-60' : 'opacity-40'}`}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-background/90" />
+        <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent transition-colors duration-500 ${isDarkMode ? 'to-black/90' : 'to-[#fafaf9]/90'}`} />
         {isAdmin && onEdit && (
           <button 
             onClick={() => {
@@ -60,10 +60,10 @@ const Hero = ({ onEdit }: HeroProps) => {
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight">
+        <h1 className={`text-5xl md:text-7xl font-serif mb-6 tracking-tight transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-black'}`}>
           Modern & <span className="text-accent italic">Innovative</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white/90 font-light mb-10 max-w-2xl mx-auto tracking-wide">
+        <p className={`text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto tracking-wide transition-colors duration-500 ${isDarkMode ? 'text-white/90' : 'text-black/80'}`}>
           FURNITURE INTERIOR & EXTERIOR
           <br />
           <span className="text-lg opacity-80">We will make your life more comfortable...</span>
@@ -78,7 +78,7 @@ const Hero = ({ onEdit }: HeroProps) => {
       </div>
 
       {/* Floating Image/Video Element for Desktop */}
-      <div className="hidden xl:block absolute right-12 bottom-12 w-64 h-80 rounded-2xl overflow-hidden glass border-white/10 shadow-2xl p-2 animate-fade-in delay-500 group">
+      <div className={`hidden xl:block absolute right-12 bottom-12 w-64 h-80 rounded-2xl overflow-hidden border transition-all duration-500 shadow-2xl p-2 animate-fade-in delay-500 group ${isDarkMode ? 'bg-white/5 border-white/10' : 'bg-black/5 border-black/10'}`}>
         <div className="relative w-full h-full rounded-xl overflow-hidden">
           <video
             src={floatingVideo}

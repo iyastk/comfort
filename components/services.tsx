@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { HiOutlineUserGroup, HiOutlineHome, HiOutlineCog, HiOutlineTable } from "react-icons/hi";
 import houseImage from "/public/images/house.png";
+import { useServiceContext } from "@/store/serviceContext";
 
 const features = [
   {
@@ -27,11 +28,12 @@ const features = [
 ];
 
 const Services = () => {
+  const { isDarkMode } = useServiceContext();
   return (
-    <section className="py-24 bg-background overflow-hidden">
+    <section className={`py-24 transition-colors duration-500 ${isDarkMode ? 'bg-[#0c0a09]' : 'bg-[#fafaf9]'}`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-serif mb-4">Our Services</h2>
+          <h2 className={`text-4xl md:text-5xl font-serif mb-4 transition-colors duration-500 ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Services</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
@@ -44,26 +46,23 @@ const Services = () => {
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">{feature.title}</h3>
-                  <p className="text-foreground/60 leading-relaxed">{feature.description}</p>
+                  <h3 className={`text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}>{feature.title}</h3>
+                  <p className={`leading-relaxed transition-colors duration-500 ${isDarkMode ? 'text-white/40' : 'text-black/60'}`}>{feature.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Center Image */}
-          <div className="relative order-1 lg:order-2 flex justify-center animate-fade-in">
-            <div className="relative w-full max-w-md aspect-square bg-primary/5 rounded-full flex items-center justify-center p-8">
+          <div className="relative order-1 lg:order-2 flex justify-center animate-fade-in group">
+            <div className="relative w-full max-w-sm aspect-square flex items-center justify-center p-2 rounded-[2rem] overflow-hidden bg-white shadow-2xl">
               <Image
                 src={houseImage}
                 alt="Comfort Services"
                 width={500}
                 height={500}
-                className="object-contain relative z-10 hover:scale-105 transition-transform duration-500"
+                className="object-contain relative z-10 hover:scale-110 transition-transform duration-700"
               />
-              {/* Decorative rings */}
-              <div className="absolute inset-4 border border-primary/10 rounded-full animate-spin-slow" />
-              <div className="absolute inset-8 border border-accent/10 rounded-full animate-spin-slow-reverse" />
             </div>
           </div>
 
@@ -75,8 +74,8 @@ const Services = () => {
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-serif font-bold mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>
-                  <p className="text-foreground/60 leading-relaxed">{feature.description}</p>
+                  <h3 className={`text-xl font-serif font-bold mb-3 group-hover:text-accent transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}>{feature.title}</h3>
+                  <p className={`leading-relaxed transition-colors duration-500 ${isDarkMode ? 'text-white/40' : 'text-black/60'}`}>{feature.description}</p>
                 </div>
               </div>
             ))}

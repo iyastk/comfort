@@ -10,20 +10,20 @@ interface PortfolioProps {
 }
 
 const Portfolio = ({ onEdit }: PortfolioProps) => {
-  const { selectedImages, activeCategorySlug, isAdmin } = useServiceContext();
+  const { selectedImages, activeCategorySlug, isAdmin, isDarkMode } = useServiceContext();
   
   // Take first 2 as featured
   const featured = (selectedImages || []).slice(0, 2);
 
   return (
-    <section className="py-24 bg-primary/5 relative overflow-hidden">
+    <section className={`py-24 relative overflow-hidden transition-colors duration-500 ${isDarkMode ? 'bg-[#0c0a09]' : 'bg-[#fafaf9]'}`}>
       {/* Decorative Blur */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 blur-[120px] rounded-full" />
+      <div className={`absolute -top-24 -right-24 w-96 h-96 blur-[120px] rounded-full transition-colors duration-500 ${isDarkMode ? 'bg-primary/10' : 'bg-primary/5'}`} />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-stretch">
           {/* Info Card - High-End Glassmorphism */}
-          <div className="md:col-span-12 lg:col-span-4 glass p-12 rounded-[3.5rem] flex flex-col justify-center items-center text-center animate-slide-up border-white/40 shadow-2xl">
+          <div className={`md:col-span-12 lg:col-span-4 p-12 rounded-[3.5rem] flex flex-col justify-center items-center text-center animate-slide-up border transition-all duration-500 shadow-2xl ${isDarkMode ? 'bg-white/5 border-white/10 text-white' : 'bg-black/5 border-black/5 text-black'}`}>
             <div className="relative w-40 h-40 mb-8 group">
               <Image
                 src={chair}
