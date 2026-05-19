@@ -7,105 +7,95 @@ import Services from "@/components/services";
 import ImageCollage from "@/components/imageCollage";
 import InfoSection from "@/components/InfoSection";
 import Footer from "@/components/footer";
-import Navigation from "@/components/Navigation/mainNavigation";
-import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-
-// import hangLight from "../public/images/hang-light.png";
-
-// import iconImage from "../public/images/";
+import Header from "@/components/Navigation/header";
+import { useServiceContext } from "@/store/serviceContext";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comfortsplus",
-  description: "Discover modern and innovative decoration for your space.",
+  title: "Comfort | Modern & Innovative Furniture",
+  description: "Discover modern and innovative decoration for your space with Comfort Furniture Factory.",
 };
 
 export default function Home() {
-  return (
-    <div className="grid grid-cols-[1fr_20fr_1fr] ">
-      <div className=" hidden  md:flex md:items-center md:justify-center  ">
-        <p>&nbsp; </p>
-      </div>
-      <div className="  bg-orange-50	 text-gray-800 ">
-        {/* Navigation Bar */}
-        <header className="flex flex-col items-between justify-center px-8">
-          <div className="flex items-center justify-center text-6xl p-4 font-serif text-gray-800 tracking-widest ">
-            {/* <Image src={iconImage} alt="icon" width={100} height={100} /> */}
-            COMFORT
-          </div>
-          <div className="flex items-center justify-between">
-            <div className=" gap-6 hidden md:flex">
-              <FaLinkedin className="text-2xl " />
-              <FaInstagram className="text-2xl " />
-            </div>
-            <div className="flex gap-2 md:flex md:justify-center md:gap-4">
-              <Navigation></Navigation>
-            </div>
-            <div className=" gap-6 hidden md:flex">
-              <FaWhatsapp className="text-2xl " />
-              <FaYoutube className="text-2xl " />
-            </div>
-          </div>
-        </header>
+  const { selectedImages } = useServiceContext();
+  
+  // Get Hero assets from the first available category if needed, 
+  // or use the first video from the default selection.
+  const heroVideo = selectedImages?.find(item => item.type === 'video')?.url || "/images/video_4.mp4";
+  const floatingVideo = selectedImages?.filter(item => item.type === 'video')[1]?.url || "/images/video_7.mp4";
 
-        {/* Main Content */}
-        <main className="flex flex-col h-screen gap-2 md:flex-row md:justify-around md:items-center md:p-8 md:relative">
-          {/* Video Section */}
-          <div className="mt-4 h-1/2 md:h-full md:flex-1 flex justify-center items-center md:mt-0 ">
+  return (
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+      {/* Header / Navigation */}
+      <Header />
+
+      <main>
+        {/* Hero Section */}
+        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20">
+          <div className="absolute inset-0 z-0">
             <video
-              src="/images/video_4.mp4"
+              src={heroVideo}
               autoPlay
               loop
               muted
-              className="w-full h-full object-cover"
+              playsInline
+              className="w-full h-full object-cover opacity-60"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-background/90" />
           </div>
 
-          {/* Overlay Section */}
-          <div className="flex-1 flex flex-col justify-center text-center h-full bg-black opacity-80  p-6 ">
-            <div className="flex justify-center mb-4">
-              <Image src={pillow1} width={100} alt="pillow1" />
-              <Image src={pillow2} width={100} alt="pillow2" />
+          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center animate-slide-up">
+            <div className="flex justify-center gap-4 mb-8">
+              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl">
+                <Image src={pillow1} fill alt="Pillow deco 1" className="object-cover" />
+              </div>
+              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl">
+                <Image src={pillow2} fill alt="Pillow deco 2" className="object-cover" />
+              </div>
             </div>
 
-            <h2 className="text-4xl text-white font-serif mb-4">
-              Modern & Innovative
-            </h2>
-            <h3 className="text-stone-200">FURNITURE INTERIOR & EXTERIOR</h3>
-            <p className="text-stone-200 mb-4">
-              We will make your life more comfortable...
+            <h1 className="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tight">
+              Modern & <span className="text-accent italic">Innovative</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 font-light mb-10 max-w-2xl mx-auto tracking-wide">
+              FURNITURE INTERIOR & EXTERIOR
+              <br />
+              <span className="text-lg opacity-80">We will make your life more comfortable...</span>
             </p>
-            <Link href="/portfolio">
-              <div className="inline-block px-6 py-2 mt-2 text-lg font-medium text-white bg-teal-900 rounded-full hover:bg-gray-700">
-                View More
-              </div>
+
+            <Link 
+              href="/portfolio"
+              className="inline-flex items-center px-10 py-4 text-lg font-medium text-white bg-primary rounded-full hover:scale-105 transition-transform shadow-xl hover:shadow-primary/20"
+            >
+              View Our Work
             </Link>
           </div>
 
-          {/* Secondary Video Section */}
-          <div className="hidden md:flex-1 md:flex md:justify-center md:items-center md:h-full ">
-            <video
-              src="/images/video_7.mp4"
-              autoPlay
-              loop
-              muted
-              className="w-full h-full object-cover"
-            />
+          {/* Floating Image/Video Element for Desktop */}
+          <div className="hidden xl:block absolute right-12 bottom-12 w-64 h-80 rounded-2xl overflow-hidden glass border-white/10 shadow-2xl p-2 animate-fade-in delay-500">
+            <div className="relative w-full h-full rounded-xl overflow-hidden">
+              <video
+                src={floatingVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
-        </main>
+        </section>
 
-        <Services></Services>
-        <Portfolio></Portfolio>
-        <ImageCollage></ImageCollage>
-        <InfoSection></InfoSection>
-      </div>
-      <div className=" hidden md:rounded-lg  md:items-center md:justify-center  md:block">
-        <p>&nbsp; </p>
-      </div>
-      <Footer></Footer>
+        {/* Content Sections */}
+        <div className="relative z-10 bg-background">
+          <Services />
+          <Portfolio />
+          <ImageCollage />
+          <InfoSection />
+        </div>
+      </main>
+
+      <Footer />
     </div>
   );
 }

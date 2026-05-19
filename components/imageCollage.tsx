@@ -15,111 +15,141 @@ import gallary_12 from "/public/images/gallary/gallary_12.jpg";
 import gallary_13 from "/public/images/gallary/gallary_13.jpg";
 
 import image_1 from "/public/images/image_2.jpg";
+import { HiPencil } from "react-icons/hi";
 import { useServiceContext } from "@/store/serviceContext";
 
-const ImageCollage = () => {
-  const { selectedImages } = useServiceContext();
-  console.log(selectedImages);
+interface ImageCollageProps {
+  onEdit?: () => void;
+}
+
+const ImageCollage = ({ onEdit }: ImageCollageProps) => {
+  const { isAdmin } = useServiceContext();
+  
+  const EditOverlay = () => (
+    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+      <button 
+        onClick={(e) => { e.preventDefault(); onEdit?.(); }}
+        className="w-10 h-10 rounded-lg bg-white text-black flex items-center justify-center hover:bg-primary hover:text-white transition-colors shadow-lg"
+      >
+        <HiPencil size={18} />
+      </button>
+    </div>
+  );
+
   return (
     <div className="grid grid-cols-8 grid-rows-[5vw] col-span-full gap-3 p-4 ">
-      <div className="col-span-2 row-span-2">
+      <div className="col-span-2 row-span-2 relative group">
         <Image
           src={gallary_1}
           alt="Image 1"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="col-span-3 row-span-3">
+      <div className="col-span-3 row-span-3 relative group">
         <Image
           src={gallary_2}
           alt="Image 2"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="col-start-6 col-span-1 row-span-1">
+      <div className="col-start-6 col-span-1 row-span-1 relative group">
         <Image
           src={gallary_3}
           alt="Image 3"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="col-start-7 col-span-2 row-span-2">
+      <div className="col-start-7 col-span-2 row-span-2 relative group">
         <Image
           src={gallary_4}
           alt="Image 4"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-3 row-span-2 col-span-2">
+      <div className="row-start-3 row-span-2 col-span-2 relative group">
         <Image
           src={gallary_5}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-4 row-span-3 col-start-3 col-span-2">
+      <div className="row-start-4 row-span-3 col-start-3 col-span-2 relative group">
         <Image
           src={gallary_6}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-4 row-span-1 col-start-5 col-span-1">
+      <div className="row-start-4 row-span-1 col-start-5 col-span-1 relative group">
         <Image
           src={gallary_7}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-3 row-span-2 col-start-6 col-span-2">
+      <div className="row-start-3 row-span-2 col-start-6 col-span-2 relative group">
         <Image
           src={gallary_8}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-3 row-span-1 col-start-8">
+      <div className="row-start-3 row-span-1 col-start-8 relative group">
         <Image
           src={gallary_9}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-4 row-span-1 col-start-8">
+      <div className="row-start-4 row-span-1 col-start-8 relative group">
         <Image
           src={gallary_10}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-5 row-span-2 col-span-2 ">
+      <div className="row-start-5 row-span-2 col-span-2 relative group">
         <Image
           src={gallary_11}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-5 row-span-2 col-span-2 ">
+      <div className="row-start-5 row-span-2 col-span-2 relative group">
         <Image
           src={gallary_12}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
-      <div className="row-start-5 row-span-2 col-span-2 ">
+      <div className="row-start-5 row-span-2 col-span-2 relative group">
         <Image
           src={gallary_13}
           alt="Image 5"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
 
-      <div className="">
+      <div className="relative group">
         <Image
           src={image_1}
           alt="Image 6"
           className="object-cover w-full h-full "
         />
+        {isAdmin && <EditOverlay />}
       </div>
     </div>
   );

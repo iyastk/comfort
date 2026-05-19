@@ -1,52 +1,105 @@
 import React from "react";
+import Link from "next/link";
+import { 
+  HiOutlineCog, 
+  HiOutlineTable, 
+  HiOutlineTemplate, 
+  HiOutlineHome, 
+  HiOutlineOfficeBuilding, 
+  HiOutlineShoppingBag,
+  HiOutlinePuzzle
+} from "react-icons/hi";
 import RotatableImage from "@/components/rotate";
 import { useServiceContext } from "@/store/serviceContext";
-import Link from "next/link";
-import useCheckScreen from "@/components/utils/checkScreen";
-import Sidebar from "@/components/sidebar";
+import Header from "@/components/Navigation/header";
+import Footer from "@/components/footer";
 
-const Services = () => {
+// Simple helper to pick an icon based on slug since the current icons are emojis
+const getIcon = (slug: string) => {
+  if (slug.includes("upholstery")) return <HiOutlineCog className="w-8 h-8" />;
+  if (slug.includes("joinery")) return <HiOutlineTable className="w-8 h-8" />;
+  if (slug.includes("curtains")) return <HiOutlineTemplate className="w-8 h-8" />;
+  if (slug.includes("shop")) return <HiOutlineShoppingBag className="w-8 h-8" />;
+  if (slug.includes("hospitality")) return <HiOutlineOfficeBuilding className="w-8 h-8" />;
+  if (slug.includes("office")) return <HiOutlineOfficeBuilding className="w-8 h-8" />;
+  if (slug.includes("Majlis")) return <HiOutlineHome className="w-8 h-8" />;
+  if (slug.includes("home")) return <HiOutlineHome className="w-8 h-8" />;
+  return <HiOutlinePuzzle className="w-8 h-8" />;
+};
+
+const ServicesPage = () => {
   const { serviceData } = useServiceContext();
-  const isAboveMd = useCheckScreen();
 
   return (
-    <div className="container mx-auto  flex bg-slate-100 font-serif text-black">
-      {isAboveMd ? <Sidebar></Sidebar> : <></>}
-
-      <div className="bg-white  w-full  ">
-        <div className=" w-full  flex flex-col items-between justify-center  md:p-6  md:-m-10 ">
-          <p className="text-orange-400  text-center  p-6">
-            Rotate in 360 view
-          </p>
-          <RotatableImage></RotatableImage>
-        </div>
-
-        <div className="flex items-center justify-center bg-white mt-10 px-1 z-50">
-          <h1 className="text-3xl md:text-5xl 	  P-2	">Our Services</h1>
-        </div>
-
-        {/* Features List */}
-        <div className="md:grid md:grid-flow-row	z-50  md:grid-cols-2 lg:grid-cols-3 gap-6 md:p-8">
-          {serviceData.map((feature, index) => (
-            <div
-              key={index}
-              className="flex items-start text-justify md:text-left	gap-3 md:gap-1 p-4 md:p-0  space-x-4"
-            >
-              <div className="text-yellow-500 text-3xl">{feature.icon}</div>
-
-              <div>
-                <Link href={`/portfolio/${feature.slug}`}>
-                  <h3 className="text-lg font-semibold">{feature.title}</h3>
-                </Link>
-
-                <p className="text-gray-600 mt-2">{feature.description}</p>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <main className="pt-32 pb-24">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Hero Section with 360 View */}
+          <div className="relative mb-32 group animate-fade-in">
+            <div className="absolute inset-0 bg-primary/5 rounded-[3rem] -z-10" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-8 md:p-16">
+              <div className="space-y-8">
+                <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Interactive Showcase</span>
+                <h1 className="text-5xl md:text-7xl font-serif leading-tight">Mastering every <span className="text-primary italic">dimension</span>.</h1>
+                <p className="text-foreground/60 text-lg leading-relaxed max-w-md">
+                  Experience our craftsmanship from every angle. Drag to rotate and explore the precision in our details.
+                </p>
+                <div className="flex items-center gap-4 text-sm font-semibold text-primary animate-pulse">
+                  <span className="w-12 h-px bg-primary/30" />
+                  DRAG TO ROTATE 360°
+                </div>
+              </div>
+              
+              <div className="relative aspect-square lg:aspect-auto h-[400px] lg:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing">
+                <div className="absolute inset-0 bg-white/40 rounded-full blur-3xl -z-10 animate-pulse" />
+                <RotatableImage />
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Services Section Header */}
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-serif mb-6">Our Capabilities</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {serviceData.map((service, index) => (
+              <div 
+                key={index} 
+                className="group flex flex-col glass p-8 rounded-3xl border border-foreground/5 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2 animate-slide-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="mb-8 w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:rotate-12">
+                  {getIcon(service.slug)}
+                </div>
+                
+                <h3 className="text-xl font-serif font-bold mb-4 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-sm text-foreground/60 leading-relaxed mb-8 flex-grow">
+                  {service.description}
+                </p>
+
+                <Link 
+                  href={`/portfolio/${service.slug}`}
+                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary group-hover:gap-4 transition-all duration-300"
+                >
+                  Explore Work <span className="text-xl">→</span>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </main>
+
+      <Footer />
     </div>
   );
 };
 
-export default Services;
+export default ServicesPage;

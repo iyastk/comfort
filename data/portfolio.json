@@ -1,0 +1,49 @@
+{
+  "categories": {
+    "MajlisDesigns": [
+      { "id": "v1", "url": "/images/video_1.mp4", "type": "video", "title": "Modern Majlis Showcase" },
+      { "id": "1", "url": "/images/Portfolio/majlis/Majlis-10.jpg", "type": "image", "title": "Majlis Design 1" },
+      { "id": "2", "url": "/images/Portfolio/majlis/Majlis-7.jpg", "type": "image", "title": "Majlis Design 2" }
+    ],
+    "HotelFurnishing": [
+      { "id": "v3", "url": "/images/video_3.mp4", "type": "video", "title": "Luxury Suite Tour" },
+      { "id": "4", "url": "/images/Portfolio/office/Office-1.jpeg", "type": "image", "title": "Hotel Suite" },
+      { "id": "5", "url": "/images/Portfolio/office/Office-2.jpeg", "type": "image", "title": "Guest Room" }
+    ],
+    "homeFurnishing": [
+      { "id": "v5", "url": "/images/video_5.mp4", "type": "video", "title": "Living Spaces" },
+      { "id": "6", "url": "/images/Portfolio/home/Home-13.jpg", "type": "image", "title": "Living Room" },
+      { "id": "7", "url": "/images/Portfolio/home/Home-14.jpg", "type": "image", "title": "Bedroom" }
+    ],
+    "shopFittings": [
+      { "id": "v7", "url": "/images/video_7.mp4", "type": "video", "title": "Retail Excellence" },
+      { "id": "8", "url": "/images/Portfolio/Shop/shop-1.jpeg", "type": "image", "title": "Retail Display" }
+    ]
+  },
+  "serviceInfo": [
+    {
+      "slug": "homeFurnishing",
+      "title": "Residential Solutions",
+      "icon": "🏠",
+      "description": "Crafting comfortable and elegant living spaces for your home."
+    },
+    {
+      "slug": "MajlisDesigns",
+      "title": "Majlis Design Solutions",
+      "icon": "🕌",
+      "description": "Bespoke Majlis interiors combining tradition with modern luxury."
+    },
+    {
+      "slug": "HotelFurnishing",
+      "title": "Hospitality & Hotel",
+      "icon": "🏨",
+      "description": "Premium furnishing for world-class hotels and resorts."
+    },
+    {
+      "slug": "shopFittings",
+      "title": "Retail & Shop",
+      "icon": "🛍️",
+      "description": "Innovative retail displays and commercial fit-out solutions."
+    }
+  ]
+}

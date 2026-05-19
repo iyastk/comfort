@@ -1,104 +1,89 @@
 import React from "react";
-
-// components/FeatureSection.js
 import Image from "next/image";
+import { HiOutlineUserGroup, HiOutlineHome, HiOutlineCog, HiOutlineTable } from "react-icons/hi";
 import houseImage from "/public/images/house.png";
-import useCheckScreen from "@/components/utils/checkScreen";
 
-const features1 = [
+const features = [
   {
     title: "Complete Upholstery Solutions",
-    icon: "⚙️",
-    description:
-      "We offer professional upholstery services for residential, commercial, automotive, and marine needs, including reupholstering, frame repairs, and restoring furniture with high-quality materials for comfort and style.",
+    icon: <HiOutlineCog className="w-8 h-8" />,
+    description: "Professional upholstery for residential, commercial, automotive, and marine. Reupholstering, frame repairs, and high-quality restorations.",
   },
   {
     title: "Joinery and Fit-Out Solutions",
-    icon: "🛠️",
-    description:
-      "We specialize in custom joinery and fit-outs, crafting furniture, cabinetry, doors, and partitions. Our services cover residential, commercial, and bespoke projects, focusing on quality craftsmanship and seamless execution.",
+    icon: <HiOutlineTable className="w-8 h-8" />,
+    description: "Custom joinery, cabinetry, doors, and partitions for residential and commercial projects with seamless execution.",
   },
-];
-const features2 = [
   {
-    title: "Hospitality Furnishing ",
-    icon: "🏠",
-    description:
-      "Tailored solutions for hospitality venues, including custom furniture, upholstery, and fit-outs. We focus on comfort, durability, and aesthetic appeal to meet the unique needs of hotels, restaurants, and event spaces.",
+    title: "Hospitality Furnishing",
+    icon: <HiOutlineUserGroup className="w-8 h-8" />,
+    description: "Tailored solutions for hotels and restaurants. Focus on comfort, durability, and aesthetic appeal for all event spaces.",
   },
-
   {
-    title: "Majlis designs",
-    icon: "🛋️",
-    description:
-      "Enhance your space with exquisite Majlis designs, blending tradition and modernity. we Create a welcoming Majlis with custom seating, luxurious fabrics, and elegant décor, blending tradition and modern style for timeless sophistication.",
+    title: "Majlis Designs",
+    icon: <HiOutlineHome className="w-8 h-8" />,
+    description: "Creating welcoming Majlis spaces with custom seating and luxurious fabrics, blending tradition with modern sophistication.",
   },
 ];
 
 const Services = () => {
-  const isAboveSm = useCheckScreen();
-
   return (
-    <div>
-      <div className="flex items-center justify-center bg-white font-serif px-1">
-        <h1 className="text-5xl 	 mt-8	">Our Services</h1>
-      </div>
-
-      <div className="flex  bg-white flex-col sm:flex-row  md:justify-between  md:mx-auto md:p-1">
-        {/* Features List */}
-        <div className="flex flex-col md:w-1/3  gap-6 p-6 md:p-0">
-          {features1.map((feature, index) => (
-            <div
-              key={index}
-              className="flex items-start gap-6 md:gap-0 md:text-left	 md:space-x-4"
-            >
-              {isAboveSm ? (
-                <>
-                  <div>
-                    <h3 className="text-lg font-semibold">{feature.title}</h3>
-                    <p className="text-gray-600 mt-2">{feature.description}</p>
-                  </div>
-                  <div className="text-yellow-500 text-3xl">{feature.icon}</div>
-                </>
-              ) : (
-                <>
-                  <div className="text-yellow-500 text-3xl">{feature.icon}</div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold">{feature.title}</h3>
-                    <p className="text-gray-600 mt-2">{feature.description}</p>
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+    <section className="py-24 bg-background overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-serif mb-4">Our Services</h2>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        {/* Feature Image */}
-        <div className="mt-10 p-6 md:w-1/3  lg:mt-0 lg:w-1/2 flex justify-center">
-          <Image
-            src={houseImage}
-            alt="Feature Image"
-            width={500}
-            height={500}
-            //   className="rounded-lg shadow-lg"
-          />
-        </div>
-
-        <div className="flex flex-col md:w-1/3 gap-6 p-6 md:p-0">
-          {features2.map((feature, index) => (
-            <div key={index} className="flex items-start space-x-4 ">
-              <div className="text-yellow-500 text-3xl">{feature.icon}</div>
-
-              <div>
-                <h3 className="text-lg font-semibold">{feature.title}</h3>
-                <p className="text-gray-600 mt-2">{feature.description}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+          {/* Left Column Features */}
+          <div className="space-y-12 order-2 lg:order-1">
+            {features.slice(0, 2).map((feature, index) => (
+              <div key={index} className="group flex gap-6 animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:rotate-12 cursor-default">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">{feature.title}</h3>
+                  <p className="text-foreground/60 leading-relaxed">{feature.description}</p>
+                </div>
               </div>
+            ))}
+          </div>
+
+          {/* Center Image */}
+          <div className="relative order-1 lg:order-2 flex justify-center animate-fade-in">
+            <div className="relative w-full max-w-md aspect-square bg-primary/5 rounded-full flex items-center justify-center p-8">
+              <Image
+                src={houseImage}
+                alt="Comfort Services"
+                width={500}
+                height={500}
+                className="object-contain relative z-10 hover:scale-105 transition-transform duration-500"
+              />
+              {/* Decorative rings */}
+              <div className="absolute inset-4 border border-primary/10 rounded-full animate-spin-slow" />
+              <div className="absolute inset-8 border border-accent/10 rounded-full animate-spin-slow-reverse" />
             </div>
-          ))}
+          </div>
+
+          {/* Right Column Features */}
+          <div className="space-y-12 order-3">
+            {features.slice(2).map((feature, index) => (
+              <div key={index} className="group flex gap-6 animate-slide-up" style={{ animationDelay: `${(index + 2) * 100}ms` }}>
+                <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300 transform group-hover:-rotate-12 cursor-default">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif font-bold mb-3 group-hover:text-accent transition-colors">{feature.title}</h3>
+                  <p className="text-foreground/60 leading-relaxed">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

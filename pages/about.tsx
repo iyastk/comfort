@@ -1,127 +1,116 @@
 import React from "react";
 import Image from "next/image";
+import Footer from "@/components/footer";
+import Header from "@/components/Navigation/header";
+import TeamCard from "@/components/teamCard";
 import AboutHero from "../public/images/Portfolio/sample-22.webp";
 import AboutPhoto from "../public/images/Icon/decoration.png";
-import TeamCard from "@/components/teamCard";
-import useCheckScreen from "@/components/utils/checkScreen";
-import Sidebar from "@/components/sidebar";
 
 const About = () => {
-  const isAboveMd = useCheckScreen();
-
   return (
-    <div className="container mx-auto  flex bg-slate-100 text-black font-serif">
-      {isAboveMd ? <Sidebar></Sidebar> : <></>}
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+      {/* Header / Navigation */}
+      <Header />
 
-      <div className="w-full  bg-slate-100 text-black ">
-        <div className="  bg-slate-100   ">
-          <div className="md:h-screen">
-            <Image
-              src={AboutHero}
-              alt="photo of a sofa and lamb to represent about"
-              objectFit="contain"
-              object-position="bottom"
-              className="md:h-4/5 "
-            ></Image>
-            {/* <h1 className="absolute top-28 left-44 text-4xl font-semibold  p-4">
-              Who We Are <span className="text-red-600">?</span>
-            </h1> */}
+      <main className="pt-24">
+        {/* Hero Section */}
+        <section className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+          <Image
+            src={AboutHero}
+            alt="About Comfort Furniture"
+            fill
+            className="object-cover transition-transform duration-700 hover:scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <h1 className="text-5xl md:text-7xl font-serif text-white tracking-tight animate-fade-in">
+              Our Story
+            </h1>
           </div>
-          <div>
-            <div className="flex md:-mt-32 bg-slate-100 w-full">
-              <div className="flex justify-center items-center w-full ">
+        </section>
+
+        {/* Content Section */}
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative aspect-square rounded-3xl overflow-hidden glass p-4 animate-slide-up">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src={AboutPhoto}
-                  alt="photo of a sofa and lamb to represent about"
-                  className="md:p-10 hidden md:block "
-                  width={500}
-                ></Image>
+                  alt="Furniture decoration"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Decorative element */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full blur-3xl opacity-20" />
+            </div>
+
+            <div className="space-y-8 animate-slide-up delay-200">
+              <div className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-widest uppercase">
+                Established Experience
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+                Crafting Excellence for Over <span className="text-primary italic">20 Years</span>
+              </h2>
+              
+              <div className="prose prose-lg text-foreground/70 space-y-6">
+                <p>
+                  <span className="font-bold text-foreground">Comfort Furniture Factory</span> is a leading manufacturer and supplier of custom-built contract furniture, serving the hospitality and leisure industries. We specialize in crafting both contemporary and traditional furniture solutions designed to meet the highest standards of quality and durability.
+                </p>
+                <p>
+                  Backed by a professional management team with over 20 years of combined experience, we have earned the trust of leading hotel chains, contractors, and designers across the Gulf region.
+                </p>
               </div>
 
-              <div className="md:px-10 bg-slate-100 text-black py-5">
-                <h1 className="text-3xl  py-6">About us</h1>
-                <div className="text-justify p-5">
-                  {" "}
-                  <span className="font-bold	">
-                    Comfort Furniture Factory
-                  </span>{" "}
-                  is a leading manufacturer and supplier of custom-built
-                  contract furniture, serving the hospitality and leisure
-                  industries. We specialize in crafting both contemporary and
-                  traditional furniture solutions designed to meet the highest
-                  standards of quality and durability.
-                  <ul className="font-bold p-2	text-red-400">
-                    Our extensive product range includes:
-                  </ul>
-                  <li className="font-bold">
-                    Classic, traditional, and contemporary furniture
-                  </li>{" "}
-                  <li className="font-bold">
-                    Fixed seating and outdoor furniture
-                  </li>{" "}
-                  <li className="pb-2 font-bold">
-                    Reclaimed furniture, case goods, and soft furnishings With
-                    state-of-the-art joinery and upholstery units,
-                  </li>
-                  we deliver bespoke solutions tailored to your project&apos;s
-                  unique needs.
-                  <span className="font-bold	">
-                    Backed by a professional management team with over 20 years
-                    of combined experience in the contract furniture sector,
-                  </span>
-                  we have earned the trust of leading hotel chains, interior
-                  contractors, designers, and architects. Our commitment to
-                  innovation, precision, and craftmdanship has positioned us as
-                  a preferred supplier in the Gulf region’s contract furniture
-                  market. At Comfort Furniture Factory,
-                  <ul className="font-bold p-2	text-red-400	">we prioritize: </ul>
-                  <li className="font-bold">
-                    Reliable construction for long-lasting performance
-                  </li>
-                  <li className="font-bold">
-                    {" "}
-                    Timely and relevant designs to match evolving trends
-                  </li>
-                  <li className="pb-2 font-bold">
-                    Value-driven pricing to suit your project requirements
-                  </li>
-                  Our products are built to withstand even the most demanding
-                  environments, ensuring years of maintenance-free service. We
-                  take pride in transforming spaces with furniture that blends
-                  quality, durability, and design excellence. Comfort Furniture
-                  Factory — your trusted partner in contract furniture
-                  solutions.
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
+                  <h4 className="font-serif font-bold mb-2">Bespoke Quality</h4>
+                  <p className="text-sm opacity-80 text-foreground/70">Tailored solutions for every project&apos;s unique needs.</p>
+                </div>
+                <div className="p-4 rounded-xl bg-accent/5 border border-accent/10">
+                  <h4 className="font-serif font-bold mb-2">Reliable Design</h4>
+                  <p className="text-sm opacity-80 text-foreground/70">Long-lasting performance in demanding environments.</p>
                 </div>
               </div>
             </div>
-            <div></div>
           </div>
-        </div>
-        {/* our team section */}
-        <div className="bg-white text-black p-4">
-          <h1 className="text-3xl  py-6 text-center p-2">Our Team</h1>
-          <div className="flex flex-col md:flex-wrap gap-5 items-center justify-center">
-            <TeamCard
-              name={"info"}
-              role={"Administrator"}
-              email={"info@comfortsplus.com"}
-              image={"👨🏻"}
-            ></TeamCard>
-            <TeamCard
-              name={"Sales"}
-              role={"Sales executive"}
-              email={"sales@comfortsplus.com"}
-              image={"👨🏻"}
-            ></TeamCard>
-            <TeamCard
-              name={"Shafi Muhammed"}
-              role={"Business Development Manager"}
-              email={"shafi@comfortsplus.com"}
-              image={"👨🏻"}
-            ></TeamCard>
+        </section>
+
+        {/* Team Section */}
+        <section className="bg-primary/5 py-24">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-serif mb-4">Meet Our Team</h2>
+              <p className="text-foreground/60 max-w-xl mx-auto">
+                The experts dedicated to bringing your vision to life with precision and craftsmanship.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-8">
+              <TeamCard
+                name={"info"}
+                role={"Administrator"}
+                email={"info@comfortsplus.com"}
+                image={"👨🏻"}
+              />
+              <TeamCard
+                name={"Sales"}
+                role={"Sales Executive"}
+                email={"sales@comfortsplus.com"}
+                image={"👨🏻"}
+              />
+              <TeamCard
+                name={"Shafi Muhammed"}
+                role={"Business Development Manager"}
+                email={"shafi@comfortsplus.com"}
+                image={"👨🏻"}
+              />
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };
