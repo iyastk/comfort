@@ -1,7 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-import pillow1 from "../public/images/pillow1.png";
-import pillow2 from "../public/images/pillow2.png";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/portfolio";
 import Services from "@/components/services";

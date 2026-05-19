@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import chair from "/public/images/chair_3.png";
-import { useServiceContext } from "@/store/serviceContext";
+import { useServiceContext, MediaItem } from "@/store/serviceContext";
 import { HiPencil } from "react-icons/hi";
 
 interface PortfolioProps {
-  onEdit?: (item: any, category: string) => void;
+  onEdit?: (item: MediaItem, category: string) => void;
 }
 
 const Portfolio = ({ onEdit }: PortfolioProps) => {

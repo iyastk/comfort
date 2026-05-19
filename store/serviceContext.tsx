@@ -25,7 +25,7 @@ interface ServiceContextType {
   selectedImages: MediaItem[];
   activeCategorySlug: string;
   activeButton: string;
-  serviceData: any[];
+  serviceData: any[]; 
   isOpen: boolean;
   isAdmin: boolean;
   isDarkMode: boolean;

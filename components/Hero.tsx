@@ -4,10 +4,10 @@ import Link from "next/link";
 import { HiPencil } from "react-icons/hi";
 import pillow1 from "../public/images/pillow1.png";
 import pillow2 from "../public/images/pillow2.png";
-import { useServiceContext } from "@/store/serviceContext";
+import { useServiceContext, MediaItem } from "@/store/serviceContext";
 
 interface HeroProps {
-  onEdit?: (item: any, category: string) => void;
+  onEdit?: (item: MediaItem, category: string) => void;
 }
 
 const Hero = ({ onEdit }: HeroProps) => {
@@ -16,14 +16,6 @@ const Hero = ({ onEdit }: HeroProps) => {
   const heroVideo = selectedImages?.find(item => item.type === 'video')?.url || "/images/video_4.mp4";
   const floatingVideo = selectedImages?.filter(item => item.type === 'video')[1]?.url || "/images/video_7.mp4";
 
-  const EditButton = ({ item, category }: { item: any, category: string }) => (
-    <button 
-      onClick={(e) => { e.preventDefault(); onEdit?.(item, category); }}
-      className="absolute top-4 right-4 w-10 h-10 rounded-lg bg-white text-black shadow-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-primary hover:text-white z-30 border border-white/20"
-    >
-      <HiPencil size={18} />
-    </button>
-  );
 
   return (
     <section className={`relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20 group/hero transition-colors duration-500 ${isDarkMode ? 'bg-black' : 'bg-[#fafaf9]'}`}>
