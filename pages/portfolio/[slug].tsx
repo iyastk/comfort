@@ -1,9 +1,11 @@
+import { GetStaticProps, GetStaticPaths } from 'next';
 import React from "react";
 import { useServiceContext } from "@/store/serviceContext";
 import ImageGallery from "@/components/imageGallary";
 import Header from "@/components/Navigation/header";
 import Footer from "@/components/footer";
 import Head from "next/head";
+import portfolioData from "@/data/portfolio.json";
 
 const SubPage = () => {
   const { selectedImages, activeButton } = useServiceContext();
@@ -35,6 +37,18 @@ const SubPage = () => {
       <Footer />
     </div>
   );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = portfolioData.serviceInfo.map((service) => ({
+    params: { slug: service.slug },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  return { props: {} };
 };
 
 export default SubPage;
