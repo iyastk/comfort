@@ -29,7 +29,7 @@ const AdminDashboard = () => {
   const router = useRouter();
   const { serviceData, updatePortfolio, categories: contextCategories, setIsAdmin, isDarkMode, toggleDarkMode } = useServiceContext();
   const [activeCategory, setActiveCategory] = useState("homeFurnishing");
-  const [viewMode, setViewMode] = useState<'inventory' | 'preview'>('inventory');
+  const [viewMode, setViewMode] = useState<'inventory' | 'preview'>('preview');
   const [activePreviewPage, setActivePreviewPage] = useState<'Home' | 'About' | 'Contact' | 'Portfolio'>('Home');
   const [tempLinks, setTempLinks] = useState<{ [key: string]: string }>({});
   const [isSaving, setIsSaving] = useState(false);
@@ -208,62 +208,43 @@ const AdminDashboard = () => {
       
       <header className="fixed top-[90px] left-0 right-0 z-[60] bg-black/40 backdrop-blur-3xl border-y border-white/10 py-5 px-12 transition-all">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20 shadow-[0_0_40px_rgba(var(--primary-rgb),0.1)]">
-              <HiSave size={28} />
+          <div className="flex items-center gap-3 md:gap-6">
+            <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20 shadow-[0_0_40px_rgba(var(--primary-rgb),0.1)]">
+              <HiSave size={20} className="md:w-7 md:h-7" />
             </div>
             <div>
-              <div className="flex items-center gap-3">
-                <h1 className="text-3xl font-serif text-white">Studio Admin</h1>
-                <span className="text-[9px] bg-primary/20 text-primary px-3 py-1 rounded-full font-bold uppercase border border-primary/20 tracking-widest">Live Sync</span>
+              <div className="flex items-center gap-2 md:gap-3">
+                <h1 className="text-xl md:text-3xl font-serif text-white">Studio Admin</h1>
+                <span className="text-[8px] md:text-[9px] bg-primary/20 text-primary px-2 md:px-3 py-1 rounded-full font-bold uppercase border border-primary/20 tracking-widest">Live</span>
               </div>
-              <p className="text-[9px] text-white/40 uppercase tracking-[0.4em] font-black mt-1">Comfort Integrated Platform</p>
+              <p className="text-[7px] md:text-[9px] text-white/40 uppercase tracking-[0.2em] md:tracking-[0.4em] font-black mt-1">Comfort Platform</p>
             </div>
           </div>
           
-          <div className="flex items-center gap-8">
-            <div className="hidden sm:flex items-center gap-2 p-1 bg-black/40 border border-white/10 rounded-2xl mr-4">
+          <div className="flex items-center gap-2 md:gap-8">
+            <div className="flex items-center gap-1 p-1 bg-black/40 border border-white/10 rounded-xl md:rounded-2xl">
               <button 
                 onClick={() => setViewMode('inventory')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-[10px] font-black uppercase tracking-widest ${viewMode === 'inventory' ? 'bg-primary text-white shadow-lg' : 'text-white/40 hover:text-white'}`}
+                className={`px-3 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl transition-all text-[9px] md:text-[10px] font-black uppercase tracking-widest ${viewMode === 'inventory' ? 'bg-primary text-white shadow-lg' : 'text-white/40 hover:text-white'}`}
               >
-                <HiOutlineDatabase size={16} /> Portfolio
+                <span className="md:inline">Edit</span>
               </button>
               <button 
                 onClick={() => setViewMode('preview')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-all text-[10px] font-black uppercase tracking-widest ${viewMode === 'preview' ? 'bg-primary text-white shadow-lg' : 'text-white/40 hover:text-white'}`}
+                className={`px-3 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl transition-all text-[9px] md:text-[10px] font-black uppercase tracking-widest ${viewMode === 'preview' ? 'bg-primary text-white shadow-lg' : 'text-white/40 hover:text-white'}`}
               >
-                <HiOutlineEye size={16} /> Preview
+                <span className="md:inline">View</span>
               </button>
             </div>
             
-            {viewMode === 'preview' && (
-              <div className="flex items-center gap-2 p-1 bg-black/40 border border-white/10 rounded-2xl">
-                {(['Home', 'About', 'Contact', 'Portfolio'] as const).map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => setActivePreviewPage(page)}
-                    className={`px-4 py-2 rounded-xl transition-all text-[9px] font-black uppercase tracking-widest ${activePreviewPage === page ? 'bg-white/15 text-white shadow-sm' : 'text-white/50 hover:text-white/80'}`}
-                  >
-                    {page}
-                  </button>
-                ))}
-              </div>
-            )}
-            <div className="hidden xl:flex flex-col items-end gap-1">
-              <span className="text-[9px] font-black text-white/30 uppercase tracking-[0.2em]">Environment State</span>
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Production Cluster</span>
-              </div>
-            </div>
             <button 
               onClick={handleSave}
               disabled={isSaving}
-              className="group flex items-center gap-4 px-12 py-5 bg-white text-black rounded-2xl font-black tracking-[0.2em] hover:bg-primary hover:text-white transition-all disabled:opacity-50 text-[11px] active:scale-95 shadow-2xl shadow-primary/20 border border-white/20"
+              className="flex items-center justify-center w-10 md:w-auto md:px-12 py-2 md:py-5 bg-white text-black rounded-lg md:rounded-2xl font-black tracking-[0.2em] hover:bg-primary hover:text-white transition-all disabled:opacity-50 text-[10px] md:text-[11px] active:scale-95 shadow-2xl shadow-primary/20 border border-white/20"
+              title="Commit Changes"
             >
-              <HiSave className="text-xl group-hover:rotate-12 transition-transform" /> 
-              {isSaving ? "SYNCHRONIZING..." : "COMMIT CHANGES"}
+              <HiSave className="text-lg md:mr-4" /> 
+              <span className="hidden md:inline">{isSaving ? "SYNCHRONIZING..." : "COMMIT CHANGES"}</span>
             </button>
           </div>
         </div>
@@ -274,26 +255,26 @@ const AdminDashboard = () => {
           {viewMode === 'inventory' ? (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
               {/* Sidebar Categories */}
-              <div className="lg:col-span-3 space-y-8 animate-fade-in">
-                <div className="bg-[#141211] border border-white/10 rounded-[2.5rem] p-8 space-y-6 shadow-2xl">
-                  <p className="text-[10px] font-black text-primary uppercase tracking-[0.4em] px-2">Content Clusters</p>
-                  <div className="space-y-2">
+              <div className="lg:col-span-3 space-y-8 animate-fade-in overflow-hidden">
+                <div className="bg-[#141211] border border-white/10 rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-8 space-y-4 md:space-y-6 shadow-2xl overflow-x-auto">
+                  <p className="text-[9px] md:text-[10px] font-black text-primary uppercase tracking-[0.4em] px-2 mb-2 md:mb-0">Content Clusters</p>
+                  <div className="flex lg:flex-col gap-2 min-w-max lg:min-w-0 pb-2 lg:pb-0">
                     {serviceData.map((service) => (
                       <button
                         key={service.slug}
                         onClick={() => setActiveCategory(service.slug)}
-                        className={`w-full text-left px-5 py-4 rounded-2xl transition-all duration-300 group flex items-center gap-4 border ${
+                        className={`text-left px-4 md:px-5 py-3 md:py-4 rounded-xl md:rounded-2xl transition-all duration-300 group flex items-center gap-3 md:gap-4 border whitespace-nowrap ${
                           activeCategory === service.slug 
                           ? "bg-primary/10 text-primary border-primary/30 shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)]" 
                           : "text-white/50 hover:bg-white/5 hover:text-white border-transparent"
                         }`}
                       >
-                        <span className={`text-xl transition-all duration-300 ${activeCategory === service.slug ? "scale-110 opacity-100" : "opacity-40 group-hover:opacity-100 group-hover:scale-110"}`}>
+                        <span className={`text-lg md:text-xl transition-all duration-300 ${activeCategory === service.slug ? "scale-110 opacity-100" : "opacity-40 group-hover:opacity-100 group-hover:scale-110"}`}>
                           {service.slug === 'homeFurnishing' ? <HiOutlineHome /> : 
                            service.slug === 'HotelFurnishing' ? <HiOutlineOfficeBuilding /> :
                            service.slug === 'MajlisDesigns' ? <HiOutlinePuzzle /> : <HiOutlineShoppingBag />}
                         </span>
-                        <span className="text-[11px] font-bold uppercase tracking-[0.15em] truncate">{service.title}</span>
+                        <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] md:tracking-[0.15em]">{service.title}</span>
                       </button>
                     ))}
                   </div>
@@ -312,7 +293,7 @@ const AdminDashboard = () => {
 
               {/* Main Editor */}
               <div ref={editorRef} className="lg:col-span-9 animate-slide-up delay-100">
-                <div className="bg-[#141211] p-10 md:p-16 rounded-[3.5rem] border border-white/10 space-y-12 shadow-2xl relative overflow-hidden">
+                <div className="bg-[#141211] p-6 md:p-16 rounded-[2.5rem] md:rounded-[3.5rem] border border-white/10 space-y-8 md:space-y-12 shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
                   
                   {/* Quality / Input Container */}
@@ -515,8 +496,8 @@ const AdminDashboard = () => {
                     </button>
                   </div>
                 </div>
-                <div className={`w-full h-[850px] overflow-y-auto rounded-[3.5rem] border-8 transition-all duration-700 scrollbar-hide relative group/preview shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] ${isDarkMode ? 'bg-[#0c0a09] border-[#1a1716]' : 'bg-[#fafaf9] border-[#e7e5e4]'}`}>
-                  <div className={`scale-[0.8] origin-top transform-gpu transition-all duration-500 px-4 pt-4 ${isDarkMode ? 'dark' : ''}`}>
+                <div className={`w-full h-[600px] md:h-[850px] overflow-y-auto rounded-[2rem] md:rounded-[3.5rem] border-4 md:border-8 transition-all duration-700 scrollbar-hide relative group/preview shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] ${isDarkMode ? 'bg-[#0c0a09] border-[#1a1716]' : 'bg-[#fafaf9] border-[#e7e5e4]'}`}>
+                  <div className={`scale-[0.95] md:scale-[0.8] origin-top transform-gpu transition-all duration-500 px-2 md:px-4 pt-4 ${isDarkMode ? 'dark' : ''}`}>
                     {activePreviewPage === 'Home' && (
                       <>
                         <Hero onEdit={(item, category) => {

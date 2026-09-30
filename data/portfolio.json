@@ -1,23 +1,412 @@
 {
   "categories": {
     "MajlisDesigns": [
-      { "id": "v1", "url": "/images/video_1.mp4", "type": "video", "title": "Modern Majlis Showcase" },
-      { "id": "1", "url": "/images/Portfolio/majlis/Majlis-10.jpg", "type": "image", "title": "Majlis Design 1" },
-      { "id": "2", "url": "/images/Portfolio/majlis/Majlis-7.jpg", "type": "image", "title": "Majlis Design 2" }
+      {
+        "id": "v1",
+        "slug": "modern-majlis-showcase",
+        "url": "/images/video_1.mp4",
+        "type": "video",
+        "title": "Modern Majlis Showcase",
+        "category": "MajlisDesigns",
+        "categoryName": "Majlis Design",
+        "description": "Experience our flagship modern Majlis interior showcase. Designed specifically for luxury Middle Eastern residences, this project seamlessly merges rich cultural heritage with sleek contemporary minimalism. Crafted using premium stain-resistant velvet upholstery, hand-carved mahogany accents, and ambient LED perimeter lighting.",
+        "client": "Private Royal Residence",
+        "location": "Al Barsha, Dubai, UAE",
+        "year": "2025",
+        "features": [
+          "Hand-crafted Solid Hardwood Frame",
+          "Custom High-Density Acoustic Foam Cushioning",
+          "Stain-Resistant Italian Silk Velvet",
+          "Integrated Ambient Perimeter Lighting",
+          "Bespoke Low-Profile Floor Seating Layout"
+        ],
+        "gallery": [
+          "/images/Portfolio/majlis/Majlis-10.jpg",
+          "/images/Portfolio/majlis/Majlis-7.jpg",
+          "/images/Portfolio/majlis/Majlis-3.jpg"
+        ]
+      },
+      {
+        "id": "1",
+        "slug": "royal-arabic-majlis-lounge",
+        "url": "/images/Portfolio/majlis/Majlis-10.jpg",
+        "type": "image",
+        "title": "Royal Arabic Majlis Lounge",
+        "category": "MajlisDesigns",
+        "categoryName": "Majlis Design",
+        "description": "A grand Arabic Majlis lounge tailored for formal VIP receptions. Features generous deep seating, gold-leaf trimmed wood paneling, and handcrafted accent cushions. Designed and manufactured at Comfort Furniture Factory in Dubai with uncompromising precision.",
+        "client": "Private Family Villa",
+        "location": "Emirates Hills, Dubai, UAE",
+        "year": "2024",
+        "features": [
+          "Gold-Leaf Finished Joinery Details",
+          "Ergonomic Lumbar Support Cushions",
+          "Flame-Retardant Contract Upholstery",
+          "Modular Seating Configuration for 30+ Guests",
+          "Custom Geometric Arabic Pattern Inlays"
+        ],
+        "gallery": [
+          "/images/Portfolio/majlis/Majlis-10.jpg",
+          "/images/Portfolio/majlis/Majlis-7.jpg",
+          "/images/Portfolio/majlis/Majlis-5.jpg"
+        ]
+      },
+      {
+        "id": "2",
+        "slug": "traditional-luxury-majlis-seating",
+        "url": "/images/Portfolio/majlis/Majlis-7.jpg",
+        "type": "image",
+        "title": "Traditional Luxury Majlis Seating",
+        "category": "MajlisDesigns",
+        "categoryName": "Majlis Design",
+        "description": "Refined traditional seating with opulent golden embroidery and plush armrest bolsters. Designed to accommodate traditional hospitality gatherings with modern comfort engineering.",
+        "client": "VIP Cultural Estate",
+        "location": "Jumeirah 2, Dubai, UAE",
+        "year": "2024",
+        "features": [
+          "Traditional Damask Fabric Weave",
+          "High-Resilience Cold-Cured Foam",
+          "Hand-Carved Walnut Corner Elements",
+          "Integrated Side Tea Tables",
+          "Custom Oversized Floor Pillows"
+        ],
+        "gallery": [
+          "/images/Portfolio/majlis/Majlis-7.jpg",
+          "/images/Portfolio/majlis/Majlis-10.jpg",
+          "/images/Portfolio/majlis/Majlis-8.jpg"
+        ]
+      },
+      {
+        "id": "majlis-3",
+        "slug": "contemporary-majlis-interior",
+        "url": "/images/Portfolio/majlis/Majlis-3.jpg",
+        "type": "image",
+        "title": "Contemporary Majlis Interior",
+        "category": "MajlisDesigns",
+        "categoryName": "Majlis Design",
+        "description": "Clean lines and understated luxury characterize this contemporary Majlis concept. Utilizing neutral earth tones, brushed metallic base trims, and warm accent pillows.",
+        "client": "Luxury Compound Villa",
+        "location": "Abu Dhabi, UAE",
+        "year": "2025",
+        "features": [
+          "Minimalist Low Profile Silhouette",
+          "Neutral Earth Tone Fabric Palette",
+          "Brushed Brass Base Trimming",
+          "Modular Sectional Alignment",
+          "Stain and UV Resistant Coating"
+        ],
+        "gallery": [
+          "/images/Portfolio/majlis/Majlis-3.jpg",
+          "/images/Portfolio/majlis/Majlis-5.jpg",
+          "/images/Portfolio/majlis/Majlis-9.jpg"
+        ]
+      },
+      {
+        "id": "majlis-5",
+        "slug": "bespoke-emirati-reception-hall",
+        "url": "/images/Portfolio/majlis/Majlis-5.jpg",
+        "type": "image",
+        "title": "Bespoke Emirati Reception Hall",
+        "category": "MajlisDesigns",
+        "categoryName": "Majlis Design",
+        "description": "High-capacity reception seating for high-profile hospitality gatherings. Includes matching wall panels, plush carpeting, and custom carved side tables.",
+        "client": "Executive Government Majlis",
+        "location": "Riyadh, KSA",
+        "year": "2024",
+        "features": [
+          "High-Capacity 50+ Seating Capacity",
+          "Fire-Retardant Commercial Fabrics",
+          "Custom Acoustic Wall Panel Matching",
+          "Polished Brass Inlay Accessories",
+          "Heavy-Duty Solid Oak Framing"
+        ],
+        "gallery": [
+          "/images/Portfolio/majlis/Majlis-5.jpg",
+          "/images/Portfolio/majlis/Majlis-10.jpg",
+          "/images/Portfolio/majlis/Majlis-7.jpg"
+        ]
+      }
     ],
     "HotelFurnishing": [
-      { "id": "v3", "url": "/images/video_3.mp4", "type": "video", "title": "Luxury Suite Tour" },
-      { "id": "4", "url": "/images/Portfolio/office/Office-1.jpeg", "type": "image", "title": "Hotel Suite" },
-      { "id": "5", "url": "/images/Portfolio/office/Office-2.jpeg", "type": "image", "title": "Guest Room" }
+      {
+        "id": "v3",
+        "slug": "luxury-suite-video-tour",
+        "url": "/images/video_3.mp4",
+        "type": "video",
+        "title": "Luxury Suite Video Tour",
+        "category": "HotelFurnishing",
+        "categoryName": "Hospitality & Hotel",
+        "description": "Explore our complete hospitality fit-out for a 5-star luxury hotel suite in Dubai. From custom upholstered headboards to ergonomic desk chairs and vanity mirrors, every piece is built for high-traffic durability and five-star aesthetic luxury.",
+        "client": "Grand Horizon 5-Star Hotel",
+        "location": "Downtown Dubai, UAE",
+        "year": "2025",
+        "features": [
+          "Full Hotel Room Package (Bed, Desk, Armchair, Vanity)",
+          "Commercial Grade 100,000+ Martindale Rub Upholstery",
+          "Scratch & Stain Resistant Veneer Surfaces",
+          "Acoustic Sound-Dampening Padded Headboards",
+          "Custom Hospitality Power-Strip Integration"
+        ],
+        "gallery": [
+          "/images/Portfolio/office/Office-1.jpeg",
+          "/images/Portfolio/office/Office-2.jpeg",
+          "/images/Portfolio/hospitality/hospitality-3.jpeg"
+        ]
+      },
+      {
+        "id": "4",
+        "slug": "presidential-hotel-suite-dubai",
+        "url": "/images/Portfolio/office/Office-1.jpeg",
+        "type": "image",
+        "title": "Presidential Hotel Suite",
+        "category": "HotelFurnishing",
+        "categoryName": "Hospitality & Hotel",
+        "description": "Turnkey hospitality furnishing for executive presidential suites. Designed with solid teak joinery, Italian leather lounge seating, and tailored blackout window drapery.",
+        "client": "Palace Resort & Spa",
+        "location": "Palm Jumeirah, Dubai, UAE",
+        "year": "2024",
+        "features": [
+          "Solid Teak Wood Joinery",
+          "Full-Grain Italian Leather Lounge Chairs",
+          "Custom Bed Surround with Nightstand Integration",
+          "Blackout Motorized Curtain System",
+          "Hospitality Fire & Safety Certification"
+        ],
+        "gallery": [
+          "/images/Portfolio/office/Office-1.jpeg",
+          "/images/Portfolio/office/Office-2.jpeg",
+          "/images/Portfolio/hospitality/hospitality-1.jpeg"
+        ]
+      },
+      {
+        "id": "5",
+        "slug": "deluxe-executive-guest-room",
+        "url": "/images/Portfolio/office/Office-2.jpeg",
+        "type": "image",
+        "title": "Deluxe Guest Room",
+        "category": "HotelFurnishing",
+        "categoryName": "Hospitality & Hotel",
+        "description": "Elegant, ergonomic guest room furnishings designed to maximize room efficiency while providing unmatched comfort for international business travelers.",
+        "client": "Metropolitan Business Hotel",
+        "location": "Business Bay, Dubai, UAE",
+        "year": "2024",
+        "features": [
+          "Ergonomic Task Desk & Chair",
+          "Wall-Mounted Floating Media Console",
+          "Stain-Resistant Bouclé Fabric Armchair",
+          "Integrated Luggage Rack Bench",
+          "Soft-Close German Cabinet Hardware"
+        ],
+        "gallery": [
+          "/images/Portfolio/office/Office-2.jpeg",
+          "/images/Portfolio/office/Office-1.jpeg",
+          "/images/Portfolio/hospitality/hospitality-2.jpeg"
+        ]
+      },
+      {
+        "id": "hosp-3",
+        "slug": "boutique-resort-lobby-lounge",
+        "url": "/images/Portfolio/hospitality/hospitality-3.jpeg",
+        "type": "image",
+        "title": "Boutique Resort Lobby Lounge",
+        "category": "HotelFurnishing",
+        "categoryName": "Hospitality & Hotel",
+        "description": "Statement lobby furniture crafted for high-volume resort entrances. Featuring organic curved sofas, stone-topped coffee tables, and accent ottomans.",
+        "client": "Royal Beach Resort",
+        "location": "Ras Al Khaimah, UAE",
+        "year": "2025",
+        "features": [
+          "Organic Curved Sculptural Sofas",
+          "Natural Marble & Travertine Coffee Tables",
+          "Heavy Commercial Fabric Rating",
+          "Modular Seating Arrangements",
+          "Water-Repellent Outdoor Transition Fabrics"
+        ],
+        "gallery": [
+          "/images/Portfolio/hospitality/hospitality-3.jpeg",
+          "/images/Portfolio/hospitality/hospitality-1.jpeg",
+          "/images/Portfolio/office/Office-3.jpeg"
+        ]
+      }
     ],
     "homeFurnishing": [
-      { "id": "v5", "url": "/images/video_5.mp4", "type": "video", "title": "Living Spaces" },
-      { "id": "6", "url": "/images/Portfolio/home/Home-13.jpg", "type": "image", "title": "Living Room" },
-      { "id": "7", "url": "/images/Portfolio/home/Home-14.jpg", "type": "image", "title": "Bedroom" }
+      {
+        "id": "v5",
+        "slug": "luxury-living-spaces-tour",
+        "url": "/images/video_5.mp4",
+        "type": "video",
+        "title": "Living Spaces Tour",
+        "category": "homeFurnishing",
+        "categoryName": "Residential & Home",
+        "description": "A immersive video showcase of modern luxury residential interiors. Featuring custom sectionals, hand-upholstered wall panels, dining tables, and bespoke bedroom furniture created for a luxury Dubai villa.",
+        "client": "Private Villa Residence",
+        "location": "Dubai Hills Estate, Dubai, UAE",
+        "year": "2025",
+        "features": [
+          "Bespoke L-Shaped Sectional Sofa",
+          "Hand-Upholstered Velvet Accent Walls",
+          "10-Seater Solid Walnut Dining Table",
+          "Custom Master Suite King Bed",
+          "Integrated Lighting & Concealed Storage"
+        ],
+        "gallery": [
+          "/images/Portfolio/home/Home-13.jpg",
+          "/images/Portfolio/home/Home-14.jpg",
+          "/images/Portfolio/home/Home-4.jpg"
+        ]
+      },
+      {
+        "id": "6",
+        "slug": "contemporary-dubai-living-room",
+        "url": "/images/Portfolio/home/Home-13.jpg",
+        "type": "image",
+        "title": "Contemporary Living Room",
+        "category": "homeFurnishing",
+        "categoryName": "Residential & Home",
+        "description": "A spacious, bright living room set designed with minimalist elegance. Upholstered in linen-blend fabrics with natural oak wooden frames.",
+        "client": "Penthouse Apartment",
+        "location": "Dubai Marina, UAE",
+        "year": "2024",
+        "features": [
+          "Feather-Down Filled Cushion Insert",
+          "Natural Linen Upholstery",
+          "Solid European Oak Framing",
+          "Custom Ottoman Coffee Table",
+          "Modular Seating Modules"
+        ],
+        "gallery": [
+          "/images/Portfolio/home/Home-13.jpg",
+          "/images/Portfolio/home/Home-14.jpg",
+          "/images/Portfolio/home/Home-5.jpg"
+        ]
+      },
+      {
+        "id": "7",
+        "slug": "master-bedroom-headboard-fitout",
+        "url": "/images/Portfolio/home/Home-14.jpg",
+        "type": "image",
+        "title": "Master Bedroom Fit-Out",
+        "category": "homeFurnishing",
+        "categoryName": "Residential & Home",
+        "description": "Bespoke master bedroom suite featuring an floor-to-ceiling upholstered headboard, integrated nightstands with brass inlay, and premium mattress support base.",
+        "client": "Luxury Villa",
+        "location": "Arabian Ranches, Dubai, UAE",
+        "year": "2024",
+        "features": [
+          "Floor-to-Ceiling Fluted Wall Headboard",
+          "Brass Accent Inlays",
+          "Concealed Wireless Charging Nightstands",
+          "Hypoallergenic Premium Upholstery",
+          "Custom Bench Footboard"
+        ],
+        "gallery": [
+          "/images/Portfolio/home/Home-14.jpg",
+          "/images/Portfolio/home/Home-13.jpg",
+          "/images/Portfolio/home/Home-11.jpg"
+        ]
+      },
+      {
+        "id": "home-4",
+        "slug": "luxury-villa-dining-collection",
+        "url": "/images/Portfolio/home/Home-4.jpg",
+        "type": "image",
+        "title": "Luxury Villa Dining Collection",
+        "category": "homeFurnishing",
+        "categoryName": "Residential & Home",
+        "description": "Elegant dining room furniture including custom dining chairs with brass legs and a marble-top dining table created for royal hosting.",
+        "client": "Luxury Villa Project",
+        "location": "Jumeirah Islands, Dubai, UAE",
+        "year": "2025",
+        "features": [
+          "Italian Calacatta Marble Top",
+          "Ergonomic Curved Dining Armchairs",
+          "Polished Metallic Brass Finish",
+          "Seating Capacity for 12 Guests",
+          "Stain-Shield Fabric Protection"
+        ],
+        "gallery": [
+          "/images/Portfolio/home/Home-4.jpg",
+          "/images/Portfolio/home/Home-13.jpg",
+          "/images/Portfolio/home/Home-14.jpg"
+        ]
+      }
     ],
     "shopFittings": [
-      { "id": "v7", "url": "/images/video_7.mp4", "type": "video", "title": "Retail Excellence" },
-      { "id": "8", "url": "/images/Portfolio/Shop/shop-1.jpeg", "type": "image", "title": "Retail Display" }
+      {
+        "id": "v7",
+        "slug": "retail-excellence-commercial-fitout",
+        "url": "/images/video_7.mp4",
+        "type": "video",
+        "title": "Retail Excellence Showcase",
+        "category": "shopFittings",
+        "categoryName": "Retail & Shop",
+        "description": "Comprehensive video tour of high-end retail shopfitting and display systems created for luxury brand boutiques in major UAE malls.",
+        "client": "Luxury Brand Boutique",
+        "location": "Mall of the Emirates, Dubai, UAE",
+        "year": "2025",
+        "features": [
+          "Bespoke Glass & Aluminum Display Cabinets",
+          "Integrated Concealed LED Strip Lighting",
+          "High-Security Electronic Locking Locks",
+          "Custom Cashier Counter & Fitting Room Joinery",
+          "Modular Wall Shelving Systems"
+        ],
+        "gallery": [
+          "/images/Portfolio/Shop/shop-1.jpeg",
+          "/images/Portfolio/Shop/shop-2.jpeg",
+          "/images/Portfolio/Shop/shop-3.jpeg"
+        ]
+      },
+      {
+        "id": "8",
+        "slug": "luxury-boutique-retail-display",
+        "url": "/images/Portfolio/Shop/shop-1.jpeg",
+        "type": "image",
+        "title": "Luxury Retail Display",
+        "category": "shopFittings",
+        "categoryName": "Retail & Shop",
+        "description": "Custom retail display cases and island counters engineered for luxury watch, jewelry, and fashion accessory merchandising.",
+        "client": "Jewelry & Horology Store",
+        "location": "Dubai Mall, UAE",
+        "year": "2024",
+        "features": [
+          "Ultra-Clear Tempered Glass Cases",
+          "High CRI 95+ Spot Lighting",
+          "Scratch-Resistant High-Gloss Lacquer Finish",
+          "Integrated Brand Logo Illumination",
+          "Heavy-Duty Commercial Slide Drawers"
+        ],
+        "gallery": [
+          "/images/Portfolio/Shop/shop-1.jpeg",
+          "/images/Portfolio/Shop/shop-2.jpeg",
+          "/images/Portfolio/Shop/shop-4.jpeg"
+        ]
+      },
+      {
+        "id": "shop-2",
+        "slug": "commercial-retail-storefront-counter",
+        "url": "/images/Portfolio/Shop/shop-2.jpeg",
+        "type": "image",
+        "title": "Commercial Retail Counter",
+        "category": "shopFittings",
+        "categoryName": "Retail & Shop",
+        "description": "Ergonomic reception and point-of-sale checkout counter crafted with corian countertop, ribbed timber cladding, and hidden cable routing.",
+        "client": "Flagship Retail Store",
+        "location": "Yas Mall, Abu Dhabi, UAE",
+        "year": "2024",
+        "features": [
+          "Seamless Corian Surface Top",
+          "Acoustic Wooden Ribbed Panel Facade",
+          "POS System & Cable Management Channels",
+          "Under-Counter Lockable Storage",
+          "Durable Kick-Plate Stainless Steel Base"
+        ],
+        "gallery": [
+          "/images/Portfolio/Shop/shop-2.jpeg",
+          "/images/Portfolio/Shop/shop-1.jpeg",
+          "/images/Portfolio/Shop/shop-3.jpeg"
+        ]
+      }
     ]
   },
   "serviceInfo": [

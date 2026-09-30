@@ -19,9 +19,7 @@ const Header = () => {
           </span>
         </Link>
         
-        <Navigation />
-
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="flex items-center gap-2 md:gap-6">
           <button
             onClick={toggleDarkMode}
             className={`w-10 h-10 flex items-center justify-center rounded-xl border transition-all ${isDarkMode ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' : 'bg-black/5 border-black/10 text-black hover:bg-black/10'}`}
@@ -29,9 +27,12 @@ const Header = () => {
           >
             {isDarkMode ? <HiOutlineSun size={20} /> : <HiOutlineMoon size={20} />}
           </button>
+          
+          <Navigation />
+
           <Link 
             href="/contact"
-            className={`px-6 py-2 border rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${isDarkMode ? 'border-white/10 text-white hover:bg-white hover:text-black' : 'border-black/10 text-black hover:bg-black hover:text-white'}`}
+            className={`hidden md:block px-6 py-2 border rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${isDarkMode ? 'border-white/10 text-white hover:bg-white hover:text-black' : 'border-black/10 text-black hover:bg-black hover:text-white'}`}
           >
             Get Quote
           </Link>

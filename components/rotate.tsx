@@ -1,5 +1,5 @@
 import { useState } from "react";
-import houseImage from "/public/images/house.png";
+import houseImage from "../public/images/house.png";
 import Image from "next/image";
 
 export default function RotatableImage() {

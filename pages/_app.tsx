@@ -9,19 +9,32 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ServiceProvider>
       <Fragment>
         <Head>
-          <title>Comfortsplus | Premium Furniture & Interior Solutions Dubai</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>Comfort | Modern & Innovative Furniture Solutions Dubai</title>
+          <meta 
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" 
+          />
           <meta
             name="description"
-            content="Comfortsplus offers premium contract furniture and custom interior solutions for hospitality, residential, and commercial spaces in Dubai, UAE."
+            content="Comfort offers premium contract furniture, custom majlis designs, hotel furnishing, and commercial fit-out interior solutions in Dubai, UAE."
           />
           <meta
             name="keywords"
-            content="furniture Dubai, custom furniture, hospitality furniture, interior solutions, upholstery services, contract furniture UAE"
+            content="furniture Dubai, custom majlis design, hospitality furniture, hotel furnishing, contract furniture UAE, office interior, shop fitting Dubai"
           />
-          <meta name="author" content="Comfortsplus" />
+          <meta name="author" content="Comfort Contract Furniture Factory" />
+          <meta name="robots" content="index, follow, max-image-preview:large" />
+          
+          {/* iOS Safari Mobile App Metadata */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta name="apple-mobile-web-app-title" content="Comfort Furniture" />
+          <meta name="format-detection" content="telephone=no" />
+
+          {/* Open Graph Tags */}
           <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Comfortsplus" />
+          <meta property="og:site_name" content="Comfort Contract Furniture" />
+          <meta property="og:locale" content="en_US" />
           <link rel="canonical" href="https://www.comfortsplus.com" />
         </Head>
 

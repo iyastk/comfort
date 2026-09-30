@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { HiOutlineUserGroup, HiOutlineHome, HiOutlineCog, HiOutlineTable } from "react-icons/hi";
-import houseImage from "/public/images/house.png";
+import houseImage from "../public/images/house.png";
 import { useServiceContext } from "@/store/serviceContext";
 
 const features = [
