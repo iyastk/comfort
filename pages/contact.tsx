@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { HiOutlinePhone, HiOutlineLocationMarker } from "react-icons/hi";
-import Scanner from "../public/whatsapp contact.jpg";
+import Scanner from "../public/new whatsapp.jpeg";
 import ContactCard from "@/components/contactCard";
 import Header from "@/components/Navigation/header";
 import Footer from "@/components/footer";

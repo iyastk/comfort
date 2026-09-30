@@ -16,7 +16,7 @@ import Image from "next/image";
 // Preview Assets
 import AboutHero from "../../public/images/Portfolio/sample-22.webp";
 import AboutPhoto from "../../public/images/Icon/decoration.png";
-import Scanner from "../../public/whatsapp contact.jpg";
+import Scanner from "../../public/new whatsapp.jpeg";
 
 interface PortfolioMediaItem {
   id: string;
