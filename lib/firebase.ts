@@ -1,6 +1,7 @@
 import { initializeApp, getApps, getApp, FirebaseApp } from "firebase/app";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL, FirebaseStorage } from "firebase/storage";
 import { getFirestore, doc, setDoc, getDoc, Firestore } from "firebase/firestore";
+import { getAnalytics, isSupported, Analytics } from "firebase/analytics";
 
 export interface FirebaseConfig {
   apiKey?: string;
@@ -9,9 +10,20 @@ export interface FirebaseConfig {
   storageBucket?: string;
   messagingSenderId?: string;
   appId?: string;
+  measurementId?: string;
 }
 
 const LOCAL_STORAGE_FIREBASE_KEY = "comfort_firebase_config";
+
+const DEFAULT_FIREBASE_CONFIG: FirebaseConfig = {
+  apiKey: "AIzaSyAALOCn8McZyxEBV0PCFWEP7GGz1oddcMM",
+  authDomain: "comfortsplus-2378e.firebaseapp.com",
+  projectId: "comfortsplus-2378e",
+  storageBucket: "comfortsplus-2378e.firebasestorage.app",
+  messagingSenderId: "266261766395",
+  appId: "1:266261766395:web:2f22447711ec5efb2e905e",
+  measurementId: "G-PM4VC1DRSV"
+};
 
 // Read configuration from environment or localStorage
 export function getFirebaseConfig(): FirebaseConfig {
@@ -28,12 +40,13 @@ export function getFirebaseConfig(): FirebaseConfig {
   }
 
   return {
-    apiKey: storedConfig.apiKey || process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "",
-    authDomain: storedConfig.authDomain || process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "",
-    projectId: storedConfig.projectId || process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "",
-    storageBucket: storedConfig.storageBucket || process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "",
-    messagingSenderId: storedConfig.messagingSenderId || process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "",
-    appId: storedConfig.appId || process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "",
+    apiKey: storedConfig.apiKey || process.env.NEXT_PUBLIC_FIREBASE_API_KEY || DEFAULT_FIREBASE_CONFIG.apiKey,
+    authDomain: storedConfig.authDomain || process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || DEFAULT_FIREBASE_CONFIG.authDomain,
+    projectId: storedConfig.projectId || process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || DEFAULT_FIREBASE_CONFIG.projectId,
+    storageBucket: storedConfig.storageBucket || process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || DEFAULT_FIREBASE_CONFIG.storageBucket,
+    messagingSenderId: storedConfig.messagingSenderId || process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || DEFAULT_FIREBASE_CONFIG.messagingSenderId,
+    appId: storedConfig.appId || process.env.NEXT_PUBLIC_FIREBASE_APP_ID || DEFAULT_FIREBASE_CONFIG.appId,
+    measurementId: storedConfig.measurementId || process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || DEFAULT_FIREBASE_CONFIG.measurementId,
   };
 }
 
@@ -66,6 +79,23 @@ export function getFirebaseApp(customConfig?: FirebaseConfig): FirebaseApp | nul
     return null;
   }
 }
+
+// Get or initialize Firebase Analytics safely (client-side only)
+export async function getFirebaseAnalytics(): Promise<Analytics | null> {
+  if (typeof window === "undefined") return null;
+  const app = getFirebaseApp();
+  if (!app) return null;
+  try {
+    const supported = await isSupported();
+    if (supported) {
+      return getAnalytics(app);
+    }
+  } catch (error) {
+    console.warn("Firebase Analytics initialization warning:", error);
+  }
+  return null;
+}
+
 
 // Upload file to Firebase Storage
 export async function uploadToFirebaseStorage(

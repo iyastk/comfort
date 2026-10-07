@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.comfortsplus.com/
+Host: https://www.comfortsplus.com
 
 # Sitemaps
 Sitemap: https://www.comfortsplus.com/sitemap.xml
