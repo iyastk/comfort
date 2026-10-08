@@ -14,10 +14,10 @@ const SITE_URL = "https://www.comfortsplus.com";
 const OG_IMAGE = `${SITE_URL}/images/og-cover.jpg`;
 
 const stats = [
-  { value: "20+", label: "Years of Excellence" },
-  { value: "500+", label: "Projects Delivered" },
-  { value: "50+", label: "5-Star Hotel Clients" },
-  { value: "15+", label: "Countries Served" },
+  { value: "10+", label: "Years of Excellence" },
+  { value: "100+", label: "Projects Delivered" },
+  { value: "Top", label: "Hospitality Clients" },
+  { value: "UAE", label: "Based Production" },
 ];
 
 const values = [
@@ -49,7 +49,7 @@ const aboutStructuredData = {
   "@id": `${SITE_URL}/about#webpage`,
   "url": `${SITE_URL}/about`,
   "name": "About Comfort Contract Furniture Factory Dubai",
-  "description": "Learn about Comfort Furniture Factory, with over 20 years of experience in crafting bespoke contract furniture for hospitality and leisure industries in Dubai.",
+  "description": "Learn about Comfort Furniture Factory, dedicated to crafting bespoke contract furniture for hospitality and leisure industries in Dubai.",
   "inLanguage": "en-US",
   "about": { "@id": `${SITE_URL}/#organization` },
 };
@@ -61,19 +61,19 @@ const About = () => {
     <div className={`min-h-screen transition-colors duration-500 selection:bg-primary selection:text-primary-foreground ${isDarkMode ? "bg-[#0c0a09] text-white" : "bg-[#fafaf9] text-black"}`}>
       <Head>
         <title>About Us | Comfort Contract Furniture Factory Dubai</title>
-        <meta name="description" content="Learn about Comfort Furniture Factory, with over 20 years of experience in crafting bespoke contract furniture for hospitality and leisure industries in Dubai, UAE." />
+        <meta name="description" content="Learn about Comfort Furniture Factory, dedicated to crafting bespoke contract furniture for hospitality and leisure industries in Dubai, UAE." />
         <link rel="canonical" href={`${SITE_URL}/about`} />
 
         {/* Open Graph */}
         <meta property="og:title" content="About Us | Comfort Contract Furniture Factory Dubai" />
-        <meta property="og:description" content="Over 20 years of bespoke contract furniture craftsmanship in Dubai. Hospitality, Majlis, residential & commercial solutions." />
+        <meta property="og:description" content="Bespoke contract furniture craftsmanship in Dubai. Hospitality, Majlis, residential & commercial solutions." />
         <meta property="og:url" content={`${SITE_URL}/about`} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
         <meta name="twitter:title" content="About Us | Comfort Contract Furniture Factory Dubai" />
-        <meta name="twitter:description" content="Over 20 years of bespoke contract furniture craftsmanship in Dubai." />
+        <meta name="twitter:description" content="Bespoke contract furniture craftsmanship in Dubai." />
         <meta name="twitter:image" content={OG_IMAGE} />
 
         {/* Structured Data */}
@@ -108,7 +108,7 @@ const About = () => {
               Our Story
             </h1>
             <p className="text-white/70 text-base md:text-lg mt-4 max-w-xl animate-fade-in">
-              Two decades of artisanal excellence in Dubai&apos;s most iconic spaces.
+              Artisanal excellence in Dubai&apos;s most iconic spaces.
             </p>
           </div>
         </section>
@@ -147,7 +147,7 @@ const About = () => {
                 Established Experience
               </div>
               <h2 className="text-4xl md:text-5xl font-serif leading-tight">
-                Crafting Excellence for Over <span className="text-primary italic">20 Years</span>
+                Crafting Excellence in <span className="text-primary italic">Bespoke Furniture</span>
               </h2>
 
               <div className={`space-y-5 text-base leading-relaxed transition-colors duration-500 ${isDarkMode ? "text-white/70" : "text-black/70"}`}>
@@ -155,7 +155,7 @@ const About = () => {
                   <span className={`font-bold transition-colors duration-500 ${isDarkMode ? "text-white" : "text-black"}`}>Comfort Furniture Factory</span> is a leading manufacturer and supplier of custom-built contract furniture, serving the hospitality and leisure industries. We specialize in crafting both contemporary and traditional furniture solutions designed to meet the highest standards of quality and durability.
                 </p>
                 <p>
-                  Backed by a professional management team with over 20 years of combined experience, we have earned the trust of leading hotel chains, contractors, and designers across the Gulf region.
+                  Backed by an experienced management and master craftsman team, we have earned the trust of leading hotel chains, contractors, and designers across the UAE and region.
                 </p>
               </div>
 

@@ -1256,7 +1256,7 @@ export default function AdminDashboard() {
                   <div className="pt-20 space-y-16 max-w-7xl mx-auto px-6">
                     <h1 className="text-5xl font-serif text-center">About Comfort Furniture</h1>
                     <p className="text-center text-foreground/70 max-w-2xl mx-auto">
-                      20 years of craftsmanship manufacturing bespoke luxury furniture for hotels, majlises, and executive villas in Dubai & the GCC.
+                      Artisanal craftsmanship manufacturing bespoke luxury furniture for hotels, majlises, and executive villas in Dubai & the GCC.
                     </p>
                   </div>
                 )}

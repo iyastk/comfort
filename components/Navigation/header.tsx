@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-[100] backdrop-blur-2xl border-b transition-colors duration-500 ${isDarkMode ? 'bg-[#0c0a09]/90 border-white/5' : 'bg-white/80 border-black/5'}`}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 md:py-5">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
         <Link href="/" className="group flex flex-col">
           <span className={`text-2xl font-serif tracking-[0.3em] transition-colors leading-none group-hover:text-primary ${isDarkMode ? 'text-white' : 'text-black'}`}>
             COMFORT

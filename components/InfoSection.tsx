@@ -3,9 +3,9 @@ import { useServiceContext } from "@/store/serviceContext";
 import Link from "next/link";
 
 const highlights = [
-  { value: "20+", label: "Years of Experience" },
+  { value: "10+", label: "Years of Experience" },
   { value: "100%", label: "Bespoke Manufacturing" },
-  { value: "GCC", label: "Region Wide Delivery" },
+  { value: "UAE", label: "Based Production" },
 ];
 
 export default function InfoSection() {
