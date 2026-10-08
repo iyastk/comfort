@@ -42,6 +42,7 @@ const Navigation = () => {
             <Link
               key={link.name}
               href={link.href}
+              aria-current={isActive ? "page" : undefined}
               className={`group relative text-[11px] font-extrabold tracking-[0.25em] uppercase transition-all duration-300 ${
                 isActive ? "text-primary" : isDarkMode ? "text-white/80 hover:text-white" : "text-black/60 hover:text-black"
               }`}
@@ -122,13 +123,29 @@ const Navigation = () => {
               </div>
               
               <div className="flex gap-6 mt-6">
-                {['Instagram', 'LinkedIn', 'Facebook'].map((social) => (
-                  <a 
-                    key={social}
-                    href="#" 
-                    className={`text-[10px] font-bold tracking-widest uppercase transition-colors ${isDarkMode ? 'text-white/50 hover:text-white' : 'text-black/50 hover:text-black'}`}
+                {[
+                  {
+                    name: "Instagram",
+                    href: "https://www.instagram.com/furniturecomfortplus?stkn=MW5udTFtbmZ0MHVnbQ%3D%3D&utm_source=qr",
+                  },
+                  {
+                    name: "Facebook",
+                    href: "https://www.facebook.com/share/1BKcaybAW4/?mibextid=wwXIfr",
+                  },
+                  {
+                    name: "WhatsApp",
+                    href: "https://wa.me/971501684151",
+                  },
+                ].map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow us on ${social.name}`}
+                    className={`text-[10px] font-bold tracking-widest uppercase transition-colors ${isDarkMode ? "text-white/50 hover:text-white" : "text-black/50 hover:text-black"}`}
                   >
-                    {social}
+                    {social.name}
                   </a>
                 ))}
               </div>

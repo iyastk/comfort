@@ -167,5 +167,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       allWorks,
     },
+    // ISR: revalidate every 60 seconds so Firestore changes appear without rebuilds
+    revalidate: 60,
   };
 };

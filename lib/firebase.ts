@@ -97,6 +97,62 @@ export async function getFirebaseAnalytics(): Promise<Analytics | null> {
 }
 
 
+// ──────────────────────────────────────────────────────────────────────────────
+// Firestore: Portfolio Data Read / Write
+// ──────────────────────────────────────────────────────────────────────────────
+
+export interface PortfolioFirestoreData {
+  categories: Record<string, any[]>;
+  serviceInfo: any[];
+  updatedAt?: string;
+}
+
+/**
+ * Read portfolio data from Firestore.
+ * Returns null if Firebase is not configured or if the document doesn't exist yet.
+ */
+export async function getPortfolioFromFirestore(): Promise<PortfolioFirestoreData | null> {
+  try {
+    const app = getFirebaseApp();
+    if (!app) return null;
+
+    const db: Firestore = getFirestore(app);
+    const docRef = doc(db, "site_data", "portfolio");
+    const snap = await getDoc(docRef);
+
+    if (snap.exists()) {
+      return snap.data() as PortfolioFirestoreData;
+    }
+    return null;
+  } catch (error) {
+    console.error("Error reading portfolio from Firestore:", error);
+    return null;
+  }
+}
+
+/**
+ * Write portfolio data to Firestore.
+ * Merges the data so existing fields not in the payload are preserved.
+ */
+export async function savePortfolioToFirestore(data: PortfolioFirestoreData): Promise<boolean> {
+  try {
+    const app = getFirebaseApp();
+    if (!app) {
+      console.warn("Firebase not configured. Portfolio saved only to local JSON.");
+      return false;
+    }
+
+    const db: Firestore = getFirestore(app);
+    const docRef = doc(db, "site_data", "portfolio");
+    await setDoc(docRef, { ...data, updatedAt: new Date().toISOString() }, { merge: true });
+    console.log("Portfolio successfully synced to Firestore.");
+    return true;
+  } catch (error) {
+    console.error("Error saving portfolio to Firestore:", error);
+    return false;
+  }
+}
+
 // Upload file to Firebase Storage
 export async function uploadToFirebaseStorage(
   file: File | Blob,

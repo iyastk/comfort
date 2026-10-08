@@ -6,4 +6,4 @@ Allow: /
 Host: https://www.comfortsplus.com
 
 # Sitemaps
-Sitemap: https://www.comfortsplus.com/api/sitemap
+Sitemap: https://www.comfortsplus.com/sitemap.xml

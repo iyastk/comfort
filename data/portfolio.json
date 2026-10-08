@@ -4,7 +4,7 @@
       {
         "id": "v1",
         "slug": "modern-majlis-showcase",
-        "url": "/images/video_1.mp4",
+        "url": "/images/optimized/video_1.mp4",
         "type": "video",
         "title": "Modern Majlis Showcase",
         "category": "MajlisDesigns",
@@ -21,15 +21,15 @@
           "Bespoke Low-Profile Floor Seating Layout"
         ],
         "gallery": [
-          "/images/Portfolio/majlis/Majlis-10.jpg",
-          "/images/Portfolio/majlis/Majlis-7.jpg",
-          "/images/Portfolio/majlis/Majlis-3.jpg"
+          "/images/optimized/Majlis-10.webp",
+          "/images/optimized/Majlis-7.webp",
+          "/images/optimized/Majlis-3.webp"
         ]
       },
       {
         "id": "1",
         "slug": "royal-arabic-majlis-lounge",
-        "url": "/images/Portfolio/majlis/Majlis-10.jpg",
+        "url": "/images/optimized/Majlis-10.webp",
         "type": "image",
         "title": "Royal Arabic Majlis Lounge",
         "category": "MajlisDesigns",
@@ -46,15 +46,15 @@
           "Custom Geometric Arabic Pattern Inlays"
         ],
         "gallery": [
-          "/images/Portfolio/majlis/Majlis-10.jpg",
-          "/images/Portfolio/majlis/Majlis-7.jpg",
-          "/images/Portfolio/majlis/Majlis-5.jpg"
+          "/images/optimized/Majlis-10.webp",
+          "/images/optimized/Majlis-7.webp",
+          "/images/optimized/Majlis-5.webp"
         ]
       },
       {
         "id": "2",
         "slug": "traditional-luxury-majlis-seating",
-        "url": "/images/Portfolio/majlis/Majlis-7.jpg",
+        "url": "/images/optimized/Majlis-7.webp",
         "type": "image",
         "title": "Traditional Luxury Majlis Seating",
         "category": "MajlisDesigns",
@@ -71,15 +71,15 @@
           "Custom Oversized Floor Pillows"
         ],
         "gallery": [
-          "/images/Portfolio/majlis/Majlis-7.jpg",
-          "/images/Portfolio/majlis/Majlis-10.jpg",
-          "/images/Portfolio/majlis/Majlis-8.jpg"
+          "/images/optimized/Majlis-7.webp",
+          "/images/optimized/Majlis-10.webp",
+          "/images/optimized/Majlis-8.webp"
         ]
       },
       {
         "id": "majlis-3",
         "slug": "contemporary-majlis-interior",
-        "url": "/images/Portfolio/majlis/Majlis-3.jpg",
+        "url": "/images/optimized/Majlis-3.webp",
         "type": "image",
         "title": "Contemporary Majlis Interior",
         "category": "MajlisDesigns",
@@ -96,15 +96,15 @@
           "Stain and UV Resistant Coating"
         ],
         "gallery": [
-          "/images/Portfolio/majlis/Majlis-3.jpg",
-          "/images/Portfolio/majlis/Majlis-5.jpg",
-          "/images/Portfolio/majlis/Majlis-9.jpg"
+          "/images/optimized/Majlis-3.webp",
+          "/images/optimized/Majlis-5.webp",
+          "/images/optimized/Majlis-9.webp"
         ]
       },
       {
         "id": "majlis-5",
         "slug": "bespoke-emirati-reception-hall",
-        "url": "/images/Portfolio/majlis/Majlis-5.jpg",
+        "url": "/images/optimized/Majlis-5.webp",
         "type": "image",
         "title": "Bespoke Emirati Reception Hall",
         "category": "MajlisDesigns",
@@ -121,9 +121,9 @@
           "Heavy-Duty Solid Oak Framing"
         ],
         "gallery": [
-          "/images/Portfolio/majlis/Majlis-5.jpg",
-          "/images/Portfolio/majlis/Majlis-10.jpg",
-          "/images/Portfolio/majlis/Majlis-7.jpg"
+          "/images/optimized/Majlis-5.webp",
+          "/images/optimized/Majlis-10.webp",
+          "/images/optimized/Majlis-7.webp"
         ]
       }
     ],
@@ -131,7 +131,7 @@
       {
         "id": "v3",
         "slug": "luxury-suite-video-tour",
-        "url": "/images/video_3.mp4",
+        "url": "/images/optimized/video_3.mp4",
         "type": "video",
         "title": "Luxury Suite Video Tour",
         "category": "HotelFurnishing",
@@ -148,15 +148,15 @@
           "Custom Hospitality Power-Strip Integration"
         ],
         "gallery": [
-          "/images/Portfolio/office/Office-1.jpeg",
-          "/images/Portfolio/office/Office-2.jpeg",
-          "/images/Portfolio/hospitality/hospitality-3.jpeg"
+          "/images/optimized/Office-1.webp",
+          "/images/optimized/Office-2.webp",
+          "/images/optimized/hospitality-3.webp"
         ]
       },
       {
         "id": "4",
         "slug": "presidential-hotel-suite-dubai",
-        "url": "/images/Portfolio/office/Office-1.jpeg",
+        "url": "/images/optimized/Office-1.webp",
         "type": "image",
         "title": "Presidential Hotel Suite",
         "category": "HotelFurnishing",
@@ -173,15 +173,15 @@
           "Hospitality Fire & Safety Certification"
         ],
         "gallery": [
-          "/images/Portfolio/office/Office-1.jpeg",
-          "/images/Portfolio/office/Office-2.jpeg",
-          "/images/Portfolio/hospitality/hospitality-1.jpeg"
+          "/images/optimized/Office-1.webp",
+          "/images/optimized/Office-2.webp",
+          "/images/optimized/hospitality-1.webp"
         ]
       },
       {
         "id": "5",
         "slug": "deluxe-executive-guest-room",
-        "url": "/images/Portfolio/office/Office-2.jpeg",
+        "url": "/images/optimized/Office-2.webp",
         "type": "image",
         "title": "Deluxe Guest Room",
         "category": "HotelFurnishing",
@@ -198,15 +198,15 @@
           "Soft-Close German Cabinet Hardware"
         ],
         "gallery": [
-          "/images/Portfolio/office/Office-2.jpeg",
-          "/images/Portfolio/office/Office-1.jpeg",
-          "/images/Portfolio/hospitality/hospitality-2.jpeg"
+          "/images/optimized/Office-2.webp",
+          "/images/optimized/Office-1.webp",
+          "/images/optimized/hospitality-2.webp"
         ]
       },
       {
         "id": "hosp-3",
         "slug": "boutique-resort-lobby-lounge",
-        "url": "/images/Portfolio/hospitality/hospitality-3.jpeg",
+        "url": "/images/optimized/hospitality-3.webp",
         "type": "image",
         "title": "Boutique Resort Lobby Lounge",
         "category": "HotelFurnishing",
@@ -223,9 +223,9 @@
           "Water-Repellent Outdoor Transition Fabrics"
         ],
         "gallery": [
-          "/images/Portfolio/hospitality/hospitality-3.jpeg",
-          "/images/Portfolio/hospitality/hospitality-1.jpeg",
-          "/images/Portfolio/office/Office-3.jpeg"
+          "/images/optimized/hospitality-3.webp",
+          "/images/optimized/hospitality-1.webp",
+          "/images/optimized/Office-3.webp"
         ]
       }
     ],
@@ -233,7 +233,7 @@
       {
         "id": "v5",
         "slug": "luxury-living-spaces-tour",
-        "url": "/images/video_5.mp4",
+        "url": "/images/optimized/video_5.mp4",
         "type": "video",
         "title": "Living Spaces Tour",
         "category": "homeFurnishing",
@@ -250,15 +250,15 @@
           "Integrated Lighting & Concealed Storage"
         ],
         "gallery": [
-          "/images/Portfolio/home/Home-13.jpg",
-          "/images/Portfolio/home/Home-14.jpg",
-          "/images/Portfolio/home/Home-4.jpg"
+          "/images/optimized/Home-13.webp",
+          "/images/optimized/Home-14.webp",
+          "/images/optimized/Home-4.webp"
         ]
       },
       {
         "id": "6",
         "slug": "contemporary-dubai-living-room",
-        "url": "/images/Portfolio/home/Home-13.jpg",
+        "url": "/images/optimized/Home-13.webp",
         "type": "image",
         "title": "Contemporary Living Room",
         "category": "homeFurnishing",
@@ -275,15 +275,15 @@
           "Modular Seating Modules"
         ],
         "gallery": [
-          "/images/Portfolio/home/Home-13.jpg",
-          "/images/Portfolio/home/Home-14.jpg",
-          "/images/Portfolio/home/Home-5.jpg"
+          "/images/optimized/Home-13.webp",
+          "/images/optimized/Home-14.webp",
+          "/images/optimized/Home-5.webp"
         ]
       },
       {
         "id": "7",
         "slug": "master-bedroom-headboard-fitout",
-        "url": "/images/Portfolio/home/Home-14.jpg",
+        "url": "/images/optimized/Home-14.webp",
         "type": "image",
         "title": "Master Bedroom Fit-Out",
         "category": "homeFurnishing",
@@ -300,15 +300,15 @@
           "Custom Bench Footboard"
         ],
         "gallery": [
-          "/images/Portfolio/home/Home-14.jpg",
-          "/images/Portfolio/home/Home-13.jpg",
-          "/images/Portfolio/home/Home-11.jpg"
+          "/images/optimized/Home-14.webp",
+          "/images/optimized/Home-13.webp",
+          "/images/optimized/Home-11.webp"
         ]
       },
       {
         "id": "home-4",
         "slug": "luxury-villa-dining-collection",
-        "url": "/images/Portfolio/home/Home-4.jpg",
+        "url": "/images/optimized/Home-4.webp",
         "type": "image",
         "title": "Luxury Villa Dining Collection",
         "category": "homeFurnishing",
@@ -325,9 +325,9 @@
           "Stain-Shield Fabric Protection"
         ],
         "gallery": [
-          "/images/Portfolio/home/Home-4.jpg",
-          "/images/Portfolio/home/Home-13.jpg",
-          "/images/Portfolio/home/Home-14.jpg"
+          "/images/optimized/Home-4.webp",
+          "/images/optimized/Home-13.webp",
+          "/images/optimized/Home-14.webp"
         ]
       }
     ],
@@ -335,7 +335,7 @@
       {
         "id": "v7",
         "slug": "retail-excellence-commercial-fitout",
-        "url": "/images/video_7.mp4",
+        "url": "/images/optimized/video_7.mp4",
         "type": "video",
         "title": "Retail Excellence Showcase",
         "category": "shopFittings",
@@ -352,15 +352,15 @@
           "Modular Wall Shelving Systems"
         ],
         "gallery": [
-          "/images/Portfolio/Shop/shop-1.jpeg",
-          "/images/Portfolio/Shop/shop-2.jpeg",
-          "/images/Portfolio/Shop/shop-3.jpeg"
+          "/images/optimized/shop-1.webp",
+          "/images/optimized/shop-2.webp",
+          "/images/optimized/shop-3.webp"
         ]
       },
       {
         "id": "8",
         "slug": "luxury-boutique-retail-display",
-        "url": "/images/Portfolio/Shop/shop-1.jpeg",
+        "url": "/images/optimized/shop-1.webp",
         "type": "image",
         "title": "Luxury Retail Display",
         "category": "shopFittings",
@@ -377,15 +377,15 @@
           "Heavy-Duty Commercial Slide Drawers"
         ],
         "gallery": [
-          "/images/Portfolio/Shop/shop-1.jpeg",
-          "/images/Portfolio/Shop/shop-2.jpeg",
-          "/images/Portfolio/Shop/shop-4.jpeg"
+          "/images/optimized/shop-1.webp",
+          "/images/optimized/shop-2.webp",
+          "/images/optimized/shop-4.webp"
         ]
       },
       {
         "id": "shop-2",
         "slug": "commercial-retail-storefront-counter",
-        "url": "/images/Portfolio/Shop/shop-2.jpeg",
+        "url": "/images/optimized/shop-2.webp",
         "type": "image",
         "title": "Commercial Retail Counter",
         "category": "shopFittings",
@@ -402,9 +402,9 @@
           "Durable Kick-Plate Stainless Steel Base"
         ],
         "gallery": [
-          "/images/Portfolio/Shop/shop-2.jpeg",
-          "/images/Portfolio/Shop/shop-1.jpeg",
-          "/images/Portfolio/Shop/shop-3.jpeg"
+          "/images/optimized/shop-2.webp",
+          "/images/optimized/shop-1.webp",
+          "/images/optimized/shop-3.webp"
         ]
       }
     ]
